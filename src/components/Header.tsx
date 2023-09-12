@@ -49,7 +49,7 @@ export const Header = () => {
                                 />
                             )}
                             {item.label}
-                        </Link>
+                        </Link> 
                     </li>
                 ))}
             </ul>
