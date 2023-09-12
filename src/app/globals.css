@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.light {
+    --bg-color: #f5f5f5;
+    --highlight: #d3d3d3;
+    --opaque: rgba(214, 211, 209, 0.6);
+    --text: #333;
+    --container: #e7e5e4;
+    --container-hover: #d0cecd; 
+    --fade: #b5b5b5;
+}
+  
+.dark {
+    --bg-color: #111;
+    --highlight: #222;
+    --opaque: rgba(34, 34, 34, 0.6);
+    --text: #e7e5e4;
+    --container: #222;
+    --container-hover: #333;
+    --fade: #404040;
+}
+  
+.email {
+    color: var(--text);
+}
+  
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+}
+   
+nav {
+    border-radius: 5rem;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 1em;
+    transition: background-color 0.4s ease; /* Add a transition for smooth background color change */
+    color: var(--text);
+}
+  
+nav.opaque {
+    background-color: var(--opaque); /* Adjust the opacity as needed */
+    backdrop-filter: blur(10px); /* Add a blur effect */
+}
+    
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+    
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+ul {
+    display: flex;
+    justify-content: flex-start;
+}
+    
+nav li {
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: fit-content;
+    position: relative;
+    user-select: none;
+}
+    
+.highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: var(--highlight); */
+    background-color: var(--highlight);
+    z-index: -1;
+    border-radius: 25em;
+}
