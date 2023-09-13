@@ -89,7 +89,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="md:w-4/5 font-light">
-              <span className="text-neutral-500">
+              <span className="text-neutral-500 font-light">
                 {projectData.title}
               </span>&nbsp;{projectData.description}
             </div>
