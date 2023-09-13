@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "MIGRA";
+    src: url('../../public/Migra-Extralight.otf')
+  }
 
 .light {
     --bg-color: #f5f5f5;
@@ -96,4 +100,74 @@ nav li {
     background-color: var(--highlight);
     z-index: -1;
     border-radius: 25em;
+}
+
+.container {
+    background-color: var(--container);
+  }
+
+.intro-text {
+    font-size: clamp(3.2rem, 3.2rem + 10vw, 10vw);
+  }
+  
+.intro-subtext {
+    font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
+}
+
+.intro-subtext {
+    font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
+}
+  
+.project-container {
+    background-color: var(--container);
+}
+  
+.project-container__1 {
+    background-color: #fdba74;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__1:hover {
+    background-color: #fb923c;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__2 {
+    background-color: #7dd3fc;
+    transition: 0.4s ease-in-out
+}
+  
+.project-container__2:hover {
+    background-color: #38bdf8;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__3 {
+    background-color: #86efac;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__3:hover {
+    background-color: #4ade80;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__4 {
+    background-color: #f87171;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__4:hover {
+    background-color: #ef4444;
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__5 {
+    background-color: var(--container);
+    transition: 0.4s ease-in-out;
+}
+  
+.project-container__5:hover {
+    background-color: var(--container-hover);
+    transition: 0.4s ease-in-out;
 }
