@@ -68,8 +68,26 @@ const Guestbook = () => {
       <Reveal>
         <div className="py-16 text-sm">
           {notes?.map(note => {
-            return <div key={note._id}>
-              <span className="text-neutral-500">{note.author}:</span> {note.body}
+
+            const creationTimeMs = note._creationTime;
+            const date = new Date(creationTimeMs);
+
+            const options: Intl.DateTimeFormatOptions = {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+            }
+
+            const formattedDate = date.toLocaleDateString('en-US', options);
+
+            return <div key={note._id} className="flex flex-col py-2">
+              <span>{note.body}</span> 
+              <div className="flex items-center text-xs">
+                <span className="text-neutral-500">{note.author} &mdash;</span>
+                <span className="text-neutral-500">&nbsp;{formattedDate}</span>
+              </div>
             </div>
           })}
         </div>
