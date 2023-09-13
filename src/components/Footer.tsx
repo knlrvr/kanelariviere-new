@@ -9,11 +9,12 @@ const Footer = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 max-w-7xl mx-auto">
-        <div className="w-full flex flex-col justify-between">
-          <Reveal>
+        <Reveal>
+          <div className="w-full flex flex-col justify-between">
             <OnRepeat />
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
+
         <div className="grid grid-cols-2 gap-4 mt-12 md:mt-0">
           <Reveal>
             <div className="flex flex-col items-start">
