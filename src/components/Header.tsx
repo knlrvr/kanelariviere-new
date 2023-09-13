@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 const items = [
-    { label: 'Home', href: '/'},
+    { label: 'Work', href: '/'},
     { label: 'About', href: '/about'},
     { label: 'Contact', href: '/contact' },
     { label: 'TSIF', href: '/tsif' },
@@ -34,7 +34,10 @@ export const Header = () => {
       };
     }, []);
 
-    const path = usePathname();
+    let path = usePathname();
+    if (path?.includes("/work/")) {
+      path = '/';
+    }
 
     return (
         <nav className={`z-50 text-xs md:text-sm mx-auto w-fit sticky px-2 ${scrolling ? 'opaque' : ''}`}
@@ -43,7 +46,7 @@ export const Header = () => {
                 {items.map((item) => (
                     <li key={item.href} className="px-2 sm:px-4 h-full w-full py-2">
                         <Link href={item.href}>
-                            {item.href === path && (
+                            {path === item.href && (
                                 <motion.span layoutId='highlight'
                                     className="highlight w-full h-full" 
                                 />

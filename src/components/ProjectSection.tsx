@@ -5,11 +5,11 @@ import { Reveal } from './utils/reveal'
 
 const Projects: React.FC = () => {
     return (
-        <Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-12 pt-8">
             <div className="md:col-span-3 project-container__1 rounded-[2.5rem] group hover:-translate-y-2 transition duration-200">
 
                     <ProjectCard
+                        url='ttrpcompanion'
                         title="TTRPCompanion"
                         category='gaming utility'
                         image={{
@@ -27,6 +27,7 @@ const Projects: React.FC = () => {
             <div className="md:col-span-1 project-container__2 rounded-[2.5rem] group hover:-translate-y-2 transition duration-200">
                     
                     <ProjectCard
+                        url='keepup'
                         title="KeepUp"
                         category='social media'
                         image={{
@@ -44,6 +45,7 @@ const Projects: React.FC = () => {
             <div className="md:col-span-2 project-container__3 rounded-[2.5rem] group hover:-translate-y-2 transition duration-200">
                     
                     <ProjectCard
+                        url='theviewfrominside'
                         title="The View From Inside"
                         category='blog'
                         image={{
@@ -61,6 +63,7 @@ const Projects: React.FC = () => {
             <div className="md:col-span-2 project-container__4 rounded-[2.5rem] group hover:-translate-y-2 transition duration-200">
                     
                     <ProjectCard
+                        url='abstract'
                         title="Abstract"
                         category='ecommerce'
                         image={{
@@ -78,6 +81,7 @@ const Projects: React.FC = () => {
             <div className="md:col-span-1 project-container__5 rounded-[2.5rem] group hover:-translate-y-2 transition duration-200">
                     
                     <ProjectCard
+                        url='personalportfolio'
                         title="Personal Portfolio"
                         category='portfolio'
                         image={{
@@ -92,7 +96,6 @@ const Projects: React.FC = () => {
 
             </div>
         </div>
-        </Reveal>
     )
 }
 

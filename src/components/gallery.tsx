@@ -110,7 +110,7 @@ const Gallery: React.FC = () => {
   return (
     <>
     <Reveal>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-12">
         {randomPictures.map((picture, index) => (
             <div key={index} className="relative group flex justify-center md:first:col-span-3 md:last:col-span-3 overflow-hidden row-span-4">
               <Image 
