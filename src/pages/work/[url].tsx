@@ -280,8 +280,8 @@ const fetchProjectData = (url: string): Project => {
       live: '',
       title: 'My Personal Portfolio',
       category: 'Misc',
-      description: 'is where you are now! Take a look around and let me know what you think!',
-      tags: ['TypeScript', 'React', 'Next.js', 'Tailwind'],
+      description: 'is where you are now! Take a look around and let me know what you think. You can navigate to the Guestbook page and leave me a message!',
+      tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
       year: '2023',
       next: '/work/ttrpcompanion',
       prev: '/work/abstract'
