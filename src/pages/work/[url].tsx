@@ -50,11 +50,90 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
   // const paragraphs = projectData.description.split('\n');
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-7xl mx-auto">
       <Header />
 
-      <div className="">
-        {projectData.title}
+      <div className="pt-12 md:pt-20 p-4">
+
+        <Reveal>
+          <div className="flex flex-col">
+            <p className="font-migra text-4xl sm:text-5xl md:text-7xl">{projectData.title}</p>
+            <p className="font-thin text-2xl sm:text-3xl md:text-4xl">&mdash; {projectData.category}</p>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="py-8 text-xs flex items-center space-x-2 text-neutral-500">
+            <Link href="/" className="font-semibold">
+              Work
+            </Link>
+            <p>&gt;</p>
+            <span className="font-light">{projectData.title}</span>
+          </div>
+        </Reveal>
+
+        {projectData.brand && (
+          <Reveal>
+            <div className="flex justify-center pb-16">
+              <Image 
+                src={projectData.brand.src}
+                alt={projectData.brand.alt}
+                width={projectData.brand.width}
+                height={projectData.brand.height}
+                className={projectData.brand.className}
+              />
+            </div>
+          </Reveal>
+        )}
+
+        <Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="md:w-4/5 font-light">
+              <span className="text-neutral-500">
+                {projectData.title}
+              </span>&nbsp;{projectData.description}
+            </div>
+            <div className="text-xs grid grid-cols-1 md:grid-cols-3 gap-0 gap-y-8 md:gap-y-0">
+              <div className="w-full flex flex-col">
+                <span className="font-migra text-base">Year</span>
+                <span className="border-t border-neutral-500 w-full mt-2 pt-4 font-light">{projectData.year}</span>
+              </div>
+              <div className="w-full flex flex-col">
+                <span className="font-migra text-base">Tech</span>
+                  <span className="border-t border-neutral-500 w-full mt-2 pt-4 flex flex-col space-y-2">
+                    {projectData.tags && projectData.tags.map((tag, index) => (
+                      <span key={index} className="text-xs flex font-light">
+                        {tag}
+                      </span>
+                    ))}
+                  </span>
+                </div>
+                <div className="w-full flex flex-col">
+                  <span className="font-migra text-base">Open</span>
+                  <span className="border-t border-neutral-500 w-full mt-2 pt-4 flex flex-col space-y-2">
+                  {projectData.git && ( 
+                    <Link href={projectData.git} target="_blank"
+                      className="flex items-center text-xs group">
+                      <span className="font-light group-hover:text-neutral-500 transition duration-200">Open Code</span>
+                      <BsArrowUpRight
+                        className="ml-6 text-sm group-hover:text-neutral-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-200"/>
+                    </Link>
+                  )}
+                  {projectData.live && (
+                    <Link href={projectData.live} target="_blank"
+                      className="flex items-center text-xs group">
+                      <span className="font-light group-hover:text-neutral-500 transition duration-200">Open Live</span>
+                      <BsArrowUpRight
+                        className="ml-[1.95rem] text-sm group-hover:text-neutral-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-200"/>
+                    </Link>
+                  )}
+                </span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+
       </div>
 
 
@@ -106,17 +185,17 @@ const fetchProjectData = (url: string): Project => {
     ttrpcompanion: {
       url: 'ttrpcompanion',
       brand: {
-        src: '/ttrpc.png',
+        src: '/ttrpc-brand-2.png',
         alt: 'ttrpc logo',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full'
+        className: 'w-full h-full rounded-[2.5rem]'
       },
       quote: 'Empowering Adventurers.',
-      git: 'https://github.com/knlrvr/ttrpg-char-stats-v2',
-      live: 'https://ttrpg-char-stats-v2.vercel.app/',
+      git: 'https://github.com/knlrvr/ttrpcompanion',
+      live: 'https://ttrpcompanion.vercel.app/',
       title: 'TTRPCompanion',
-      category: 'Utility',
+      category: 'Gaming Utility',
       description: 'is a gaming utility app that allows users to track their character\'s stats in D&D Campaigns. Typically, other tools carry on the basic stats of characters, while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
       year: '2023',
@@ -127,11 +206,11 @@ const fetchProjectData = (url: string): Project => {
     keepup: {
       url: 'keepup',
       brand: {
-        src: '/keepup.png',
+        src: '/keepup-brand.png',
         alt: 'KeepUp',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full'
+        className: 'w-full h-full rounded-[2.5rem]'
       },
       quote: 'Seamless Connection. Expressive Impact.',
       git: 'https://github.com/knlrvr/next-notes',
@@ -148,11 +227,11 @@ const fetchProjectData = (url: string): Project => {
     theviewfrominside: {
       url: 'theviewfrominside',
       brand: {
-        src: '/tvfi.png',
+        src: '/tvfi-brand.png',
         alt: 'The View From Inside',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full'
+        className: 'w-full h-full rounded-[2.5rem]'
       },
       quote: 'Boldly written. Relatably lived.',
       git: 'https://github.com/knlrvr/the-view-from-inside',
@@ -169,16 +248,16 @@ const fetchProjectData = (url: string): Project => {
     abstract: {
       url: 'abstract',
       brand: {
-        src: '/abstract.png',
+        src: '/abstract-brand.png',
         alt: 'Abstract Store',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full'
+        className: 'w-full h-full rounded-[2.5rem]'
       },
       quote: 'Abstract. The concept of shopping.',
       git: 'https://github.com/knlrvr/abstract',
       live: 'https://abstract-eight.vercel.app/',
-      title: 'Abstract Store',
+      title: 'Abstract',
       category: 'Ecommerce',
       description: 'is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
       tags: ['JavaScript', 'React', 'Next', 'Tailwind', 'MongoDB'],
@@ -190,11 +269,11 @@ const fetchProjectData = (url: string): Project => {
     personalportfolio: {
       url: 'personalportfolio',
       brand: {
-        src: '/port.png',
+        src: '/logo-new.png',
         alt: 'Personal Portfolio',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full'
+        className: 'w-full h-full rounded-[2.5rem]'
       },
       quote: 'Endless Inspiration.',
       git: 'https://github.com/knlrvr/kanelariviere',
