@@ -7,17 +7,14 @@ import '../../app/globals.css';
 import { Reveal } from '@/components/utils/reveal';
 
 import {  
-  BsChevronRight,
-  BsArrowUpRight,
-  BsArrowRight,
-  BsArrowLeft,
-  BsPlusLg
+  BsArrowUpRight
 } from 'react-icons/bs'
 
-import { 
-  RiDoubleQuotesL, 
-  RiDoubleQuotesR 
-} from 'react-icons/ri'
+// import { 
+//   RiDoubleQuotesL, 
+//   RiDoubleQuotesR 
+// } from 'react-icons/ri'
+
 import { Header } from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -189,7 +186,7 @@ const fetchProjectData = (url: string): Project => {
         alt: 'ttrpc logo',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full rounded-[2.5rem]'
+        className: 'w-full h-full rounded-md'
       },
       quote: 'Empowering Adventurers.',
       git: 'https://github.com/knlrvr/ttrpcompanion',
@@ -210,7 +207,7 @@ const fetchProjectData = (url: string): Project => {
         alt: 'KeepUp',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full rounded-[2.5rem]'
+        className: 'w-full h-full rounded-md'
       },
       quote: 'Seamless Connection. Expressive Impact.',
       git: 'https://github.com/knlrvr/next-notes',
@@ -231,7 +228,7 @@ const fetchProjectData = (url: string): Project => {
         alt: 'The View From Inside',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full rounded-[2.5rem]'
+        className: 'w-full h-full rounded-md'
       },
       quote: 'Boldly written. Relatably lived.',
       git: 'https://github.com/knlrvr/the-view-from-inside',
@@ -252,7 +249,7 @@ const fetchProjectData = (url: string): Project => {
         alt: 'Abstract Store',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full rounded-[2.5rem]'
+        className: 'w-full h-full rounded-md'
       },
       quote: 'Abstract. The concept of shopping.',
       git: 'https://github.com/knlrvr/abstract',
@@ -273,7 +270,7 @@ const fetchProjectData = (url: string): Project => {
         alt: 'Personal Portfolio',
         width: 1000,
         height: 1000,
-        className: 'w-full h-full rounded-[2.5rem]'
+        className: 'w-full h-full rounded-md'
       },
       quote: 'Endless Inspiration.',
       git: 'https://github.com/knlrvr/kanelariviere',

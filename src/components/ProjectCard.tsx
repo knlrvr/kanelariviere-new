@@ -24,27 +24,11 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ url, title, category, image, git, live}: ProjectCardProps) => {
     return (
-      <Link href={`/work/${url}`} as={`/work/${url}`}>
-        <div className='relative h-64 md:h-96 rounded-[2.5rem] overflow-hidden'>
-          <div className="flex items-start justify-between p-8">
-            <div className="flex flex-col space-y-2">
-              <span className="font-mont tracking-wide text-xs md:text-base uppercase font-light">{category} &nbsp;&mdash;</span>
-              <span className="font-migra text-3xl md:text-4xl tracking-widest">{title}</span>
-            </div>
-            {/* <div className="flex items-center space-x-4 text-lg">
-              {git && (
-                <Link href={git} target="_blank">
-                  <BsGithub />
-                </Link>
-              )}
-              {live && (
-                <Link href={live} target="_blank">
-                  <BsBoxArrowUpRight />
-                </Link>
-              )}
-            </div> */}
-          </div>
-          <Image
+      <Link href={`/work/${url}`} as={`/work/${url}`}
+      className="group">
+      <div className="flex flex-col mx-auto group rounded-xl project-container__5">
+        <div className="w-full h-fit flex justify-center group p-8 md:p-16">
+          <Image 
             src={image.src}
             alt={image.alt}
             width={image.width}
@@ -52,7 +36,12 @@ const ProjectCard = ({ url, title, category, image, git, live}: ProjectCardProps
             className={image.className}
           />
         </div>
-      </Link>
+        <div className="px-8 md:px-16 p-8 flex justify-between items-center">
+          <span className="text-lg font-migra tracking-wider">{title}</span>
+          <span className="text-neutral-500 text-sm font-light">&mdash;&mdash; {category}</span>
+        </div>
+      </div>
+    </Link>
     )
 }
 
