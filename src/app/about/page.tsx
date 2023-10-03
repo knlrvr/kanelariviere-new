@@ -53,10 +53,10 @@ const About = () => {
         </Reveal> */}
 
         <Reveal>
-        <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-7 gap-4 md:mt-16 mb-24 md:mb-32">
+        <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-8 gap-4 md:mt-16 mb-24 md:mb-32">
           
           {/* 1 */} 
-          <div className="md:col-span-3 md:row-start-1 container p-8 rounded-full flex justify-between items-center">
+          <div className="md:col-span-4 md:row-start-1 container p-8 rounded-full flex justify-between items-center">
             <div className="flex flex-col">
               <span className="font-migra text-xl md:text-2xl">Gaston College</span>
               <span className="font-light text-xs md:text-sm">AAS, Computer Science</span>
@@ -67,7 +67,7 @@ const About = () => {
           </div>
 
           {/* 2 */}
-          <div className="md:col-span-5 md:col-start-3 row-start-2 container p-8 rounded-full flex justify-between items-center">
+          <div className="md:col-span-7 md:col-start-2 row-start-2 container p-8 rounded-full flex justify-between items-center">
             <div className="flex flex-col">
               <span className="font-migra text-xl md:text-2xl">KNLRVR</span>
               <span className="font-light text-xs md:text-sm">Freelance Developer</span>
@@ -78,7 +78,7 @@ const About = () => {
           </div>
 
           {/* 3 */}
-          <div className="md:col-span-4 md:col-start-4 md:row-start-3 container p-8 rounded-full flex justify-between items-center">
+          <div className="md:col-span-6 md:col-start-3 md:row-start-3 container p-8 rounded-full flex justify-between items-center">
             <div className="flex flex-col">
               
               <span className="block md:hidden font-migra text-xl md:text-2xl">WGU</span>
