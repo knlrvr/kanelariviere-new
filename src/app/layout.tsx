@@ -20,7 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script strategy='lazyOnload' src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      {/* removed until cookie banner is created (: */}
+      {/* <Script strategy='lazyOnload' src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -29,7 +30,7 @@ export default function RootLayout({
  
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
-      </Script>
+      </Script> */}
       <head>
         <title>Kane Lariviere • Portfolio</title>
         <meta name="description" content="Kane Lariviere • Software Engineer. Full Stack Developer. Designer." />
