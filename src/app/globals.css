@@ -19,7 +19,7 @@
   
 .dark {
     --bg-color: #111;
-    --highlight: #222;
+    --highlight: #333;
     --opaque: rgba(34, 34, 34, 0.6);
     --text: #e7e5e4;
     --container: #222;
@@ -100,6 +100,7 @@ nav li {
     background-color: var(--highlight);
     z-index: -1;
     border-radius: 25em;
+    opacity: 0.5;
 }
 
 .container {
