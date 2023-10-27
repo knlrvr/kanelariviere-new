@@ -119,7 +119,7 @@ nav li {
     font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
 }
   
-/* .project-container__1 {
+.project-container__1 {
     background-color: #fdba74;
     transition: 0.4s ease-in-out;
 }
@@ -157,7 +157,7 @@ nav li {
 .project-container__4:hover {
     background-color: #ef4444;
     transition: 0.4s ease-in-out;
-} */
+}
   
 .project-container__5 {
     background-color: var(--container);
