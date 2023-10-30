@@ -7,7 +7,8 @@ import '../../app/globals.css';
 import { Reveal } from '@/components/utils/reveal';
 
 import {  
-  BsArrowUpRight
+  BsArrowUpRight,
+  BsArrowRight
 } from 'react-icons/bs'
 
 // import { 
@@ -36,7 +37,7 @@ interface Project {
   tags?: string[];        // array of tags
   year: string;
   next: string;
-  prev: string;
+  nextTitle: string;
 }
 
 interface ProjectDetailsPageProps {
@@ -130,7 +131,15 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
           </div>
         </Reveal>
 
-
+        <Reveal>
+          <div className="pt-24 flex md:justify-end justify-center">
+            <Link href={projectData.next}
+              className="text-2xl font-migra flex items-center space-x-4 w-fit">
+              <span>{projectData.nextTitle}</span>
+              <BsArrowRight className="text-xl" />
+            </Link>
+          </div>
+        </Reveal>
       </div>
 
 
@@ -197,7 +206,7 @@ const fetchProjectData = (url: string): Project => {
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
       year: '2023',
       next: '/work/keepup',
-      prev: '/work/personalportfolio'
+      nextTitle: 'KeepUp'
     },
 
     keepup: {
@@ -218,7 +227,7 @@ const fetchProjectData = (url: string): Project => {
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Redis', 'NextAuth'],
       year: '2023',
       next: '/work/theviewfrominside',
-      prev: '/work/ttrpcompanion'
+      nextTitle: 'The View From Inside'
     },
 
     theviewfrominside: {
@@ -239,7 +248,7 @@ const fetchProjectData = (url: string): Project => {
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Sanity'],
       year: '2023',
       next: '/work/abstract',
-      prev: '/work/keepup'
+      nextTitle: 'Abstract'
     },
 
     abstract: {
@@ -260,7 +269,7 @@ const fetchProjectData = (url: string): Project => {
       tags: ['JavaScript', 'React', 'Next', 'Tailwind', 'MongoDB'],
       year: '2023',
       next: '/work/personalportfolio',
-      prev: '/work/theviewfrominside'
+      nextTitle: 'Personal Portfolio'
     },
 
     personalportfolio: {
@@ -281,7 +290,7 @@ const fetchProjectData = (url: string): Project => {
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
       year: '2023',
       next: '/work/ttrpcompanion',
-      prev: '/work/abstract'
+      nextTitle: 'TTRPCompanion'
     },
   };
 
