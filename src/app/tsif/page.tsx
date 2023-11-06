@@ -31,7 +31,7 @@ const TSIF = () => {
             <Link href="https://www.theskyisfake.org" target="_blank"
               className="inline-flex items-center space-x-2 hover:text-blue-400 duration-300">
               <span>theskyisfake.org</span>
-              <BsBoxArrowUpRight />
+              <BsBoxArrowUpRight /> 
             </Link>.
           </p>
         </div>
