@@ -9,8 +9,8 @@
 
 .light {
     --bg-color: #f5f5f5;
-    --highlight: #d3d3d3;
-    --opaque: rgba(214, 211, 209, 0.6);
+    --highlight: rgba(163, 163, 163, 0.5); 
+    --opaque: rgba(214, 211, 211, 0.8);
     --text: #333;
     --container: #e7e5e4;
     --container-hover: #d0cecd; 
@@ -19,8 +19,8 @@
   
 .dark {
     --bg-color: #111;
-    --highlight: #333;
-    --opaque: rgba(34, 34, 34, 0.6);
+    --highlight: rgba(68, 68, 68, 0.5);
+    --opaque: rgba(51, 51, 51, 0.5);
     --text: #e7e5e4;
     --container: #222;
     --container-hover: #333;
@@ -52,7 +52,7 @@ nav {
   
 nav.opaque {
     background-color: var(--opaque); /* Adjust the opacity as needed */
-    backdrop-filter: blur(10px); /* Add a blur effect */
+    backdrop-filter: blur(8px); /* Add a blur effect */
 }
     
 .tabs {
@@ -100,7 +100,6 @@ nav li {
     background-color: var(--highlight);
     z-index: -1;
     border-radius: 25em;
-    opacity: 0.5;
 }
 
 .container {

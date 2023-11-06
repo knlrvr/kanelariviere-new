@@ -55,7 +55,7 @@ export const Header = () => {
                         </Link> 
                     </li>
                 ))}
-            </ul>
+            </ul> 
         </nav>
     )
 }
