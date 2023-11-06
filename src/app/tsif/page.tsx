@@ -23,7 +23,7 @@ const TSIF = () => {
 
         <div className="mt-12">
           <p className="text-neutral-500 intro-about">
-            To learn more about The Sky Is Fake, visit 
+            To learn more about The Sky Is Fake, please visit 
             <Link href="https://www.theskyisfake.org" target="_blank"
               className=""> theskyisfake.org</Link>.
           </p>
