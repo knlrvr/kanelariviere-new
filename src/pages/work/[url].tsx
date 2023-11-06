@@ -28,6 +28,13 @@ interface Project {
     height: number;
     className: string;
   };
+  mockup?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    className: string;
+  };
   quote: string,
   git?: string;
   live?: string;
@@ -72,13 +79,27 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
 
         {projectData.brand && (
           <Reveal>
-            <div className="flex justify-center pb-16">
+            <div className="flex justify-center pb-8">
               <Image 
                 src={projectData.brand.src}
                 alt={projectData.brand.alt}
                 width={projectData.brand.width}
                 height={projectData.brand.height}
                 className={projectData.brand.className}
+              />
+            </div>
+          </Reveal>
+        )}
+
+        {projectData.mockup && (
+          <Reveal>
+            <div className="flex justify-center pb-16">
+              <Image 
+                src={projectData.mockup.src}
+                alt={projectData.mockup.alt}
+                width={projectData.mockup.width}
+                height={projectData.mockup.height}
+                className={projectData.mockup.className}
               />
             </div>
           </Reveal>
@@ -197,6 +218,13 @@ const fetchProjectData = (url: string): Project => {
         height: 1000,
         className: 'w-full h-full rounded-md'
       },
+      mockup: {
+        src: '/1.png',
+        alt: 'ttrpc mockup',
+        width: 1000,
+        height: 1000,
+        className: 'w-full h-full rounded-md'
+      },
       quote: 'Empowering Adventurers.',
       git: 'https://github.com/knlrvr/ttrpcompanion',
       live: 'https://ttrpcompanion.vercel.app/',
@@ -204,27 +232,6 @@ const fetchProjectData = (url: string): Project => {
       category: 'Gaming Utility',
       description: 'is a gaming utility app that allows users to track their character\'s stats in D&D Campaigns. Typically, other tools carry on the basic stats of characters, while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
-      year: '2023',
-      next: '/work/keepup',
-      nextTitle: 'KeepUp'
-    },
-
-    keepup: {
-      url: 'keepup',
-      brand: {
-        src: '/keepup-brand.png',
-        alt: 'KeepUp',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
-      quote: 'Seamless Connection. Expressive Impact.',
-      git: 'https://github.com/knlrvr/next-notes',
-      live: 'https://next-notes-74lh.vercel.app/',
-      title: 'KeepUp',
-      category: 'Social Media',
-      description: 'is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
-      tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Redis', 'NextAuth'],
       year: '2023',
       next: '/work/theviewfrominside',
       nextTitle: 'The View From Inside'
@@ -239,6 +246,13 @@ const fetchProjectData = (url: string): Project => {
         height: 1000,
         className: 'w-full h-full rounded-md'
       },
+      mockup: {
+        src: '/2.png',
+        alt: 'tvfi mockup',
+        width: 1000,
+        height: 1000,
+        className: 'w-full h-full rounded-md'
+      },
       quote: 'Boldly written. Relatably lived.',
       git: 'https://github.com/knlrvr/the-view-from-inside',
       live: 'https://the-view-from-inside.vercel.app/',
@@ -246,6 +260,35 @@ const fetchProjectData = (url: string): Project => {
       category: 'Blog',
       description: 'is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Sanity'],
+      year: '2023',
+      next: '/work/keepup',
+      nextTitle: 'Keep Up'
+    },
+
+
+    keepup: {
+      url: 'keepup',
+      brand: {
+        src: '/keepup-brand.png',
+        alt: 'KeepUp',
+        width: 1000,
+        height: 1000,
+        className: 'w-full h-full rounded-md'
+      },
+      mockup: {
+        src: '/3.png',
+        alt: 'keepup mockup',
+        width: 1000,
+        height: 1000,
+        className: 'w-full h-full rounded-md'
+      },
+      quote: 'Seamless Connection. Expressive Impact.',
+      git: 'https://github.com/knlrvr/next-notes',
+      live: 'https://next-notes-74lh.vercel.app/',
+      title: 'KeepUp',
+      category: 'Social Media',
+      description: 'is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
+      tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Redis', 'NextAuth'],
       year: '2023',
       next: '/work/abstract',
       nextTitle: 'Abstract'
@@ -256,6 +299,13 @@ const fetchProjectData = (url: string): Project => {
       brand: {
         src: '/abstract-brand.png',
         alt: 'Abstract Store',
+        width: 1000,
+        height: 1000,
+        className: 'w-full h-full rounded-md'
+      },
+      mockup: {
+        src: '/4.png',
+        alt: 'ttrpc logo',
         width: 1000,
         height: 1000,
         className: 'w-full h-full rounded-md'
