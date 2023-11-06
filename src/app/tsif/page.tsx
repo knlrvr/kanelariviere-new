@@ -4,6 +4,10 @@ import { Reveal } from '@/components/utils/reveal'
 
 import Gallery from '@/components/gallery'
 
+import { 
+  BsBoxArrowUpRight
+} from 'react-icons/bs'
+
 const TSIF = () => {
     return (
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
@@ -23,9 +27,12 @@ const TSIF = () => {
 
         <div className="mt-12">
           <p className="text-neutral-500 intro-about">
-            To learn more about The Sky Is Fake, please visit 
+            To learn more about The Sky Is Fake, please visit <br />
             <Link href="https://www.theskyisfake.org" target="_blank"
-              className=""> theskyisfake.org</Link>.
+              className="inline-flex items-center space-x-2 hover:text-blue-400 duration-300">
+              <span>theskyisfake.org</span>
+              <BsBoxArrowUpRight />
+            </Link>.
           </p>
         </div>
         </div>
