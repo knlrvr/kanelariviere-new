@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { Reveal } from '@/components/utils/reveal'
 
 import Gallery from '@/components/gallery'
@@ -19,6 +20,14 @@ const TSIF = () => {
         </div>
 
         <Gallery />
+
+        <div className="mt-12">
+          <p className="text-neutral-500 intro-about">
+            To learn more about The Sky Is Fake, visit 
+            <Link href="https://www.theskyisfake.org" target="_blank"
+              className=""> theskyisfake.org</Link>.
+          </p>
+        </div>
         </div>
     )
 }
