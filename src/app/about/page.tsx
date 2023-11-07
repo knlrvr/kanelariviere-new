@@ -2,6 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import { Reveal } from '@/components/utils/reveal'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | About',
+  description: 'About | Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
+
 const About = () => {
   return (
     <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">

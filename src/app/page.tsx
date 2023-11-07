@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 
 import {
@@ -10,6 +10,12 @@ import {
 import { Reveal } from '@/components/utils/reveal'
 import Projects from '@/components/ProjectSection'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | Portfolio',
+  description: 'Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
 
 const Home = () => {
   return (

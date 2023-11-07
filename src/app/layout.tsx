@@ -31,11 +31,11 @@ export default function RootLayout({
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script> */}
-      <head>
-        <title>Kane Lariviere • Portfolio</title>
+      {/* <head>
+        <title>Kane Lariviere | Portfolio</title>
         <meta name="description" content="Kane Lariviere • Software Engineer. Full Stack Developer. Designer." />
         <link rel="icon" href='/favicon.ico' />
-      </head>
+      </head> */}
       <body>
       <ClerkProvider publishableKey='pk_test_dml0YWwtZG9yeS01OC5jbGVyay5hY2NvdW50cy5kZXYk'>
           <ConvexProviderWithClerk client={convex} useAuth={useAuth}>

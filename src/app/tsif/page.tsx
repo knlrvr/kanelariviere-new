@@ -8,6 +8,13 @@ import {
   BsBoxArrowUpRight
 } from 'react-icons/bs'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | The Sky Is Fake',
+  description: 'The Sky Is Fake | Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
+
 const TSIF = () => {
     return (
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
