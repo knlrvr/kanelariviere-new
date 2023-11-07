@@ -56,7 +56,7 @@ const About = () => {
         <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-8 gap-4 md:mt-16 mb-24 md:mb-32">
           
           {/* 1 */} 
-          <div className="md:col-span-4 md:row-start-1 container p-8 rounded-full flex justify-between items-center">
+          <div className="md:col-span-4 row-start-1 container p-8 rounded-full flex justify-between items-center">
             <div className="flex flex-col">
               <span className="font-migra text-xl md:text-2xl">Gaston College</span>
               <span className="font-light text-xs md:text-sm">AAS, Computer Science</span>
@@ -78,11 +78,10 @@ const About = () => {
           </div>
 
           {/* 3 */}
-          <div className="md:col-span-6 md:col-start-3 md:row-start-3 container p-8 rounded-full flex justify-between items-center">
+          <div className="md:col-span-4 md:col-start-5 row-start-3 container p-8 rounded-full flex justify-between items-center">
             <div className="flex flex-col">
-              
-              <span className="block md:hidden font-migra text-xl md:text-2xl">WGU</span>
-              <span className="hidden md:block font-migra text-xl md:text-2xl">Western Governors University</span>
+              <span className="block lg:hidden font-migra text-xl md:text-2xl">WGU</span>
+              <span className="hidden lg:block font-migra text-xl md:text-2xl">Western Governors University</span>
               <span className="font-light text-xs md:text-sm">BSc, Computer Science</span>
             </div>
             <div className="">
