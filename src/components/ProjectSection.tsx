@@ -6,8 +6,8 @@ import { Reveal } from './utils/reveal'
 const Projects: React.FC = () => {
     return (
       <div className="max-w-7xl mx-auto">
-        <div className="pt-8 md:pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
-          <div className="md:col-span-2">
+        <div className="pt-10 md:pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+          <div className="md:col-span-2 relative">
             <Reveal>
               <ProjectCard 
                 url='/ttrpcompanion'
@@ -20,11 +20,11 @@ const Projects: React.FC = () => {
                   height: 1000,
                   className: 'absolute left-1/3 rounded-md group-hover:translate-y-4 duration-300',
                 }}
-                background='bg-[#fcd34d]'
+                background='bg-[#c4b5fd]'
               />
             </Reveal>
           </div>
-          <div>
+          <div className="relative">
             <Reveal>
               <ProjectCard 
                 url='/theviewfrominside'
