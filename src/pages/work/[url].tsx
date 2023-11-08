@@ -146,7 +146,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
           {projectData.design && (
             <Reveal>
               <div className="flex flex-col justify-center space-y-2">
@@ -176,7 +176,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
               </div>
             </Reveal>
           )}
-        </div>
+        </div> */}
 
         <Reveal>
           <div className="pt-24 flex md:justify-end justify-center">
