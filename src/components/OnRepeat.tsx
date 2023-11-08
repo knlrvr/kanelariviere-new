@@ -10,14 +10,9 @@ import {
 
 const songs = [
   {
-    title: 'Absence',
-    artist: 'glasslight',
-    link: 'https://open.spotify.com/track/5V4TlcwtVBENzHgQx24aGV?si=29736d12645d4dbf'
-  },
-  {
-    title: 'Upside Down - Lofi',
-    artist: 'Mik, The Story So Far',
-    link: 'https://open.spotify.com/track/5W2jpvaV8RpeP2PEkZ6mtu?si=1978918e9dfa4df3'
+    title: 'Big Blind',
+    artist: 'The Story So Far',
+    link: 'https://open.spotify.com/track/5IiyHmNFsTx6PLI2diNH98?si=af2946545b9548c1'
   },
   {
     title: 'Overcome',
@@ -40,9 +35,9 @@ const songs = [
     link: 'https://open.spotify.com/track/5w40ZYhbBMAlHYNDaVJIUu?si=e83419a0e4b9470f'
   },
   {
-    title: 'You\'re Gonna Go Far',
-    artist: 'Noah Kahan',
-    link: 'https://open.spotify.com/track/4nHJcUtNSUVjXRnjdP29Bk?si=49ef22b8d51f4aa1'
+    title: '234',
+    artist: 'Driveways',
+    link: 'https://open.spotify.com/track/2kXs5h6xwYvzbYmYlXRK3E?si=6c501bc756044ca2'
   },
   {
     title: 'Everywhere, Everything',
