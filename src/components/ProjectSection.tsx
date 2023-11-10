@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
                   alt: 'knlrvr logo',
                   width: 1000,
                   height: 1000,
-                  className: 'absolute left-1/3 rounded-md group-hover:translate-y-4 duration-300'
+                  className: 'absolute left-1/3 rounded-md md:top-3/4 group-hover:translate-y-2 duration-300'
                 }}
                 background='bg-[#fdba74]'
               />
