@@ -266,7 +266,7 @@ const fetchProjectData = (url: string): Project => {
       git: 'https://github.com/knlrvr/theskyisfake',
       live: 'https://www.theskyisfake.org',
       title: 'The Sky Is Fake',
-      category: 'Gallery',
+      category: 'Social Media',
       description: 'is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'Convex', 'Clerk'],
       year: '2023',

@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
               <ProjectCard 
                 url='/theskyisfake'
                 title='The Sky Is Fake'
-                category='Gallery'
+                category='Social Media'
                 image={{
                   src: '/5.png',
                   alt: 'knlrvr logo',
