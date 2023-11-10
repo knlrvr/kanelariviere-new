@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
                   alt: 'the view from inside',
                   width: 1000,
                   height: 1000,
-                  className: 'absolute left-1/3 rounded-md md:top-3/4 group-hover:translate-y-2 duration-300'
+                  className: 'absolute left-1/3 rounded-sm md:top-3/4 group-hover:translate-y-2 duration-300'
                 }}
                 background='bg-[#86efac]'
               />
@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
                   alt: 'keepup brand',
                   width: 1000,
                   height: 1000,
-                  className: 'absolute left-1/3 rounded-md md:top-3/4 group-hover:translate-y-2 duration-300'
+                  className: 'absolute left-1/3 rounded-sm md:top-3/4 group-hover:translate-y-2 duration-300'
                 }}
                 background='bg-[#7dd3fc]'
               />
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
                   alt: 'knlrvr logo',
                   width: 1000,
                   height: 1000,
-                  className: 'absolute left-1/3 rounded-md md:top-3/4 group-hover:translate-y-2 duration-300'
+                  className: 'absolute left-1/3 rounded-sm md:top-3/4 group-hover:translate-y-2 duration-300'
                 }}
                 background='bg-[#fdba74]'
               />
