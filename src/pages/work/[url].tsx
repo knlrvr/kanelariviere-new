@@ -36,20 +36,6 @@ interface Project {
   description: string;
   tags?: string[];        // array of tags
   year: string;
-  design?: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className: string;
-  };
-  snap?: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className: string;
-  };
   next: string;
   nextTitle: string;
 }
@@ -146,38 +132,6 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
           </div>
         </Reveal>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-          {projectData.design && (
-            <Reveal>
-              <div className="flex flex-col justify-center space-y-2">
-                <span className="text-lg font-migra tracking-widest">Design &mdash;</span>
-                <Image 
-                  src={projectData.design.src}
-                  alt={projectData.design.alt}
-                  width={projectData.design.width}
-                  height={projectData.design.height}
-                  className={projectData.design.className}
-                />
-              </div>
-            </Reveal>
-          )}
-
-          {projectData.snap && (
-            <Reveal>
-              <div className="flex flex-col justify-center space-y-2">
-                <span className="text-lg font-migra tracking-widest">Preview &mdash;</span>
-                <Image 
-                  src={projectData.snap.src}
-                  alt={projectData.snap.alt}
-                  width={projectData.snap.width}
-                  height={projectData.snap.height}
-                  className={projectData.snap.className}
-                />
-              </div>
-            </Reveal>
-          )}
-        </div> */}
-
         <Reveal>
           <div className="pt-24 flex md:justify-end justify-center">
             <Link href={projectData.next}
@@ -200,11 +154,11 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Replace this with your actual logic to fetch the dynamic paths
   const paths = [
     { params: { url: 'theviewfrominside' } },
     { params: { url: 'keepup' } },
     { params: { url: 'abstract' } },
+    { params: { url: 'theskyisfake'} },
     { params: { url: 'personalportfolio' } },
     { params: { url: 'ttrpcompanion' } },
     // Add more dynamic paths as needed
@@ -252,20 +206,6 @@ const fetchProjectData = (url: string): Project => {
       description: 'is a gaming utility app that allows users to track their character\'s stats in D&D Campaigns. Typically, other tools carry on the basic stats of characters, while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
       year: '2023',
-      design: {
-        src: '/1.png',
-        alt: 'ttrpc design',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
-      snap: {
-        src: '/ttrpc-preview.png',
-        alt: 'ttrpc screenshot',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
       next: '/work/theviewfrominside',
       nextTitle: 'The View From Inside'
     },
@@ -287,20 +227,6 @@ const fetchProjectData = (url: string): Project => {
       description: 'is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Sanity'],
       year: '2023',
-      design: {
-        src: '/2.png',
-        alt: 'tvfi design',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
-      snap: {
-        src: '/tvfi-preview.png',
-        alt: 'tvfi screenshot',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
       next: '/work/keepup',
       nextTitle: 'Keep Up'
     },
@@ -323,20 +249,27 @@ const fetchProjectData = (url: string): Project => {
       description: 'is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Redis', 'NextAuth'],
       year: '2023',
-      design: {
-        src: '/3.png',
-        alt: 'keepup design',
+      next: '/work/theskyisfake',
+      nextTitle: 'The Sky Is Fake'
+    },
+
+    theskyisfake: {
+      url: 'theskyisfake',
+      brand: {
+        src: '/tsif-brand.png',
+        alt: 'The Sky Is Fake',
         width: 1000,
         height: 1000,
         className: 'w-full h-full rounded-md'
       },
-      snap: {
-        src: '/keepup-preview.png',
-        alt: 'keepup screenshot',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
+      quote: 'We Can Stop Pretending Now.',
+      git: 'https://github.com/knlrvr/theskyisfake',
+      live: 'https://www.theskyisfake.org',
+      title: 'The Sky Is Fake',
+      category: 'Gallery',
+      description: 'is more or less a full stack social media app. Users can login through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery is meant to feature images of the sky that seem just a little too picturesque to be real.',
+      tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'Convex', 'Clerk'],
+      year: '2023',
       next: '/work/abstract',
       nextTitle: 'Abstract'
     },
@@ -358,20 +291,6 @@ const fetchProjectData = (url: string): Project => {
       description: 'is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
       tags: ['JavaScript', 'React', 'Next', 'Tailwind', 'MongoDB'],
       year: '2023',
-      design: {
-        src: '/4.png',
-        alt: 'abstract design',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
-      snap: {
-        src: '/abstract-preview.png',
-        alt: 'abstract screenshot',
-        width: 1000,
-        height: 1000,
-        className: 'w-full h-full rounded-md'
-      },
       next: '/work/personalportfolio',
       nextTitle: 'Personal Portfolio'
     },

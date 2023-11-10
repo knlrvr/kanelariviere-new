@@ -61,6 +61,23 @@ const Projects: React.FC = () => {
           <div className="md:col-span-2">
             <Reveal>
               <ProjectCard 
+                url='/theskyisfake'
+                title='The Sky Is Fake'
+                category='Gallery'
+                image={{
+                  src: '/5.png',
+                  alt: 'knlrvr logo',
+                  width: 1000,
+                  height: 1000,
+                  className: 'absolute left-1/3 rounded-md group-hover:translate-y-4 duration-300'
+                }}
+                background='bg-[#fef08a]'
+              />
+            </Reveal>
+          </div>
+          <div className="md:col-span-2">
+            <Reveal>
+              <ProjectCard 
                 url='/abstract'
                 title='Abstract'
                 category='Ecommerce'
@@ -75,7 +92,8 @@ const Projects: React.FC = () => {
               />
             </Reveal>
           </div>
-          <div className="md:col-span-2">
+        
+          <div className="">
             <Reveal>
               <ProjectCard 
                 url='/personalportfolio'
