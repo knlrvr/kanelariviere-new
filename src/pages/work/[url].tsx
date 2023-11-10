@@ -256,7 +256,7 @@ const fetchProjectData = (url: string): Project => {
     theskyisfake: {
       url: 'theskyisfake',
       brand: {
-        src: '/tsif-brand.png',
+        src: '/tsif-brand-2.png',
         alt: 'The Sky Is Fake',
         width: 1000,
         height: 1000,
