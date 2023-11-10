@@ -267,7 +267,7 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://www.theskyisfake.org',
       title: 'The Sky Is Fake',
       category: 'Gallery',
-      description: 'is more or less a full stack social media app. Users can login through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery is meant to feature images of the sky that seem just a little too picturesque to be real.',
+      description: 'is more or less a full stack social media app. Users can login through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery is meant to feature images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'Convex', 'Clerk'],
       year: '2023',
       next: '/work/abstract',
