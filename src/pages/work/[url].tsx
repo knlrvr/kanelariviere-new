@@ -192,7 +192,7 @@ const fetchProjectData = (url: string): Project => {
     ttrpcompanion: {
       url: 'ttrpcompanion',
       brand: {
-        src: '/ttrpc-brand-2.png',
+        src: '/ttrpc-brand-new.png',
         alt: 'ttrpc logo',
         width: 1000,
         height: 1000,
@@ -213,7 +213,7 @@ const fetchProjectData = (url: string): Project => {
     theviewfrominside: {
       url: 'theviewfrominside',
       brand: {
-        src: '/tvfi-brand.png',
+        src: '/tvfi-brand-new.png',
         alt: 'The View From Inside',
         width: 1000,
         height: 1000,
@@ -235,7 +235,7 @@ const fetchProjectData = (url: string): Project => {
     keepup: {
       url: 'keepup',
       brand: {
-        src: '/keepup-brand.png',
+        src: '/keepup-brand-new.png',
         alt: 'KeepUp',
         width: 1000,
         height: 1000,
@@ -256,7 +256,7 @@ const fetchProjectData = (url: string): Project => {
     theskyisfake: {
       url: 'theskyisfake',
       brand: {
-        src: '/tsif-brand-2.png',
+        src: '/tsif-brand-new.png',
         alt: 'The Sky Is Fake',
         width: 1000,
         height: 1000,
@@ -277,7 +277,7 @@ const fetchProjectData = (url: string): Project => {
     abstract: {
       url: 'abstract',
       brand: {
-        src: '/abstract-brand.png',
+        src: '/abs-brand-new.png',
         alt: 'Abstract Store',
         width: 1000,
         height: 1000,

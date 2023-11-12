@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
                 title='TTRPCompanion'
                 category='Utility'
                 image={{
-                  src: '/1.png',
+                  src: '/ttrpc-brand-new.png',
                   alt: 'ttrpcompanion logo',
                   width: 1000,
                   height: 1000,
@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
                 title='The View From Inside'
                 category='Blog'
                 image={{
-                  src: '/2.png',
+                  src: '/tvfi-brand-new.png',
                   alt: 'the view from inside',
                   width: 1000,
                   height: 1000,
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
                 title='KeepUp'
                 category='Social Media'
                 image={{
-                  src: '/3.png',
+                  src: '/keepup-brand-new.png',
                   alt: 'keepup brand',
                   width: 1000,
                   height: 1000,
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                 title='The Sky Is Fake'
                 category='Social Media'
                 image={{
-                  src: '/5.png',
+                  src: '/tsif-brand-new.png',
                   alt: 'tsif logo',
                   width: 1000,
                   height: 1000,
@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
                 title='Abstract'
                 category='Ecommerce'
                 image={{
-                  src: '/4.png',
+                  src: '/abs-brand-new.png',
                   alt: 'abstract brand',
                   width: 1000,
                   height: 1000,
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
                   alt: 'knlrvr logo',
                   width: 1000,
                   height: 1000,
-                  className: 'absolute left-1/3 rounded-md group-hover:translate-y-4 duration-300'
+                  className: 'absolute left-1/3 rounded-sm md:top-3/4 group-hover:translate-y-2 duration-300'
                 }}
                 background='bg-[#fdba74]'
               />
