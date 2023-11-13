@@ -161,3 +161,7 @@ nav li {
 .project-container__5 {
     background-color: var(--container);
 }
+
+.text {
+    color: var(--text);
+}

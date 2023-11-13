@@ -21,6 +21,7 @@ import Footer from '@/components/Footer';
 
 interface Project {
   url: string;
+  bg: string;
   brand?: {
     src: string;
     alt: string;
@@ -72,7 +73,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
 
         {projectData.brand && (
           <Reveal>
-            <div className="flex justify-center pb-8">
+            <div className={`flex justify-center pl-2 rounded-l-md rounded-r-xl mb-8 ${projectData.bg}`}>
 
               <Image 
                 src={projectData.brand.src}
@@ -191,6 +192,7 @@ const fetchProjectData = (url: string): Project => {
     
     ttrpcompanion: {
       url: 'ttrpcompanion',
+      bg: 'bg-[#fef08a]',
       brand: {
         src: '/ttrpc-brand-new.png',
         alt: 'ttrpc logo',
@@ -205,13 +207,14 @@ const fetchProjectData = (url: string): Project => {
       category: 'Gaming Utility',
       description: 'is a gaming utility app that allows users to track their character\'s stats in D&D Campaigns. Typically, other tools carry on the basic stats of characters, while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
-      year: '2023',
+      year: '2023 ~',
       next: '/work/theviewfrominside',
       nextTitle: 'The View From Inside'
     },
 
     theviewfrominside: {
       url: 'theviewfrominside',
+      bg: 'bg-[#86efac]',
       brand: {
         src: '/tvfi-brand-new.png',
         alt: 'The View From Inside',
@@ -234,6 +237,7 @@ const fetchProjectData = (url: string): Project => {
 
     keepup: {
       url: 'keepup',
+      bg: 'bg-[#7dd3fc]',
       brand: {
         src: '/keepup-brand-new.png',
         alt: 'KeepUp',
@@ -255,6 +259,7 @@ const fetchProjectData = (url: string): Project => {
 
     theskyisfake: {
       url: 'theskyisfake',
+      bg: 'bg-[#c4b5fd]',
       brand: {
         src: '/tsif-brand-new.png',
         alt: 'The Sky Is Fake',
@@ -269,13 +274,14 @@ const fetchProjectData = (url: string): Project => {
       category: 'Social Media',
       description: 'is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'Convex', 'Clerk'],
-      year: '2023',
+      year: '2023 ~',
       next: '/work/abstract',
       nextTitle: 'Abstract'
     },
 
     abstract: {
       url: 'abstract',
+      bg: 'bg-[#f87171]',
       brand: {
         src: '/abs-brand-new.png',
         alt: 'Abstract Store',
@@ -297,6 +303,7 @@ const fetchProjectData = (url: string): Project => {
 
     personalportfolio: {
       url: 'personalportfolio',
+      bg: 'bg-[#fdba74]',
       brand: {
         src: '/logo-new.png',
         alt: 'Personal Portfolio',

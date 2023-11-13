@@ -67,6 +67,7 @@ const Footer = () => {
           </Reveal>
         </div>
       </div>
+      
       <Reveal>
         <div className="flex items-center justify-between mt-16 mb-4 max-w-7xl mx-auto">
           <ToggleTheme />
