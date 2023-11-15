@@ -3,6 +3,8 @@ import Link from 'next/link'
 import ToggleTheme from './toggleTheme';
 import { Reveal } from './utils/reveal';
 
+import CircadianTheme from './circTheme';
+
 import OnRepeat from './OnRepeat';
 
 const Footer = () => {
@@ -67,10 +69,13 @@ const Footer = () => {
           </Reveal>
         </div>
       </div>
+
+      <Reveal>
+        <CircadianTheme />
+      </Reveal>
       
       <Reveal>
-        <div className="flex items-center justify-between mt-16 mb-4 max-w-7xl mx-auto">
-          <ToggleTheme />
+        <div className="flex justify-center mt-16 mb-4 max-w-7xl mx-auto">
           <span className="font-light text-xs">
             &copy; 2023 Kane Lariviere.
           </span>
