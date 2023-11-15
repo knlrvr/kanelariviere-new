@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
               <ProjectCard 
                 url='/ttrpcompanion'
                 title='TTRPCompanion'
-                category='Utility'
+                category='Gaming Utility'
                 image={{
                   src: '/ttrpc-brand-new.png',
                   alt: 'ttrpcompanion logo',
