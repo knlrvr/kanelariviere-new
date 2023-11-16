@@ -16,6 +16,8 @@ This portfolio features a gallery, titled 'The Sky is Fake' (TSIF), that showcas
 
 This portfolio also features a guestbook, where visitors can sign in via Apple, Discord, or Google (provided by Clerk), and leave a note or message! Building this feature was a lot of fun because I got to work with [Convex](https://www.convex.dev/), which was a **dream** to integrate. I'm excited to see what people will say! 
 
+I've implemented a light/dark theme that is dependent on the current time of day. There are 24 lines at the bottom of the page representing the hours of the day, and the current time will be highlighted with an icon displayed above it. The theme can still be manually switched if you do prefer one over the other! 
+
 <a name="view"></a>
 ## View
 [knlrvr.com](https://knlrvr.com) or [knlrvr.dev](https://knlrvr.dev)
