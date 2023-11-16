@@ -112,7 +112,7 @@ const Gallery: React.FC = () => {
     <Reveal>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-12">
         {randomPictures.map((picture, index) => (
-            <div key={index} className="relative group flex justify-center md:first:col-span-3 md:last:col-span-3 overflow-hidden row-span-4">
+            <div key={index} className="relative group flex justify-center md:first:col-span-3 md:last:col-span-3 overflow-hidden row-span-4 rounded-2xl shadow-md">
               <Image 
                 src={picture.url} 
                 alt={`Random Picture ${index + 1} - ${picture.location}`} 

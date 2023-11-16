@@ -26,7 +26,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ url, title, category, image, background }: ProjectCardProps) => {
     return (
       <Link href={`/work/${url}`} as={`/work/${url}`} className="group">
-        <div className={`relative h-64 md:h-96 rounded-[2rem] overflow-hidden group-hover:-translate-y-1 duration-300 ${background}`}>
+        <div className={` shadow-md relative h-64 md:h-96 rounded-[2rem] overflow-hidden group-hover:-translate-y-1 group-hover:shadow-xl duration-300 ${background}`}>
           <div className="flex items-start justify-between p-8">
             <div className="flex flex-col space-y-2 text-[#333]">
               <span className="font-mont tracking-wide text-xs md:text-base uppercase font-light">{category} &nbsp;&mdash;</span>

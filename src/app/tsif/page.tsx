@@ -32,7 +32,7 @@ const TSIF = () => {
 
         <Gallery />
 
-        <div className="mt-12">
+        <div className="mt-12 font-light text-center max-w-3xl mx-auto font-mont px-6 text-base md:text-lg lg:text-xl text-neutral-500 mb-8">
           <p className="text-neutral-500 intro-about">
             To learn more about The Sky Is Fake, please visit <br />
             <Link href="https://www.theskyisfake.org" target="_blank"

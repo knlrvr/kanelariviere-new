@@ -67,12 +67,12 @@ const CircadianTheme = () => {
 
                 {/* icon dependent on theme */}
                 {isActive && theme === 'light' && 
-                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2">
+                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
                         <BsSun />
                     </div>
                 }
                 {isActive && theme === 'dark' && 
-                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2">
+                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
                         <BsMoon />
                     </div>
                 }

@@ -20,14 +20,14 @@ const useDarkMode = () => {
     root.classList.add(theme);
   }, [theme]);
 
-  useEffect(() => {
-    // Update theme based on the current time every minute
-    const updateThemeInterval = setInterval(() => {
-      setTheme(getCurrentTheme());
-    }, 60000);
+  // useEffect(() => {
+  //   // Update theme based on the current time every minute
+  //   const updateThemeInterval = setInterval(() => {
+  //     setTheme(getCurrentTheme());
+  //   }, 60000);
 
-    return () => clearInterval(updateThemeInterval);
-  }, []);
+  //   return () => clearInterval(updateThemeInterval);
+  // }, []);
 
   return [theme, toggleTheme] as const;
 };

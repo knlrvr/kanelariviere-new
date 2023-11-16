@@ -25,7 +25,7 @@ const GuestbookForm = () => {
         </Reveal>
         {!user && (
           <Reveal>
-            <div className="mt-4 border border-neutral-500 p-1 px-4 rounded-full">
+            <div className="mt-4 container p-1 px-4 rounded-full shadow-md">
               <SignInButton mode='modal' afterSignInUrl='/guestbook'/>
             </div>
           </Reveal>

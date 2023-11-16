@@ -58,7 +58,7 @@ const OnRepeat: React.FC = () => {
 
   return (
     <Link href={songLink} target="_blank" rel="noopener noreferrer"
-      className="container py-4 px-4 rounded-full flex items-center justify-between">
+      className="container py-4 px-4 rounded-full flex items-center justify-between shadow-md">
       <div className="flex items-center">
         <BsSpotify 
           className="text-green-500 text-4xl" />

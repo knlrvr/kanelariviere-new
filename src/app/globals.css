@@ -104,7 +104,13 @@ nav li {
 
 .container {
     background-color: var(--container);
+    transition: 300ms ease-in-out;
   }
+
+.container:hover {
+    background-color: var(--container-hover);
+    transition: 300ms ease-in-out;
+}
 
 .intro-text {
     font-size: clamp(3.2rem, 3.2rem + 10vw, 10vw);
