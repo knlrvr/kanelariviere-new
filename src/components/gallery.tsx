@@ -21,7 +21,11 @@ const pictures = [
     location: 'North Carolina',
   },
   {
-    url: '/gallery/7.jpeg',
+    url: '/gallery/5.jpeg',
+    location: 'North Carolina',
+  },
+  {
+    url: '/gallery/6.jpeg',
     location: 'North Carolina',
   },
   {
@@ -33,32 +37,12 @@ const pictures = [
     location: 'Florida',
   },
   {
-    url: '/gallery/10.jpeg',
-    location: 'North Carolina',
-  },
-  {
-    url: '/gallery/13.jpeg',
-    location: 'North Carolina',
-  },
-  {
-    url: '/gallery/14.jpeg',
-    location: 'North Carolina',
-  },
-  {
     url: '/gallery/15.jpeg',
     location: 'North Carolina',
   },
   {
-    url: '/gallery/16.jpeg',
-    location: 'United States',
-  },
-  {
     url: '/gallery/17.jpeg',
     location: 'United States',
-  },
-  {
-    url: '/gallery/18.jpg',
-    location: 'North Carolina',
   },
   {
     url: '/gallery/19.jpg',
@@ -71,10 +55,6 @@ const pictures = [
   {
     url: '/gallery/23.jpg',
     location: 'North Carolina',
-  },
-  {
-    url: '/gallery/24.jpeg',
-    location: 'Florida',
   },
   {
     url: '/gallery/25.jpg',
