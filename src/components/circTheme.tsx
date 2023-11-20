@@ -29,9 +29,7 @@ const CircadianTheme = () => {
   
       // Update the active hour immediately after toggling the theme
       setActiveHour(hour);
-  
-      console.log(`Theme for ${hour}:00 - ${hour + 1}:00 toggled`);
-    }
+      }
 
     function handleHourHover(hour: any) {
         setHoveredHour(hour);
@@ -45,7 +43,6 @@ const CircadianTheme = () => {
       const lines = [];
       for (let hour = 1; hour < 25; hour++) {
         const isActive = activeHour === hour;
-        const isHovered = hoveredHour === hour;
         lines.push(
           <div className="relative mt-20 w-full">
             <div
@@ -73,7 +70,7 @@ const CircadianTheme = () => {
                 }
                 {isActive && theme === 'dark' && 
                     <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
-                        <BsMoon />
+                        <LuMoon />
                     </div>
                 }
 
