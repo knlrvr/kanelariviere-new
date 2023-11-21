@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useDarkMode from './utils/theme';
 
 import {
-    BsSun, BsMoon
+    BsSun
 } from 'react-icons/bs'
 import { 
     LuMoon 
@@ -12,14 +12,14 @@ import {
 const CircadianTheme = () => {
     const [theme, toggleTheme] = useDarkMode();
     const [activeHour, setActiveHour] = useState(getCurrentHour());
-    const [hoveredHour, setHoveredHour] = useState(null);
   
     function getCurrentHour() {
       return new Date().getHours();
     }
   
     function handleHourClick(hour: any) {
-      // Toggle the theme if it's different from the current theme
+
+      // Toggle the theme IF it's different from the current theme
       if ((hour < 7 || hour >= 17) && theme !== 'dark') {
         toggleTheme();
       }
@@ -29,16 +29,8 @@ const CircadianTheme = () => {
   
       // Update the active hour immediately after toggling the theme
       setActiveHour(hour);
-      }
-
-    function handleHourHover(hour: any) {
-        setHoveredHour(hour);
     }
 
-    function handleHourLeave() {
-        setHoveredHour(null);
-    }
-  
     function renderHourLines() {
       const lines = [];
       for (let hour = 1; hour < 25; hour++) {
@@ -55,24 +47,22 @@ const CircadianTheme = () => {
                     'w-full cursor-pointer bg-opacity-20' 
                 }`}
                 onClick={() => handleHourClick(hour)}
-                onMouseEnter={() => handleHourHover(hour)}
-                onMouseLeave={() => handleHourLeave}
             >
-                <span className={`bg-neutral-500 w-[2px] h-8 
-                ${isActive ? '' : 'mt-[3.25rem] opacity-50' } 
-                `}> </span> 
+              <span className={`bg-neutral-500 w-[2px] h-8 
+              ${isActive ? '' : 'mt-[3.25rem] opacity-50' } 
+              `}> </span> 
 
-                {/* icon dependent on theme */}
-                {isActive && theme === 'light' && 
-                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
-                        <BsSun />
-                    </div>
-                }
-                {isActive && theme === 'dark' && 
-                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
-                        <LuMoon />
-                    </div>
-                }
+              {/* icon dependent on theme */}
+              {isActive && theme === 'light' && 
+                <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
+                  <BsSun />
+                </div>
+              }
+              {isActive && theme === 'dark' && 
+                <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
+                  <LuMoon />
+                </div>
+              }
 
             </div>
           </div> 
