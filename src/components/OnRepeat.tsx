@@ -20,11 +20,6 @@ const songs = [
     link: 'https://open.spotify.com/track/18q5OmlDTbSm8w9J1i17dT?si=d03902ace3c9482a'
   },
   {
-    title: 'BLOOD AND SUGAR',
-    artist: 'BOYS LIKE GIRLS',
-    link: 'https://open.spotify.com/track/7slQaLDyL3WnMUffGwrnYi?si=9e6c8d914e7840bf'
-  },
-  {
     title: 'Seasonal',
     artist: 'glasslight',
     link: 'https://open.spotify.com/track/6mKFrX61Q81ie7KA5iXVcu?si=70cfa7daf7554ec5'
