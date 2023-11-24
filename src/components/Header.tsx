@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 const items = [
     { label: 'Work', href: '/'},
     { label: 'About', href: '/about'},
-    { label: 'Contact', href: '/contact' },
+    { label: 'Blog', href: '/blog'},
     { label: 'TSIF', href: '/tsif' },
     { label: 'Guestbook', href: '/guestbook' },
 ];
@@ -35,8 +35,13 @@ export const Header = () => {
     }, []);
 
     let path = usePathname();
+
     if (path?.includes("/work/")) {
       path = '/';
+    }
+
+    if (path?.includes("/blog/")) {
+      path = '/blog';
     }
 
     return (

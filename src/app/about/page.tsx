@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+
 import { Reveal } from '@/components/utils/reveal'
 
 import type { Metadata } from 'next'
@@ -106,8 +108,7 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="mt-4 font-light font-mont text-base md:text-lg lg:text-xl text-neutral-500 md:w-1/2">
-            Whatever you might need, don&apos;t hesitate to reach out!
-            Find the best ways to reach me under &apos;Contact&apos;.
+            Reach me at <Link href="mailto:hello@knlrvr.com">hello@knlrvr.com</Link>!
           </p>
         </Reveal>
       </div>

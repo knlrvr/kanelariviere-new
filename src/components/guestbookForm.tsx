@@ -18,7 +18,7 @@ const GuestbookForm = () => {
     <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
       <div className="flex flex-col items-center justify-center">
         <Reveal>
-          <span className="intro-text font-migra">Guestbook</span>
+          <span className="intro-text font-migra">Guestbook.</span>
         </Reveal>
         <Reveal>
           <p className="intro-about font-light text-center max-w-3xl mx-auto font-mont px-6 text-base md:text-lg lg:text-xl text-neutral-500">Sign in to sign my guestbook!</p>
