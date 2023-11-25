@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
                 title='TTRPCompanion'
                 category='Gaming Utility'
                 image={{
-                  src: '/ttrpc-brand-new.png',
+                  src: '/brand/ttrpc-brand-new.png',
                   alt: 'ttrpcompanion logo',
                   width: 1000,
                   height: 1000,
@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
                 title='The View From Inside'
                 category='Blog'
                 image={{
-                  src: '/tvfi-brand-new.png',
+                  src: '/brand/tvfi-brand-new.png',
                   alt: 'the view from inside',
                   width: 1000,
                   height: 1000,
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
                 title='KeepUp'
                 category='Social Media'
                 image={{
-                  src: '/keepup-brand-new.png',
+                  src: '/brand/keepup-brand-new.png',
                   alt: 'keepup brand',
                   width: 1000,
                   height: 1000,
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                 title='The Sky Is Fake'
                 category='Social Media'
                 image={{
-                  src: '/tsif-brand-new.png',
+                  src: '/brand/tsif-brand-new.png',
                   alt: 'tsif logo',
                   width: 1000,
                   height: 1000,
@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
                 title='Abstract'
                 category='Ecommerce'
                 image={{
-                  src: '/abs-brand-new.png',
+                  src: '/brand/abs-brand-new.png',
                   alt: 'abstract brand',
                   width: 1000,
                   height: 1000,
@@ -100,7 +100,7 @@ const Projects: React.FC = () => {
                 title='Personal Portfolio'
                 category='Misc'
                 image={{
-                  src: '/logo-new.png',
+                  src: '/brand/logo-new.png',
                   alt: 'knlrvr logo',
                   width: 1000,
                   height: 1000,
