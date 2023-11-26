@@ -20,7 +20,6 @@ export const generateStaticParams = async () => {
         params: {
             slug: post.slug,
         },
-        key: post.slug,
     }));
 }
 
@@ -51,9 +50,10 @@ const PostPage = (props: PostPageProps) => {
                 </Reveal>
             </div>
 
-            <article className="text prose prose-md md:prose-lg prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
+            <article key={post.data.title}
+                className="text prose prose-md md:prose-lg prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
-                    <ReactMarkdown key={post.matter} className=""
+                    <ReactMarkdown className=""
                     >
                         {post.content}
                     </ReactMarkdown>
