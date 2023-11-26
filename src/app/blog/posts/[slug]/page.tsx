@@ -18,15 +18,16 @@ export const generateStaticParams = async () => {
     const posts = getPostMetadata();
     return posts.map((post) => ({
         params: {
-        slug: post.slug,
-        }
+            slug: post.slug,
+        },
+        key: post.slug,
     }));
 }
 
 interface PostPageProps {
     params: {
         slug: string;
-    };
+    }
 }
 
 const PostPage = (props: PostPageProps) => {
