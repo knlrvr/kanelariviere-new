@@ -4,17 +4,13 @@ import Link from 'next/link'
 import { Reveal } from '@/components/utils/reveal';
 
 import getPostMetadata from '@/components/utils/PostMetadata';
+import PostPreview from '@/components/PostPreview';
 
 const Blog = () => {
 
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
-    <Link key={post.slug} className=""
-      href={`/blog/posts/${post.slug}`}>
-      <p className="font-light tracking-wide text-lg">{post.title}</p>
-      <p className="font-light text-sm md:text-base lg:text-lg text-neutral-500">{post.description}</p>
-      <span className="text-neutral-500 text-xs">{post.date}</span>
-    </Link>
+    <PostPreview key={post.slug} {...post}/>
   ));
 
   return (
