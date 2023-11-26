@@ -53,7 +53,7 @@ const PostPage = (props: PostPageProps) => {
 
             <article className="text prose prose-md md:prose-lg prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
-                    <ReactMarkdown className=""
+                    <ReactMarkdown key={post.matter} className=""
                     >
                         {post.content}
                     </ReactMarkdown>
