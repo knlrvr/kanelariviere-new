@@ -1,12 +1,10 @@
-// pages/[slug].tsx
+import { Reveal } from "@/components/utils/reveal"
 
-import { Reveal } from "@/components/utils/reveal";
 import getPostMetadata from "@/components/utils/PostMetadata";
-import fs from 'fs';
+
+import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-import { GetStaticProps } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -16,38 +14,27 @@ const getPostContent = (slug: string) => {
     return matterResult;
 }
 
-export const getStaticPaths = async () => {
+export const generateStaticParams = async () => {
     const posts = getPostMetadata();
-    const paths = posts.map((post) => ({
+    return posts.map((post) => ({
         params: {
             slug: post.slug,
+            key: post.slug,
         },
     }));
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-    const post = getPostContent(params.slug);
-    return {
-        props: {
-            post,
-        },
-    };
 }
 
 interface PostPageProps {
-    post: {
-        data: {
-            title: string;
-        };
-        content: string;
-    };
+    params: {
+        slug: string;
+    }
 }
 
-const PostPage = ({ post }: PostPageProps) => {
+const PostPage = (props: PostPageProps) => {
+
+    const slug = props.params.slug;
+    const post = getPostContent(slug);
+
     return (
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center">
@@ -66,13 +53,14 @@ const PostPage = ({ post }: PostPageProps) => {
 
             <article className="text prose prose-md md:prose-lg prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
-                    <ReactMarkdown className="">
+                    <ReactMarkdown className=""
+                    >
                         {post.content}
                     </ReactMarkdown>
                 </Reveal>
             </article>
         </div>
-    );
+    )
 }
 
-export default PostPage;
+export default PostPage
