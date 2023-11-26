@@ -6,6 +6,7 @@ import fs from 'fs';
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import { GetStaticProps } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -28,7 +29,7 @@ export const getStaticPaths = async () => {
     };
 }
 
-export const getStaticProps = async ({ params }: Params) => {
+export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
     const post = getPostContent(params.slug);
     return {
         props: {
