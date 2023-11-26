@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'code': 'var(--code-text)',
+        'heading': 'var(--heading)',
+      },
       fontFamily: {
         'migra': ['MIGRA', 'serif'],
       },
@@ -18,6 +22,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config
