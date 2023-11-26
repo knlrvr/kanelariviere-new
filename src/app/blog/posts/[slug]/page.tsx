@@ -14,14 +14,14 @@ const getPostContent = (slug: string) => {
     return matterResult;
 }
 
-export const generateStaticParams = async () => {
-    const posts = getPostMetadata();
-    return posts.map((post) => ({
-        params: {
-            slug: post.slug,
-        },
-    }));
-}
+// export const generateStaticParams = async () => {
+//     const posts = getPostMetadata();
+//     return posts.map((post) => ({
+//         params: {
+//             slug: post.slug,
+//         },
+//     }));
+// }
 
 interface PostPageProps {
     params: {
