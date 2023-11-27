@@ -2,7 +2,7 @@ import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import { notFound } from "next/navigation";
 
-import Image from "next/image";
+import Image from "@/app/opengraph-image";
 
 import getPostMetadata from "@/components/utils/PostMetadata";
 
@@ -43,20 +43,6 @@ interface CodeBlockProps {
     value: string;
 }
 
-const newImageUrl = async () => {
-    const currentImage = Image;
-    const newImage = currentImage.toString();
-    return (
-        <Image
-            src={newImage}
-            alt="og"
-            width={1000}
-            height={1000}
-            className=""
-        />
-    );
-}
-
 const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
@@ -75,7 +61,7 @@ export async function generateMetadata({
         description,
     } = post;
 
-    const ogImage = await newImageUrl();
+    const ogImage = Image();
 
     return {
         title, 
@@ -115,8 +101,7 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
-    const ogImage = newImageUrl();
-
+    const ogImage = Image();
     return (
         <section>
             <script
