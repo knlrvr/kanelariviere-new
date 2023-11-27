@@ -44,12 +44,6 @@ interface CodeBlockProps {
     value: string;
 }
 
-export const generateURL = () => {
-    const currentImage = Image;
-    const newImage = currentImage.toString();
-    return newImage;
-}
-
 export const newImageUrl = () => {
     const currentImage = Image;
     const newImage = currentImage.toString();
