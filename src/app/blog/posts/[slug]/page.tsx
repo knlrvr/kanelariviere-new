@@ -6,6 +6,10 @@ import getPostMetadata from "@/components/utils/PostMetadata";
 import { BsArrowLeft } from "react-icons/bs";
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 import fs from 'fs'
 import matter from "gray-matter";
@@ -35,10 +39,10 @@ interface PostPageProps {
 interface CodeBlockProps {
     language: string;
     value: string;
-  }
+}
 
-export const CodeBlock = ({ language, value }: CodeBlockProps) => {
-    return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
+const CodeBlock = ({ language, value }: CodeBlockProps) => {
+    return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
 const PostPage = (props: PostPageProps) => {
@@ -48,7 +52,7 @@ const PostPage = (props: PostPageProps) => {
 
     const components = {
         code: ({ node, inline, className, children, ...props }: any) => (
-            <CodeBlock language={props.language} value={children} />
+            <CodeBlock language={props.language} value={children}/>
         )
     }
 
@@ -76,7 +80,7 @@ const PostPage = (props: PostPageProps) => {
                 </Reveal>
             </div>
 
-            <article className="text prose prose-md prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
+            <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
                     <ReactMarkdown className=""
                         components={components}

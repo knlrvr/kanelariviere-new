@@ -14,18 +14,21 @@ I was looking for something to learn, and I'd found it. And it was a **dream** t
 
 ## Let's Dive In!
 The Convex docs are incredible. They have guides depending on your use case, and a ton of detailed information that will help you along the way. For me, I went ahead with their Next.js quickstart guide. I already had an existing project, so the first thing I needed to do was install the convex client and server library. 
-```
+
+`
 npm install convex
-```
+`
 
 Next, I had to set up a convex dev deployment.
-```
-npx convex dev
-```
-This prompted me to login with GitHub, create a project, and save prod & deployment URLS. This also created a `convex/` folder, where I needed to write the backend API functions. 
 
-With Convex installed and the `dev` command running to sync functions with the dev deployment, it was time to start coding. 
-First, I had to create a client component for the convex provider. I created  `ConvexClientProvider.tsx` in the `app/` folder, and pasted the provided code from Convex. This code would wrap the application. 
+`
+npx convex dev
+`
+
+This prompted me to login with GitHub, create a project, and save prod & deployment URLS. This also created a **convex/** folder, where I needed to write the backend API functions. 
+
+With Convex installed and the **dev** command running to sync functions with the dev deployment, it was time to start coding. 
+First, I had to create a client component for the convex provider. I created  **ConvexClientProvider.tsx** in the **app/** folder, and pasted the provided code from Convex. This code would wrap the application. 
 
 ```js
 // ConvexClientProvider.tsx
@@ -47,7 +50,8 @@ export default function ConvexClientProvider({
 
 However, this code isn't used at all. **Why?** Since I wanted the functionality of a guestbook, I obviously wanted to see who was signing it. For this, I needed some kind of authentication. Since I was using Convex, I decided to use [Clerk](https://docs.convex.dev/auth/clerk) for authentication, as they have a super easy setup. Setting the database up with authentication differs slightly from what's provided in the quickstart guide. 
 
-Before doing anything else in the project, I needed to create a new application in Clerk. Within Clerk, I chose the Convex template, and copied the Issuer URL from the Issuer input field, and saved the template. Now, in the `convex` folder, I created `auth.config.js` and pasted the following code from Convex, changing the `domain` to what was actually generated. 
+Before doing anything else in the project, I needed to create a new application in Clerk. Within Clerk, I chose the Convex template, and copied the Issuer URL from the Issuer input field, and saved the template. Now, in the **convex** folder, I created **auth.config.js** and pasted the following code from Convex, changing the *domain* to what was actually generated. 
+
 ```js
 // auth.config.js
 
@@ -61,12 +65,18 @@ export default {
 };
 ```
 
-Now I needed to run `npx convex dev` to sync the config to the backend. Once that was done, I could continue by installing clerk. 
-```
-npm install @clerk/clerk-react
-```
+Now I needed to sync the config to the backend. Once that was done, I could continue by installing clerk. 
 
-With Clerk installed and set up, I just needed to grab the Publishable Key to connect to the application. I also needed to import a few things from Clerk & Convex in the `app/layout.tsx` file to wrap the application. 
+`
+npx convex dev
+`
+
+`
+npm install @clerk/clerk-react
+`
+
+With Clerk installed and set up, I just needed to grab the Publishable Key to connect to the application. I also needed to import a few things from Clerk & Convex in the **app/layout.tsx** file to wrap the application.
+
 ```js
 // layout.tsx
 
@@ -76,6 +86,7 @@ import { ConvexReactClient } from 'convex/react'
 ```
 
 I also needed to define the client, which would be the Convex dev deployment url. 
+
 ```js
 // layout.tsx
 
@@ -83,6 +94,7 @@ const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 ```
 
 With all of that out of the way, I could now wrap the application with the necessary requirements. 
+
 ```js
 // layout.tsx
 
@@ -97,14 +109,15 @@ With all of that out of the way, I could now wrap the application with the neces
 </ClerkProvider>
 ```
 
-Perfect! The next thing I did was add the ability to sign in within `guestbook.tsx`. Luckily, sign in/out buttons are provided by Clerk. I'll also import `useUser` so I can access the current user data. 
+Perfect! The next thing I did was add the ability to sign in within **guestbook.tsx**. Luckily, sign in/out buttons are provided by Clerk. I'll also import **useUser** so I can access the current user data. 
+
 ```js
 // guestbook.tsx
 
 import { SignInButton, SignOutButton, useUser } from '@clerk/clerk-react'
 ```
 
-Now that visitors are able to sign in, I needed to add the functionality of 'signing'. I wanted visitors to be able to leave messages of some kind when they signed. So, within the `convex/` folder, I added the file `notes.tsx`. The form in `guestbook.tsx` will allow the visitor to input their message & `notes.tsx` will take the form input from the visitor and store it in the database.
+Now that visitors are able to sign in, I needed to add the functionality of 'signing'. I wanted visitors to be able to leave messages of some kind when they signed. So, within the **convex/** folder, I added the file **notes.tsx**. The form in **guestbook.tsx** will allow the visitor to input their message & **notes.tsx** will take the form input from the visitor and store it in the database.
 
 ```js
 // notes.tsx
@@ -125,6 +138,8 @@ export const createNote = mutation({
     },
 });
 ```
+
+####
 
 ```js
 // guestbook.tsx
@@ -161,7 +176,7 @@ const createNote = useMutation(api.notes.createNote);
 </div>
 ```
 
-The next thing I needed to do was display the messages left by visitors, so anyone who visited the page could see the messages as well, whether they were signed in or not. This meant I needed to `query` the data in the database and display each entry. I also needed to format the dates of the messages if I wanted to display them, since the date is returned as a Unix Timestamp. I could've used something like `toLocaleTimeString()` but I wanted the messages formatted in a very specific way. 
+The next thing I needed to do was display the messages left by visitors, so anyone who visited the page could see the messages as well, whether they were signed in or not. This meant I needed to **query** the data in the database and display each entry. I also needed to format the dates of the messages if I wanted to display them, since the date is returned as a Unix Timestamp. I could've used something like **toLocaleTimeString()** but I wanted the messages formatted in a very specific way. 
 
 ```js
 // notes.tsx
@@ -172,6 +187,8 @@ export const getNotes = query({
     }
 })
 ```
+
+####
 
 ```js
 // guestbook.tsx
@@ -202,10 +219,11 @@ const notes = useQuery(api.notes.getNotes);
 })}
 ```
 
-The complete code for `notes.tsx` & `guestbook.tsx` can be found below or in the [GitHub Repo for my new portfolio](https://github.com/knlrvr/kanelariviere-new). In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
+The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the [GitHub Repo for my new portfolio](https://github.com/knlrvr/kanelariviere-new). In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
 
-```js
-notes.tsx
+```js 
+// notes.tsx
+
 import { mutation, query } from './_generated/server'
 import { v } from 'convex/values'
 
@@ -228,6 +246,8 @@ export const getNotes = query({
     }
 })
 ```
+
+####
 
 ```js
 // guestbook.tsx
