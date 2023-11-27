@@ -1,6 +1,5 @@
 import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
-import Head from "next/head";
 
 import getPostMetadata, { PostMetadata } from "@/components/utils/PostMetadata";
 
@@ -16,7 +15,7 @@ import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -48,14 +47,7 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
-const data = getPostMetadata
-
-export const metadata: Metadata = {
-
-}
-
 const PostPage = (props: PostPageProps) => {
-    const postMetadata = getPostMetadata();
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
@@ -70,6 +62,16 @@ const PostPage = (props: PostPageProps) => {
     return (
         <>
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
+            <script 
+                type='application/ld+json'
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                       headline: post.data.title,
+                       description: post.data.description, 
+                    })
+                }}
+            />
             <div className="flex flex-col items-center justify-center">
                 <Reveal>
                     <span className="intro-text font-migra -mb-4">Blog.</span>
