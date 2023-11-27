@@ -68,7 +68,7 @@ export async function generateMetadata({
         description,
     } = post;
 
-    let ogImage = await newImageUrl();
+    let ogImage = 'https://images.unsplash.com/photo-1701077136756-3b8439292118';
 
     return {
         title, 
@@ -80,7 +80,7 @@ export async function generateMetadata({
             url: `https://knlrvr.dev/blog/${post.slug}`,
             images: [
                 {
-                    url: ogImage, 
+                    url: 'ogImage', 
                 },
             ],
         },
