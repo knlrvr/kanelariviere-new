@@ -16,7 +16,7 @@ export const contentType = 'image/png'
 export default async function Image({ params }: { params: { slug: string }}) {
   // Font
   const migra = fetch(
-    new URL('/Migra-Extralight.otf', import.meta.url)
+    new URL('../../public/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer())
  
   return new ImageResponse(
