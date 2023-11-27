@@ -15,7 +15,6 @@ import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import type { Metadata, ResolvingMetadata } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -43,24 +42,8 @@ interface CodeBlockProps {
     value: string;
 }
 
-type MetaProps = {
-    params: { id: string }
-}
-
 const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
-}
-
-export async function generateMetadata(
-    { params }: MetaProps, 
-): Promise<Metadata> {
-    const title = params.id
-
-    const post = await fetch(`https://.../${title}`).then((res) => res.json())
-
-    return {
-        title: `Kane Lariviere | ${post}`,
-    }
 }
 
 const PostPage = (props: PostPageProps) => {
@@ -77,6 +60,11 @@ const PostPage = (props: PostPageProps) => {
     return (
         <>
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
+            <Head>
+                <title>Kane Lariviere | {post.data.title}</title>
+                <meta name='description' content={post.data.description} />
+            </Head>
+
             <div className="flex flex-col items-center justify-center">
                 <Reveal>
                     <span className="intro-text font-migra -mb-4">Blog.</span>
