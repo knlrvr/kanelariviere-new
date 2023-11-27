@@ -108,6 +108,8 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
+    const ogImage = newImageUrl();
+
     return (
         <section>
             <script
@@ -117,6 +119,7 @@ const PostPage = (props: PostPageProps) => {
                     __html: JSON.stringify({
                         headline: post.data.title,
                         description: post.data.description,
+                        image: ogImage,
                         author: {
                             '@type': 'Person',
                             name: 'Kane Lariviere',
