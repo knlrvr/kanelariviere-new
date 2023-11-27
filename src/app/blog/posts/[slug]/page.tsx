@@ -79,9 +79,8 @@ const PostPage = (props: PostPageProps) => {
             <article className="text prose prose-md prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
                     <ReactMarkdown className=""
-                        children={post.content}
                         components={components}
-                    />
+                    >{post.content}</ReactMarkdown>
                 </Reveal>
             </article>
         </div>
