@@ -64,7 +64,7 @@ export async function generateMetadata(
     }
 }
 
-const PostPage = (props: PostPageProps) => {
+const PostPage = (params: MetaProps, props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
