@@ -13,10 +13,10 @@ export const size = {
 export const contentType = 'image/png'
  
 // Image generation
-export default async function Image() {
+export default async function Image({ params }: { params: { slug: string }}) {
   // Font
   const migra = fetch(
-    new URL('../../public/Migra-Extralight.otf', import.meta.url)
+    new URL('/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer())
  
   return new ImageResponse(
@@ -50,5 +50,5 @@ export default async function Image() {
         },
       ],
     }
-  )
+  );
 }

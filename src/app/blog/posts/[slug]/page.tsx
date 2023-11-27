@@ -61,8 +61,6 @@ export async function generateMetadata({
         description,
     } = post;
 
-    const ogImage = await Image();
-
     return {
         title, 
         description,
@@ -71,17 +69,11 @@ export async function generateMetadata({
             description,
             type: 'article',
             url: `https://knlrvr.dev/blog/${post.slug}`,
-            images: [
-                {
-                    url: ogImage, 
-                },
-            ],
         },
         twitter: {
             card: 'summary_large_image',
             title, 
             description,
-            images: [ogImage],
         },
     };
 }
@@ -101,7 +93,6 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
-    const ogImage = Image();
     return (
         <section>
             <script
@@ -111,7 +102,6 @@ const PostPage = (props: PostPageProps) => {
                     __html: JSON.stringify({
                         headline: post.data.title,
                         description: post.data.description,
-                        image: ogImage,
                         author: {
                             '@type': 'Person',
                             name: 'Kane Lariviere',
