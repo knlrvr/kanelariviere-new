@@ -1,16 +1,15 @@
 import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import { notFound } from "next/navigation";
-import image from '@/app/opengraph-image'
+import { ImageResponse } from "next/server";
 
-import getPostMetadata, { PostMetadata } from "@/components/utils/PostMetadata";
+import Image from "@/app/opengraph-image";
+
+import getPostMetadata from "@/components/utils/PostMetadata";
 
 import { BsArrowLeft } from "react-icons/bs";
 
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 import fs from 'fs'
@@ -18,8 +17,6 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
 import type { Metadata } from "next";
-
-// import type { Metadata } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -51,6 +48,12 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
+async function getImageUrl(): Promise<string> {
+    const imageResponse = await Image();
+    const imageUrl = (imageResponse as ImageResponse).url;
+    return imageUrl;
+}
+
 export async function generateMetadata({ 
     params
 }: any): Promise<Metadata | undefined> {
@@ -64,10 +67,9 @@ export async function generateMetadata({
         title,
         description,
     } = post;
-    let ogImage = image
-        ? `https://knlrvr.dev${image}`
-        : `https://knlrvr.dev/og?title=${title}`;
-
+    let ogImage = await getImageUrl();
+        // ? `https://knlrvr.dev${image}`
+        // : `https://knlrvr.dev/og?title=${title}`;
 
     return {
         title, 
@@ -87,7 +89,8 @@ export async function generateMetadata({
             card: 'summary_large_image',
             title, 
             description,
-        }
+            images: [ogImage],
+        },
     };
 }
 
