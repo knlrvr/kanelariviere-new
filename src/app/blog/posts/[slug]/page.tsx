@@ -2,8 +2,6 @@ import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import { notFound } from "next/navigation";
 
-import Image from "@/app/opengraph-image";
-
 import getPostMetadata from "@/components/utils/PostMetadata";
 
 import { BsArrowLeft } from "react-icons/bs";
@@ -61,6 +59,8 @@ export async function generateMetadata({
         description,
     } = post;
 
+    let ogImage = 'https://knlrvr.dev/og-bg.png'
+
     return {
         title, 
         description,
@@ -69,11 +69,17 @@ export async function generateMetadata({
             description,
             type: 'article',
             url: `https://knlrvr.dev/blog/${post.slug}`,
+            images: [
+                {
+                    url: ogImage,
+                }
+            ]
         },
         twitter: {
             card: 'summary_large_image',
             title, 
             description,
+            images: [ogImage]
         },
     };
 }
