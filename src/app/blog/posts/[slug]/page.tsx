@@ -45,7 +45,7 @@ interface CodeBlockProps {
 }
 
 const newImageUrl = async () => {
-    const currentImage = Image;
+    const currentImage = Image();
     const newImage = currentImage.toString();
     return newImage;
 }
