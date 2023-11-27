@@ -5,7 +5,7 @@ import getPostMetadata from "@/components/utils/PostMetadata";
 
 import { BsArrowLeft } from "react-icons/bs";
 
-// import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 
 import fs from 'fs'
 import matter from "gray-matter";
@@ -32,25 +32,25 @@ interface PostPageProps {
     }
 }
 
-// interface CodeBlockProps {
-//     language: string;
-//     value: string;
-//   }
+interface CodeBlockProps {
+    language: string;
+    value: string;
+  }
 
-// export const CodeBlock = ({ language, value }: CodeBlockProps) => {
-//     return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
-// }
+export const CodeBlock = ({ language, value }: CodeBlockProps) => {
+    return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>
+}
 
 const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
 
-    // const components = {
-    //     code: ({ node, inline, className, children, ...props }: any) => (
-    //         <CodeBlock language={props.language} value={children} />
-    //     )
-    // }
+    const components = {
+        code: ({ node, inline, className, children, ...props }: any) => (
+            <CodeBlock language={props.language} value={children} />
+        )
+    }
 
     return (
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
@@ -80,6 +80,7 @@ const PostPage = (props: PostPageProps) => {
                 <Reveal>
                     <ReactMarkdown className=""
                         children={post.content}
+                        components={components}
                     />
                 </Reveal>
             </article>
