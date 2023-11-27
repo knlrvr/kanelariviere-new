@@ -1,9 +1,8 @@
 import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import { notFound } from "next/navigation";
-import { ImageResponse } from "next/server";
 
-import Image from "@/app/opengraph-image";
+import Image from "next/image";
 
 import getPostMetadata from "@/components/utils/PostMetadata";
 
@@ -45,9 +44,17 @@ interface CodeBlockProps {
 }
 
 const newImageUrl = async () => {
-    const currentImage = Image();
+    const currentImage = Image;
     const newImage = currentImage.toString();
-    return newImage;
+    return (
+        <Image
+            src={newImage}
+            alt="og"
+            width={1000}
+            height={1000}
+            className=""
+        />
+    );
 }
 
 const CodeBlock = ({ language, value }: CodeBlockProps) => {
@@ -88,7 +95,7 @@ export async function generateMetadata({
             card: 'summary_large_image',
             title, 
             description,
-            images: [ogImage],
+            images: 'ogImage',
         },
     };
 }
