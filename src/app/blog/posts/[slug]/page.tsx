@@ -44,7 +44,7 @@ interface CodeBlockProps {
     value: string;
 }
 
-const newImageUrl = () => {
+const newImageUrl = async () => {
     const currentImage = Image;
     const newImage = currentImage.toString();
     return newImage;
@@ -68,7 +68,7 @@ export async function generateMetadata({
         description,
     } = post;
 
-    let ogImage = newImageUrl();
+    let ogImage = await newImageUrl();
 
     return {
         title, 
