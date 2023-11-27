@@ -1,5 +1,4 @@
 import { ImageResponse } from 'next/server'
-import { NextRequest } from 'next/server'
  
 // Route segment config
 export const runtime = 'edge'
@@ -14,10 +13,7 @@ export const size = {
 export const contentType = 'image/png'
  
 // Image generation
-export async function GET(req: NextRequest) {
-  const { searchParams } = req.nextUrl;
-  const title = searchParams.get('title');
-
+export async function GET() {
   const font = fetch(
     new URL('../../public/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -51,7 +47,6 @@ export async function GET(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-          {title}
         </div>
       </div>
     ),
