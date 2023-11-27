@@ -48,25 +48,14 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
-export const metadata = (slug: string, allMetadata: PostMetadata[]): Metadata => {
-    const post = allMetadata.find((metadata) => metadata.slug === slug);
+const data = getPostMetadata
 
-    if (post) {
-        return {
-            title: `Kane Lariviere | Blog | ${post.title}`,
-            description: post.description,
-            // Add other metadata properties as needed
-        };
-    } else {
-        // Return a default metadata object if the post is not found
-        return {
-            title: `Kane Lariviere | Blog`,
-            description: `Default description`,
-        };
-    }
-};
+export const metadata: Metadata = {
+
+}
 
 const PostPage = (props: PostPageProps) => {
+    const postMetadata = getPostMetadata();
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
