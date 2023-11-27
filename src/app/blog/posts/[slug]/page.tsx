@@ -2,7 +2,7 @@ import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import Head from "next/head";
 
-import getPostMetadata from "@/components/utils/PostMetadata";
+import getPostMetadata, { PostMetadata } from "@/components/utils/PostMetadata";
 
 import { BsArrowLeft } from "react-icons/bs";
 
@@ -48,15 +48,29 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
+const getPostSpecificMetadata = (slug: string, allMetadata: PostMetadata[]): Metadata => {
+    const post = allMetadata.find((metadata) => metadata.slug === slug);
+
+    if (post) {
+        return {
+            title: `Kane Lariviere | Blog | ${post.title}`,
+            description: post.description,
+            // Add other metadata properties as needed
+        };
+    } else {
+        // Return a default metadata object if the post is not found
+        return {
+            title: `Kane Lariviere | Blog`,
+            description: `Default description`,
+        };
+    }
+};
+
 const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
 
-    const metadata: Metadata = {
-        title: `Kane Lariviere | Blog | ${post.data.title}`,
-        description: `${post.data.description}`
-    }
 
     const components = {
         code: ({ node, inline, className, children, ...props }: any) => (
