@@ -44,7 +44,7 @@ interface CodeBlockProps {
     value: string;
 }
 
-export const newImageUrl = () => {
+const newImageUrl = () => {
     const currentImage = Image;
     const newImage = currentImage.toString();
     return newImage;
