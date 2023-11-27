@@ -53,18 +53,17 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
 
 export async function generateMetadata(
     { params }: MetaProps, 
-    parent: ResolvingMetadata
 ): Promise<Metadata> {
     const title = params.id
 
     const post = await fetch(`https://.../${title}`).then((res) => res.json())
 
     return {
-        title: `Kane Lariviere | ${title}`,
+        title: `Kane Lariviere | ${post}`,
     }
 }
 
-const PostPage = (params: MetaProps, props: PostPageProps) => {
+const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
