@@ -48,7 +48,7 @@ const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
-const getPostSpecificMetadata = (slug: string, allMetadata: PostMetadata[]): Metadata => {
+export const metadata = (slug: string, allMetadata: PostMetadata[]): Metadata => {
     const post = allMetadata.find((metadata) => metadata.slug === slug);
 
     if (post) {
