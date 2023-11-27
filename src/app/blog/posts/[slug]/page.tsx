@@ -43,8 +43,25 @@ interface CodeBlockProps {
     value: string;
 }
 
+type MetaProps = {
+    params: { id: string }
+}
+
 const CodeBlock = ({ language, value }: CodeBlockProps) => {
     return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
+}
+
+export async function generateMetadata(
+    { params }: MetaProps, 
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const slug = params.id
+
+    const post = await fetch(`https://.../${slug}`).then((res) => res.json())
+
+    return {
+        title: slug,
+    }
 }
 
 const PostPage = (props: PostPageProps) => {
@@ -60,13 +77,6 @@ const PostPage = (props: PostPageProps) => {
 
     return (
         <>
-
-        <Head>
-            <title>{post.data.title}</title>
-            <meta property="og:title" content={`Kane Lariviere | Blog`} key="title" />
-            <meta property="description" content={`${post.data.title}`} /> 
-        </Head>
-
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center">
                 <Reveal>
