@@ -51,7 +51,7 @@ export async function GET(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-          {title}
+          {/* {title} */}
         </div>
       </div>
     ),

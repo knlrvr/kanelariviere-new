@@ -13,7 +13,7 @@ export const size = {
 export const contentType = 'image/png'
  
 // Image generation
-export async function GET() {
+export default async function Image() {
   const font = fetch(
     new URL('../../public/Migra-Extralight.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());
@@ -52,8 +52,6 @@ export async function GET() {
     ),
     // ImageResponse options
     {
-      // For convenience, we can re-use the exported opengraph-image
-      // size config to also set the ImageResponse's width and height.
       ...size,
       fonts: [
         {
