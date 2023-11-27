@@ -55,12 +55,12 @@ export async function generateMetadata(
     { params }: MetaProps, 
     parent: ResolvingMetadata
 ): Promise<Metadata> {
-    const slug = params.id
+    const title = params.id
 
-    const post = await fetch(`https://.../${slug}`).then((res) => res.json())
+    const post = await fetch(`https://.../${title}`).then((res) => res.json())
 
     return {
-        title: slug,
+        title: `Kane Lariviere | ${title}`,
     }
 }
 
