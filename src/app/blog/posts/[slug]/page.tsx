@@ -44,14 +44,20 @@ interface CodeBlockProps {
     value: string;
 }
 
-const CodeBlock = ({ language, value }: CodeBlockProps) => {
-    return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
+export const generateURL = () => {
+    const currentImage = Image;
+    const newImage = currentImage.toString();
+    return newImage;
 }
 
-async function getImageUrl(): Promise<string> {
-    const imageResponse = await Image();
-    const imageUrl = (imageResponse as ImageResponse).url;
-    return imageUrl;
+export const newImageUrl = () => {
+    const currentImage = Image;
+    const newImage = currentImage.toString();
+    return newImage;
+}
+
+const CodeBlock = ({ language, value }: CodeBlockProps) => {
+    return <SyntaxHighlighter language={language} style={a11yDark}>{value}</SyntaxHighlighter>
 }
 
 export async function generateMetadata({ 
@@ -67,9 +73,8 @@ export async function generateMetadata({
         title,
         description,
     } = post;
-    let ogImage = await getImageUrl();
-        // ? `https://knlrvr.dev${image}`
-        // : `https://knlrvr.dev/og?title=${title}`;
+
+    let ogImage = newImageUrl();
 
     return {
         title, 
