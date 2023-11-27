@@ -63,7 +63,7 @@ const PostPage = (props: PostPageProps) => {
 
         <Head>
             <title>{post.data.title}</title>
-            <meta property="og:title" content={`Kane Lariviere | ${post.data.title}`} key="title" />
+            <meta property="og:title" content={`Kane Lariviere | Blog`} key="title" />
             <meta property="description" content={`${post.data.title}`} /> 
         </Head>
 
