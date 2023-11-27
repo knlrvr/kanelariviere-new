@@ -16,6 +16,8 @@ import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
+import type { Metadata } from "next";
+
 const getPostContent = (slug: string) => {
     const folder = "posts/";
     const file = `${folder}/${slug}.md`;
@@ -28,6 +30,10 @@ export const generateStaticParams = async () => {
     const posts = getPostMetadata();
     return posts.map((post) => ({
         slug: post.slug,
+        metadata: {
+            title: `Kane Lariviere | Blog | ${post.slug}`,
+            description: `${post.slug}`
+        }
     }));
 }
 
@@ -60,11 +66,6 @@ const PostPage = (props: PostPageProps) => {
     return (
         <>
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
-            <Head>
-                <title>Kane Lariviere | {post.data.title}</title>
-                <meta name='description' content={post.data.description} />
-            </Head>
-
             <div className="flex flex-col items-center justify-center">
                 <Reveal>
                     <span className="intro-text font-migra -mb-4">Blog.</span>
