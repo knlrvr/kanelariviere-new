@@ -61,7 +61,7 @@ export async function generateMetadata({
         description,
     } = post;
 
-    const ogImage = Image();
+    const ogImage = await Image();
 
     return {
         title, 
@@ -73,7 +73,7 @@ export async function generateMetadata({
             url: `https://knlrvr.dev/blog/${post.slug}`,
             images: [
                 {
-                    url: 'ogImage', 
+                    url: ogImage, 
                 },
             ],
         },
@@ -81,7 +81,7 @@ export async function generateMetadata({
             card: 'summary_large_image',
             title, 
             description,
-            images: 'ogImage',
+            images: [ogImage],
         },
     };
 }
