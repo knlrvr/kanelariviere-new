@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
+import Head from "next/head";
 
 import getPostMetadata from "@/components/utils/PostMetadata";
 
@@ -14,6 +15,7 @@ import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import type { Metadata, ResolvingMetadata } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -57,6 +59,14 @@ const PostPage = (props: PostPageProps) => {
     }
 
     return (
+        <>
+
+        <Head>
+            <title>{post.data.title}</title>
+            <meta property="og:title" content={`Kane Lariviere | ${post.data.title}`} key="title" />
+            <meta property="description" content={`${post.data.title}`} /> 
+        </Head>
+
         <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center">
                 <Reveal>
@@ -88,6 +98,7 @@ const PostPage = (props: PostPageProps) => {
                 </Reveal>
             </article>
         </div>
+        </>
     )
 }
 

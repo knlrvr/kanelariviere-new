@@ -6,6 +6,13 @@ import { Reveal } from '@/components/utils/reveal';
 import getPostMetadata from '@/components/utils/PostMetadata';
 import PostPreview from '@/components/PostPreview';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | Blog',
+  description: 'Blog | Kane Lariviere',
+}
+
 const Blog = () => {
 
   const postMetadata = getPostMetadata();
