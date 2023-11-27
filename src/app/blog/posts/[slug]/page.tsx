@@ -68,7 +68,7 @@ export async function generateMetadata({
         description,
     } = post;
 
-    let ogImage = 'https://images.unsplash.com/photo-1701077136756-3b8439292118';
+    const ogImage = await newImageUrl();
 
     return {
         title, 
