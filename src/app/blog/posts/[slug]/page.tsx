@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/utils/reveal"
 import Link from 'next/link'
 import { notFound } from "next/navigation";
+import image from '@/app/opengraph-image'
 
 import getPostMetadata, { PostMetadata } from "@/components/utils/PostMetadata";
 
@@ -63,6 +64,10 @@ export async function generateMetadata({
         title,
         description,
     } = post;
+    let ogImage = image
+        ? `https://knlrvr.dev${image}`
+        : `https://knlrvr.dev/og?title=${title}`;
+
 
     return {
         title, 
@@ -72,6 +77,11 @@ export async function generateMetadata({
             description,
             type: 'article',
             url: `https://knlrvr.dev/blog/${post.slug}`,
+            images: [
+                {
+                    url: ogImage, 
+                },
+            ],
         },
         twitter: {
             card: 'summary_large_image',
