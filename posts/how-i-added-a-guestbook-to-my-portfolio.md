@@ -10,9 +10,6 @@ As a (mostly) self-taught dev, I try to keep up with current news, making sure I
 
 I was looking for something to learn, and I'd found it. And it was a **dream** to work with. So, here's how I added a guestbook to my portfolio using Convex.   
 
-##### Note
-> Most of this is the code I used to accomplish this with some brief descriptions. For more information, visit the [Convex Quickstart Guide](https://docs.convex.dev/quickstarts) or [Setting Up Convex & Clerk](https://docs.convex.dev/auth/clerk). Just about everything that I used to accomplish this can be found within the Convex documentation. 
-
 ## 
 
 ## Let's Dive In!

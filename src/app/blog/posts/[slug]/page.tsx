@@ -1,6 +1,9 @@
 import { Reveal } from "@/components/utils/reveal"
+import Link from 'next/link'
 
 import getPostMetadata from "@/components/utils/PostMetadata";
+
+import { BsArrowLeft } from "react-icons/bs";
 
 import fs from 'fs'
 import matter from "gray-matter";
@@ -42,13 +45,21 @@ const PostPage = (props: PostPageProps) => {
 
             <div className="my-8">
                 <Reveal>
-                    <span className="font-light tracking-wide text-3xl md:text-4xl xl:text-5xl">
-                        {post.data.title}
-                    </span>
+                    <div className="flex flex-col space-y-4">
+                        <Link href="/blog" className="text-2xl w-fit">
+                            <BsArrowLeft />
+                        </Link>
+                        <span className="font-light tracking-wide text-3xl md:text-4xl xl:text-5xl">
+                            {post.data.title}
+                        </span>
+                        <span className="text-neutral-500 text-sm">
+                            {post.data.date}
+                        </span>
+                    </div>
                 </Reveal>
             </div>
 
-            <article className="text prose prose-md md:prose-lg prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
+            <article className="text prose prose-md prose-neutral prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
                 <Reveal>
                     <ReactMarkdown className=""
                     >
