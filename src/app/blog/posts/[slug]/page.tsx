@@ -16,7 +16,7 @@ import fs from 'fs'
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 // import type { Metadata } from "next";
 
@@ -54,6 +54,7 @@ export async function generateMetadata({
     params
 }: any): Promise<Metadata | undefined> {
     let post = getPostMetadata().find((post) => post.slug === params.slug);
+    
     if (!post) {
         return;
     }
@@ -80,7 +81,7 @@ export async function generateMetadata({
     };
 }
 
-const PostPage = ( params: Metadata , props: PostPageProps) => {
+const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
