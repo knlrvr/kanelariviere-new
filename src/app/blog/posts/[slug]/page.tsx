@@ -30,10 +30,6 @@ export const generateStaticParams = async () => {
     const posts = getPostMetadata();
     return posts.map((post) => ({
         slug: post.slug,
-        metadata: {
-            title: `Kane Lariviere | Blog | ${post.slug}`,
-            description: `${post.slug}`
-        }
     }));
 }
 
@@ -56,6 +52,11 @@ const PostPage = (props: PostPageProps) => {
 
     const slug = props.params.slug;
     const post = getPostContent(slug);
+
+    const metadata: Metadata = {
+        title: `Kane Lariviere | Blog | ${post.data.title}`,
+        description: `${post.data.description}`
+    }
 
     const components = {
         code: ({ node, inline, className, children, ...props }: any) => (
