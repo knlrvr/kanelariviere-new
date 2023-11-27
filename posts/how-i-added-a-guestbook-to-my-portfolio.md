@@ -10,20 +10,18 @@ As a (mostly) self-taught dev, I try to keep up with current news, making sure I
 
 I was looking for something to learn, and I'd found it. And it was a **dream** to work with. So, here's how I added a guestbook to my portfolio using Convex.   
 
-## 
-
 ## Let's Dive In!
 The Convex docs are incredible. They have guides depending on your use case, and a ton of detailed information that will help you along the way. For me, I went ahead with their Next.js quickstart guide. I already had an existing project, so the first thing I needed to do was install the convex client and server library. 
 
-`
+```
 npm install convex
-`
+```
 
 Next, I had to set up a convex dev deployment.
 
-`
+```
 npx convex dev
-`
+```
 
 This prompted me to login with GitHub, create a project, and save prod & deployment URLS. This also created a **convex/** folder, where I needed to write the backend API functions. 
 
@@ -67,13 +65,13 @@ export default {
 
 Now I needed to sync the config to the backend. Once that was done, I could continue by installing clerk. 
 
-`
+```
 npx convex dev
-`
+```
 
-`
+```
 npm install @clerk/clerk-react
-`
+```
 
 With Clerk installed and set up, I just needed to grab the Publishable Key to connect to the application. I also needed to import a few things from Clerk & Convex in the **app/layout.tsx** file to wrap the application.
 
@@ -139,7 +137,7 @@ export const createNote = mutation({
 });
 ```
 
-####
+
 
 ```js
 // guestbook.tsx
@@ -188,7 +186,7 @@ export const getNotes = query({
 })
 ```
 
-####
+
 
 ```js
 // guestbook.tsx
@@ -247,7 +245,7 @@ export const getNotes = query({
 })
 ```
 
-####
+
 
 ```js
 // guestbook.tsx
