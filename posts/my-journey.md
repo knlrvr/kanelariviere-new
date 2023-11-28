@@ -6,6 +6,8 @@ date: 11/01/2023
 
 My hope is that this blog documents my journey and serves as a place where I can learn, teach, and inspire. But you should probably know who I am first. I didn't learn to code in the womb. I didn't get into MIT right after high school. I don't have an uncle who works at Meta. I've never hacked into the mainframe. So *why* should you care about what I have to say?
 
+###### Disclaimer: There's some oversimplifications in this post, but hopefully it doesn't detract from the point I'm trying to make! Thanks! 
+
 ## How It Started
 When I was little, we had this [massive 55" Mitsubishi TV](https://www.recycledgoods.com/mitsubishi-55-widescreen-rear-projection-tv-ws-55809/) that I would **dream** about taking apart. I wanted to witness how it worked, and why it worked. But you can't disassemble the 300 lb. family TV when you're 8 years old. It's just not sensible. We didn't have much, and we certainly didn't have anything to spare a curious kid who was **absolutely** going to break it. So what did I break instead? Well, nothing. 
 
