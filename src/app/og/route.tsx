@@ -31,10 +31,10 @@ export async function GET(req: NextRequest) {
             marginRight: 190,
             marginBottom: 180,
             display: 'flex',
-            fontSize: 180,
+            fontSize: 130,
             letterSpacing: '-0.025em',
             color: 'white',
-            lineHeight: '75px',
+            lineHeight: '125px',
             whiteSpace: 'pre-wrap',
           }}
         >
