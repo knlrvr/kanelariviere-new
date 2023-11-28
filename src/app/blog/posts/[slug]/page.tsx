@@ -134,14 +134,14 @@ const PostPage = (props: PostPageProps) => {
                             <span className="font-light tracking-wide text-3xl md:text-4xl xl:text-5xl">
                                 {post.data.title}
                             </span>
-                            <span className="text-neutral-500 text-sm">
+                            <span className="text-neutral-500 tracking-wider text-sm">
                                 {post.data.date}
                             </span>
                         </div>
                     </Reveal>
                 </div>
 
-                <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-code:text-code">
+                <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-headings:font-light prose-headings:tracking-wide prose-code:text-code prose-h6:text-sm prose-h6:text-neutral-500 prose-p:font-light">
                     <Reveal>
                         <ReactMarkdown className=""
                             components={components}
