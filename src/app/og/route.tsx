@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
           style={{
             marginLeft: 70,
             marginRight: 190,
-            marginBottom: 180,
+            marginBottom: 120,
             display: 'flex',
             fontSize: 130,
             letterSpacing: '-0.025em',
