@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
             fontSize: 130,
             letterSpacing: '-0.025em',
             color: 'white',
-            lineHeight: '125px',
+            lineHeight: '130px',
             whiteSpace: 'pre-wrap',
           }}
         >
