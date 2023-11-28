@@ -23,8 +23,6 @@ export async function GET(req: NextRequest) {
           alignItems: 'flex-start',
           justifyContent: 'center',
           backgroundImage: 'url(https://knlrvr.dev/og-bg.png)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
         }}
       >
         <div 
