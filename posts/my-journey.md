@@ -1,5 +1,5 @@
 --- 
-title: My Journey Into Web Dev
+title: My Journey Into Front End & Full Stack Development
 description: How It Started & Where I Am Now
 date: 11/01/2023
 ---
@@ -57,7 +57,7 @@ The unfortunate reality is that, without a degree, finding a job is going to be 
 ###### Lesson: Find something that excites you and see it through. It might take some trial and error, but once you've found it, you'll know. I spent so long thinking I was too good for HTML, and it's exactly what sent me down the path I'm on now. Maybe go to college, too. 
 
 ## The Present
-The end of 2023! I've been working full time, finishing up my degree, and freelancing & working on personal projects in any free time that I have left. The road has been anything but smooth, but I've loved every bit of it so far. Between everything that I'm doing, I'm excited to keep going. 
+The end of 2023! I've been working full time, finishing up my degree, and freelancing & working on personal projects in any free time that I have left. The road has been anything but smooth, but I've loved every bit of it so far. Between everything that I'm doing, I'm excited to keep going.
 
 ###### Lesson: *Do not give up*. No matter what. If you're working full time, if you're in school full time, if you're barely finding time for what you love, just keep pushing. 
 
