@@ -7,6 +7,7 @@ export interface PostMetadata {
     date: string,
     description: string,
     slug: string,
+    image?: string,
 }
 
 const getPostMetadata = (): PostMetadata[] => {

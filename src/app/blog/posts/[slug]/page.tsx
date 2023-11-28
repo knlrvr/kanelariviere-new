@@ -57,9 +57,12 @@ export async function generateMetadata({
     let {
         title,
         description,
+        image,
     } = post;
 
-    let ogImage = 'https://knlrvr.dev/og-bg.png'
+    let ogImage = image
+    ? `https://knlrvr.dev${image}`
+    : `https://knlrvr.dev/og?title=${title}`
 
     return {
         title, 
