@@ -69,6 +69,6 @@ Here are some very important lessons I've learned so far -
   3. **Learning is not linear**. You'll excel on some days, and you'll feel behind on others. That's okay.
   4. **Pick a niche**! Whatever you like, do that!
   5. **Network**. Network, network, network.
-  6. **It's never too late**. 
+  6. **It's never too late**. Whether you're switching careers, going back to school, or anything else, there is no schedule or predefined path. 
 
 I'm not a seasoned professional with years of experience in a corporate environment. I'm not a prodigy with groundbreaking ideas that will revolutionize the industry. You don't have to be either. I'm just someone that rediscovered their passion for breaking things and putting them back together. It just so happens that the things I break are also the things I've built. And I believe that is equally as exciting. 
