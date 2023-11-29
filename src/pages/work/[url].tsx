@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { GetStaticProps, GetStaticPaths } from 'next';
 import '../../app/globals.css';
 
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 
 import { Reveal } from '@/components/utils/reveal';
 
