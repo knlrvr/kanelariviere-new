@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { GetStaticProps, GetStaticPaths } from 'next';
 import '../../app/globals.css';
 
+import { Metadata } from 'next';
+
 import { Reveal } from '@/components/utils/reveal';
 
 import {  
@@ -44,6 +46,8 @@ interface Project {
 interface ProjectDetailsPageProps {
   projectData: Project;
 }
+
+// generate metadata w og
 
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) => {
   // const paragraphs = projectData.description.split('\n');
