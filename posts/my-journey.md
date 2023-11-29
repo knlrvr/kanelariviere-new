@@ -52,7 +52,7 @@ console.log('Hello World! Goodbye Python!')
 
 Shortly after falling down this rabbit hole, I started college again. I don't think college is absolutely necessary to be successful in this field, but it's something that I wanted to see through. Thankfully, I didn't put college off for *too* long. I just took some small breaks that let me breathe and realign, so a lot of what I learned stayed with me. 
 
-The unfortunate reality is that, without a degree, finding a job is going to be an uphill battle. It's not impossible, but you will have to better than everyone else. 
+The unfortunate reality is that, without a degree, finding a job is going to be an uphill battle. It's not impossible, but you will have to be  better than everyone else. 
 
 ###### Lesson: Find something that excites you and see it through. It might take some trial and error, but once you've found it, you'll know. I spent so long thinking I was too good for HTML, and it's exactly what sent me down the path I'm on now. Maybe go to college, too. 
 
