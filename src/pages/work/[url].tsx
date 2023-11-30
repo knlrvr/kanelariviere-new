@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head';
+
 import { GetStaticProps, GetStaticPaths } from 'next';
 import '../../app/globals.css';
-
-import { Metadata } from 'next';
 
 import { Reveal } from '@/components/utils/reveal';
 
@@ -47,17 +47,17 @@ interface ProjectDetailsPageProps {
   projectData: Project;
 }
 
-// generate metadata w og
-
-export const metadata: Metadata = {
-  title: `Kane Lariviere | Work`,
-}
-
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) => {
   // const paragraphs = projectData.description.split('\n');
 
   return (
     <div className="min-h-screen max-w-7xl mx-auto">
+      <Head>
+        <title>Kane Lariviere | {projectData.title}</title>
+        <meta property='og:image' content='https://knlrvr.dev/og-bg-2.png' />
+      </Head>
+
+
       <Header />
 
       <div className="pt-12 md:pt-20 p-4">
