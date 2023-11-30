@@ -53,7 +53,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
   return (
     <div className="min-h-screen max-w-7xl mx-auto">
       <Head>
-        <meta property='og:title' content={`{'Kane Lariviere | ${projectData.title}'}`} key='title' />
+        <meta property='og:title' content={`Kane Lariviere | ${projectData.title}`} key='title' />
         <meta property='og:image' content='https://knlrvr.dev/og-bg-2.png' />
       </Head>
 
