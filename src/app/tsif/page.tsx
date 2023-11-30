@@ -39,7 +39,7 @@ const TSIF = () => {
               className="inline-flex items-center space-x-2 hover:text-blue-400 duration-300">
               <span>theskyisfake.org</span>
               <BsBoxArrowUpRight className="text-sm" />
-            </Link>.
+            </Link>
           </p>
         </div>
         </div>

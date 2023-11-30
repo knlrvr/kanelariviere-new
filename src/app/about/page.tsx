@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Reveal } from '@/components/utils/reveal'
 
 import type { Metadata } from 'next'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | About',
@@ -43,6 +44,12 @@ const About = () => {
                 My work mostly consists of code, but I&apos;ve had the pleasure of working in various areas of digital design, including
                 but not limited to front-end development, UI/UX design, & graphic design.
               </p>
+
+              <Link href="/LariviereK.pdf" target="_blank"
+                className="text-neutral-500 flex items-center space-x-2 font-light text-sm group">
+                <span className="group-hover:text-blue-400 duration-300">View My Resume</span>
+                <BsBoxArrowUpRight className="text-sm group-hover:text-blue-400 duration-300" />
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -108,7 +115,7 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="mt-4 font-light font-mont text-base md:text-lg lg:text-xl text-neutral-500 md:w-1/2">
-            Reach me at <Link href="mailto:hello@knlrvr.com">hello@knlrvr.com</Link>!
+            Reach me at <Link href="mailto:hello@knlrvr.com" className="hover:text-blue-400 duration-300">hello@knlrvr.com</Link>!
           </p>
         </Reveal>
       </div>
