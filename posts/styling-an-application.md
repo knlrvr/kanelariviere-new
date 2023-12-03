@@ -144,7 +144,7 @@ Personally, Sass is my #2 go-to for styling. It's easy and intuitive.
 The biggest drawback to any of these methods is naming. If you're working on a large application, you'll have to get pretty creative with names, regardless of the styling conventions you might be using. This is something that I, personally, absolutely hate.
 
 ## ✨ Tailwind ✨
-Tailwind CSS is my go-to for most of my projects, and I won't apologize for that. It gets a lot of hate, though. A lot of folks see Tailwind as a shortcut to avoid actually learning CSS, but I believe the only way to effectively use Tailwind is by knowing CSS. I'm not saying that people don't use it for that reason, but to write off an entire framework because a few people take advantage of it seems strange to me. 
+[Tailwind CSS](https://tailwindcss.com/) is my go-to for most of my projects, and I won't apologize for that. It gets a lot of hate, though. A lot of folks see Tailwind as a shortcut to avoid actually learning CSS, but I believe the only way to effectively use Tailwind is by knowing CSS. I'm not saying that people don't use it for that reason, but to write off an entire framework because a few people take advantage of it seems strange to me. 
 
 Tailwind is a utility-first framework, so it doesn't provide predefined classes for elements like buttons, or tables. You'll still have to design & build components yourself. 
 
