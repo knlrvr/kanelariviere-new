@@ -94,7 +94,7 @@ function Container() {
 ###### Tip &mdash; The reason I wouldn't recommend CSS-in-JS without a library is the lack of support for CSS features like ***:hover***, ***:active***, ***:focused***, etc. Libraries like styled-components offer this support out of the box. 
 
 
-CSS-in-JS, when implemented correctly, solves **a lot** of problems. The biggest benefit is the ability to scope styles only to their intended elements since the necessary CSS is colocated. The benefits also include auto-generated unique class names, automatic vendor prefixing & very, very easy maintenance. 
+CSS-in-JS, when implemented correctly, solves **a lot** of problems. The biggest benefit is the ability to scope styles only to their intended elements since the necessary CSS is colocated. The benefits also include auto-generated unique class names, automatic vendor prefixing, taking advantage of the JS ecosystem & very, very easy maintenance. 
 
 The biggest issue I've come across with CSS-in-JS is it's impact on performance. [This deep dive](https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b) is a really good explanation of what exactly that means, and how you can avoid similar performance issues when using CSS-in-JS. 
 
