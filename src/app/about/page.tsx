@@ -46,7 +46,7 @@ const About = () => {
               </p>
 
               <Link href="/LariviereK.pdf" target="_blank"
-                className="text-neutral-500 flex items-center space-x-2 font-light text-sm group">
+                className="text-neutral-500 flex items-center space-x-2 font-light text-sm group w-fit">
                 <span className="group-hover:text-blue-400 duration-300">View My Resume</span>
                 <BsBoxArrowUpRight className="text-sm group-hover:text-blue-400 duration-300" />
               </Link>
