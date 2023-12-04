@@ -22,7 +22,7 @@ Link the CSS to your HTML or import it in your JSX and you're good to go! That's
 ```jsx
 import 'globals.css'
 
-<p>This is text in a JSX file!</p>
+<p className="text">This is text in a JSX file!</p>
 ```
 
 ```css
