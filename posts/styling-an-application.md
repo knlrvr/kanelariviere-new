@@ -192,11 +192,11 @@ Tailwind also allows you to set arbitrary values if the predefined values just a
 ```
 
 ```jsx
-<div className="div"> Hello! </div>
+<div className="text"> Hello! </div>
 ```
 
 ```css
-.div {
+.text {
   display: flex;
   justify-content: center;
   padding: 2.25rem;
