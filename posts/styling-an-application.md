@@ -98,8 +98,41 @@ CSS-in-JS, when implemented correctly, solves **a lot** of problems. The biggest
 
 The biggest issue I've come across with CSS-in-JS is it's impact on performance. [This deep dive](https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b) is a really good explanation of what exactly that means, and how you can avoid similar performance issues when using CSS-in-JS. 
 
+## CSS Modules
+[CSS Modules](https://github.com/css-modules/css-modules) locally scope all class names by default. What this means is that you can reuse class names in different files, since the class names change to unique class names at build time so they won't modify any other components. 
+
+```css
+.text {
+  color: #222;
+  font-size: 14px;
+}
+
+.bigText {
+  font-size: 3rem;
+  line-height: 1;
+}
+```
+
+```jsx
+import styles from './[fileName].module.css'
+
+<h1 className={styles.bigText}>I'm big text!</div>
+<p className={styles.text}>I'm smaller text!</p>
+```
+
+###### Tip &mdash; It's advised (but not required) to use camelCase for local class identifiers. 
+
+The benefit to CSS Modules is that it's still just CSS. They take care of the setbacks presented by vanilla CSS, but have a few setbacks of their own &mdash;
+
+**Tool Configuration**. You may have to configure specific build tools and loaders, like Webpack and 'css-loader' to handle the modules. 
+
+**One size does not fit all**. CSS Modules introduce a certain *unnecessary* complexity that might not justify the effort they require, especially during the initial setup. 
+
+CSS Modules aren't very beginner friendly, but they're a great way to style your application if you're willing to do the work. 
+
+
 ## CSS Preprocessors
-In the simplest of terms, preprocessors compile the code you write into something else. CSS preprocessors compile code written in the selected preprocessors syntax and generate CSS based on that code. It sounds like vanilla CSS with extra steps, but preprocessors offer a new dimension to writing CSS that makes them far easier to work with overall. 
+In the simplest of terms, preprocessors compile the code you write into something else. CSS preprocessors compile code written in the selected preprocessors syntax and generate CSS based on that code. Well, *this* sounds like vanilla CSS with extra steps, but preprocessors offer a new dimension to writing CSS that makes them far easier to work with overall. 
 
 ## Sass
 [Sass](https://sass-lang.com/) is a CSS preprocessor. Sass introduces features that lend to writing reusable and maintainable styling, making it a go-to for many projects. For example &mdash;
@@ -141,7 +174,7 @@ p {
 Personally, Sass is my #2 go-to for styling. It's easy and intuitive. 
 
 ## But Naming Is... Hard
-The biggest drawback to any of these methods is naming. If you're working on a large application, you'll have to get pretty creative with names, regardless of the styling conventions you might be using. This is something that I, personally, absolutely hate.
+The biggest drawback to most of these methods is naming. If you're working on a large application, you'll have to get pretty creative with names, regardless of the styling conventions you might be using. This is something that I, personally, absolutely hate.
 
 ## ✨ Tailwind ✨
 [Tailwind CSS](https://tailwindcss.com/) is my go-to for most of my projects, and I won't apologize for that. It gets a lot of hate, though. A lot of folks see Tailwind as a shortcut to avoid actually learning CSS, but I believe the only way to effectively use Tailwind is by knowing CSS. I'm not saying that people don't use it for that reason, but to write off an entire framework because a few people take advantage of it seems strange to me. 
