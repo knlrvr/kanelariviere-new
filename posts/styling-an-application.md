@@ -61,7 +61,7 @@ const Container = styled.div`
 </Container>
 ```
 
-or without a library at all (*which I don't recommend*) by creating an object and passing the CSS properties inside of it then passing the object to the chosen element, or by writing it directly within the element.
+or without a library at all (*which I don't recommend*) &mdash; by creating an object *or* by writing it directly within the element.
 
 ```jsx
 const containerStyle = {
