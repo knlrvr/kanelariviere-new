@@ -44,7 +44,7 @@ const About = () => {
                 My work mostly consists of code, but I&apos;ve had the pleasure of working in various areas of digital design, including
                 but not limited to front-end development, UI/UX design, & graphic design.
                 <br /><br />
-                It's my goal in my work to commit myself to accessibility, equity, education, & sustainability and I do my best to 
+                It&apos;s my goal in my work to commit myself to accessibility, equity, education, & sustainability and I do my best to 
                 contribute to those ideals whenever and however I can. 
                 <br /><br />
                 Outside of work, I try to hone my creativity through multiple outlets. 
