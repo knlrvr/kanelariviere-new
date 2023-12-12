@@ -53,7 +53,7 @@ const CircadianTheme = () => {
                   `}
                   onClick={() => handleHourClick(hour)}
               >
-                <span className={`w-[2px] duration-200 md:group-hover:h-10
+                <span className={`w-[2px] duration-200 group-hover:h-10
                 
                 ${hour < 7 || hour > 16 ? 
                   'bg-neutral-700 h-4' 
