@@ -58,11 +58,16 @@ const Footer = () => {
           <Reveal>
             <div className="flex flex-col items-start">
               <span className="font-migra text-2xl">Contact</span>
-              <ul className="flex flex-col space-y-2 font-light text-sm">
+              <ul className="flex flex-col font-light text-sm">
                 <li>
                   <Link href="mailto:hello@knlrvr.com" target="_blank">
                     Email
                   </Link>
+                </li>
+                <li className="mt-9 font-migra text-2xl">Availability</li>
+                <li className="mt-2 flex items-center space-x-2">
+                  <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                  <span className="text-xs">Currently Available</span>
                 </li>
               </ul>
             </div>
