@@ -38,7 +38,7 @@ const About = () => {
               <p className="font-migra text-3xl md:text-4xl xl:text-5xl">
                 Software engineer. Full stack developer. Designer.
               </p>
-              <p className="font-light font-mont text-base md:text-lg lg:text-xl">
+              <p className="font-light font-mont text-base md:text-lg lg:text-xl text-neutral-500">
                 As a freelance developer, I&apos;ve had to wear many hats. I deliver high-quality, production-ready code 
                 for a diverse array of projects for clients, tailored to their needs and the needs of the commununities they serve. 
                 My work mostly consists of code, but I&apos;ve had the pleasure of working in various areas of digital design, including
