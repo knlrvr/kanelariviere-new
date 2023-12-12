@@ -127,15 +127,15 @@ const PostPage = (props: PostPageProps) => {
 
                 <div className="my-8">
                     <Reveal>
-                        <div className="flex flex-col space-y-4">
-                            <Link href="/blog" className="text-2xl w-fit">
+                        <div className="flex flex-col">
+                            <Link href="/blog" className="text-2xl w-fit mb-4">
                                 <BsArrowLeft />
                             </Link>
-                            <span className="font-light tracking-wide text-3xl md:text-4xl xl:text-5xl">
+                            <span className="font-migra text-4xl sm:text-5xl md:text-7xl">
                                 {post.data.title}
                             </span>
-                            <span className="text-neutral-500 tracking-wider text-sm">
-                                {post.data.date}
+                            <span className="font-light tracking-wider text-sm mt-2">
+                                &mdash; {post.data.date}
                             </span>
                         </div>
                     </Reveal>

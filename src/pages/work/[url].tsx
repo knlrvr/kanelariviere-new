@@ -10,7 +10,8 @@ import { Reveal } from '@/components/utils/reveal';
 
 import {  
   BsArrowUpRight,
-  BsArrowRight
+  BsArrowRight,
+  BsArrowLeft
 } from 'react-icons/bs'
 
 // import { 
@@ -60,16 +61,24 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
 
       <Header />
 
-      <div className="pt-12 md:pt-20 p-4">
+      <div className="pt-10 md:pt-20 p-4">
+        <div className="flex flex-col items-center justify-center">
+            <Reveal>
+              <span className="intro-text font-migra -mb-4">Work.</span>
+            </Reveal>
+          </div>
 
         <Reveal>
-          <div className="flex flex-col">
+          <div className="flex flex-col my-8">
+            <Link href="/" className="text-2xl w-fit mb-4">
+              <BsArrowLeft />
+            </Link>
             <p className="font-migra text-4xl sm:text-5xl md:text-7xl">{projectData.title}</p>
             <p className="font-thin text-2xl sm:text-3xl md:text-4xl">&mdash; {projectData.category}</p>
           </div>
         </Reveal>
 
-        <Reveal>
+        {/* <Reveal>
           <div className="py-8 text-xs flex items-center space-x-2 text-neutral-500">
             <Link href="/" className="font-semibold">
               Work
@@ -77,7 +86,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
             <p>&gt;</p>
             <span className="font-light">{projectData.title}</span>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {projectData.brand && (
           <Reveal>
@@ -97,7 +106,7 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="md:w-4/5 font-light">
-              <span className="text-neutral-500 font-light">
+              <span className="text-neutral-500">
                 {projectData.title}
               </span>&nbsp;{projectData.description}
             </div>
@@ -144,9 +153,9 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
         <Reveal>
           <div className="pt-24 flex md:justify-end justify-center">
             <Link href={projectData.next}
-              className="text-2xl font-migra flex items-center space-x-4 w-fit">
+              className="group text-2xl font-migra flex items-center space-x-4 w-fit">
               <span>{projectData.nextTitle}</span>
-              <BsArrowRight className="text-xl" />
+              <BsArrowRight className="text-xl group-hover:translate-x-2 duration-300 mb-1" />
             </Link>
           </div>
         </Reveal>
