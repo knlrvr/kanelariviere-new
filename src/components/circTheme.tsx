@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import useDarkMode from './utils/theme';
 
+import { Reveal } from './utils/reveal';
+
 import {
     BsSun
 } from 'react-icons/bs'
@@ -38,35 +40,47 @@ const CircadianTheme = () => {
       for (let hour = 1; hour < 25; hour++) {
         const isActive = activeHour === hour;
         lines.push(
-          <div className="relative mt-20 w-full">
-            <div
-                key={hour}
-                className={`
-                flex flex-col-reverse items-center gap-4
-                ${isActive ? 
-                    'w-full' 
-                : 
-                    'w-full cursor-pointer bg-opacity-20' 
-                }`}
-                onClick={() => handleHourClick(hour)}
-            >
-              <span className={`bg-neutral-500 w-[2px] h-8 
-              ${isActive ? '' : 'mt-[3.25rem] opacity-50' } 
-              `}> </span> 
+          <div className="relative w-full flex items-end">
+              <div
+                  key={hour}
+                  className={`
+                  flex flex-col-reverse items-center gap-2 group absolute
+                  ${isActive ? 
+                      'w-full' 
+                  : 
+                      'w-full cursor-pointer bg-opacity-20' 
+                  }
+                  `}
+                  onClick={() => handleHourClick(hour)}
+              >
+                <span className={`w-[2px] duration-200 md:group-hover:h-10
+                
+                ${hour < 7 || hour > 16 ? 
+                  'bg-neutral-700 h-4' 
+                  : 
+                  'bg-neutral-400 h-7'
+                }
+                
+                ${isActive ? 'h-10' : 'opacity-50' } 
 
-              {/* icon dependent on theme */}
-              {isActive && theme === 'light' && 
-                <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
-                  <BsSun />
-                </div>
-              }
-              {isActive && theme === 'dark' && 
-                <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
-                  <LuMoon />
-                </div>
-              }
+                `}> </span> 
 
-            </div>
+                {/* icon dependent on theme */}
+                {isActive && theme === 'light' && 
+                  <Reveal>
+                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
+                      <BsSun />
+                    </div>
+                  </Reveal>
+                }
+                {isActive && theme === 'dark' && 
+                  <Reveal>
+                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
+                      <LuMoon />
+                    </div>
+                  </Reveal>
+                }
+              </div>
           </div> 
         );
       }
@@ -75,7 +89,7 @@ const CircadianTheme = () => {
   
     return (
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-44">
           {renderHourLines()}
         </div>
       </div>
