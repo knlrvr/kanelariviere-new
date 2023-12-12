@@ -42,29 +42,21 @@ const CircadianTheme = () => {
         lines.push(
           <div className="relative w-full flex items-end">
               <div
-                  key={hour}
-                  className={`
+                key={hour}
+                className={`
                   flex flex-col-reverse items-center gap-4 group absolute
                   ${isActive ? 
-                      'w-full' 
-                  : 
-                      'w-full cursor-pointer bg-opacity-20' 
+                      'w-full' : 'w-full cursor-pointer bg-opacity-20' 
                   }
                   `}
-                  onClick={() => handleHourClick(hour)}
+                onClick={() => handleHourClick(hour)}
               >
                 <span className={`w-[2px] duration-200 group-hover:h-9
-                
                 ${hour < 7 || hour > 16 ? 
-                  'bg-neutral-700 h-3' 
-                  : 
-                  'bg-neutral-400 h-6'
+                  'bg-neutral-700 h-3' : 'bg-neutral-400 h-6'
                 }
-                
                 ${isActive ? 'h-9' : 'opacity-50' } 
-
                 `}> </span> 
-
                 {/* icon dependent on theme */}
                 {isActive && theme === 'light' && 
                   <Reveal>
