@@ -38,11 +38,18 @@ const About = () => {
               <p className="font-migra text-3xl md:text-4xl xl:text-5xl">
                 Software engineer. Full stack developer. Designer.
               </p>
-              <p className="font-light font-mont text-base md:text-lg lg:text-xl text-neutral-500">
+              <p className="font-light font-mont text-base md:text-lg lg:text-xl">
                 As a freelance developer, I&apos;ve had to wear many hats. I deliver high-quality, production-ready code 
                 for a diverse array of projects for clients, tailored to their needs and the needs of the commununities they serve. 
                 My work mostly consists of code, but I&apos;ve had the pleasure of working in various areas of digital design, including
                 but not limited to front-end development, UI/UX design, & graphic design.
+                <br /><br />
+                It's my goal in my work to commit myself to accessibility, equity, education, & sustainability and I do my best to 
+                contribute to those ideals whenever and however I can. 
+                <br /><br />
+                Outside of work, I try to hone my creativity through multiple outlets. 
+                I write & play music, I&apos;m an avid D&D nerd and gamer, I love to 
+                explore the world with my fiancée & play with my dog, Sundance. 
               </p>
 
               <Link href="/LariviereK.pdf" target="_blank"
