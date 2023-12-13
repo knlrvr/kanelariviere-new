@@ -61,7 +61,7 @@ const CircadianTheme = () => {
                 {/* icon dependent on theme */}
                 {isActive && theme === 'light' && 
                   <Reveal>
-                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-3 shadow-lg">
+                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-3 shadow-md">
                       <LuSunDim />
                     </div>
                   </Reveal>
