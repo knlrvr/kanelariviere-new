@@ -9,7 +9,8 @@ import {
     BsSun
 } from 'react-icons/bs'
 import { 
-    LuMoon 
+  LuMoon, 
+  LuSunDim
 } from "react-icons/lu";
 
 
@@ -60,14 +61,14 @@ const CircadianTheme = () => {
                 {/* icon dependent on theme */}
                 {isActive && theme === 'light' && 
                   <Reveal>
-                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-2 shadow-lg">
-                      <BsSun />
+                    <div className="bounce rounded-full bg-yellow-400 text-center text-xl p-3 shadow-lg">
+                      <LuSunDim />
                     </div>
                   </Reveal>
                 }
                 {isActive && theme === 'dark' && 
                   <Reveal>
-                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-2 shadow-md">
+                    <div className="bounce rounded-full bg-blue-400 text-center text-xl p-3 shadow-md">
                       <LuMoon />
                     </div>
                   </Reveal>
