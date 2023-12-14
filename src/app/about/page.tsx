@@ -49,7 +49,7 @@ const About = () => {
                 <br /><br />
                 Outside of work, I try to hone my creativity through multiple outlets. 
                 I write & play music, I&apos;m an avid D&D nerd and gamer, I love to 
-                explore the world with my fiancée & play with my dog, Sundance. 
+                explore the world with my fiancée & play with my dog, Sundance, and my cat, Tadashi. 
               </p>
 
               <Link href="/LariviereK.pdf" target="_blank"
