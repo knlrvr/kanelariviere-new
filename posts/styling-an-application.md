@@ -98,6 +98,30 @@ CSS-in-JS, when implemented correctly, solves **a lot** of problems. The biggest
 
 The biggest issue I've come across with CSS-in-JS is it's impact on performance. [This deep dive](https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b) is a really good explanation of what exactly that means, and how you can avoid similar performance issues when using CSS-in-JS. 
 
+## StyleX
+[StyleX](https://stylexjs.com/) is Meta's CSS-in-JS solution, which they've been developing for some time and have recently open-sourced. 
+
+It's important to note that this is probably far better suited for large-scale solutions since it was created with those solutions in mind. I wouldn't use StyleX for a small to medium project, but I think the benefit becomes apparent in larger projects when you have to build and define specific design systems. 
+
+One thing that I really liked that StyleX was sure to be clear about is that it's a CSS-in-JS solution, not a CSS-in-React solution. Obviously, it was made with React in mind, but it is framework-agnostic. You can use this with *any* JavaScript framework, provided that framework allows authoring markup in JavaScript. 
+
+Using StyleX is pretty similar to how we'd use other CSS-in-JS solutions. 
+
+```jsx
+import * as stylex from '@stylexjs/stylex'
+
+const styles = stylex.create({
+  base: {
+    fontSize: 16,
+    color: rgb(34, 34, 34),
+  },
+});
+
+<p {...stylex.props(styles.base)}>I'm text styled with StyleX!</p>
+```
+
+###### This portion of the blog entry (StyleX) was added on 12/14/23.
+
 ## CSS Modules
 [CSS Modules](https://github.com/css-modules/css-modules) locally scope all class names by default. What this means is that you can reuse class names in different files, since the class names change to unique class names at build time so they won't modify any other components. 
 
