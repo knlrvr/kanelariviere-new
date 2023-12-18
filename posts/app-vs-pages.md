@@ -134,6 +134,74 @@ export async function generateStaticParams() {
 
 Other than the dynamic routes for work, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, and I will be making the complete transition at some point, but I wanted to see the different behaviors in practice. 
 
+For example, if you change the theme and then navigate to any of the '**work**' pages, the theme will revert to it's default setting, which is dependent on the time of day. Another example is how metadata is added. In the pages directory, we simply use the Head component provided by Next.js &mdash;
+
+```jsx
+<Head>
+  <meta property='og:title' content={`Kane Lariviere | ${projectData.title}`} key='title' />
+  <meta property='og:image' content='https://knlrvr.dev/og-bg-2.png' />
+</Head>
+```
+
+In the app directory, we have a few options. To define static metadata, we export a '**Metadata**'' object &mdash;
+
+```jsx
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | Portfolio',
+  description: 'Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
+```
+
+**or** to fetch metadata with dynamic values, we use the *generateMetadata* function &mdash;
+
+```jsx
+export async function generateMetadata({ 
+    params
+}: any): Promise<Metadata | undefined> {
+    let post = getPostMetadata().find((post) => post.slug === params.slug);
+    
+    if (!post) {
+        return;
+    }
+
+    let {
+        title,
+        description,
+        image,
+    } = post;
+
+    let ogImage = image
+    ? `https://knlrvr.dev${image}`
+    : `https://knlrvr.dev/og?title=${title}`
+
+    return {
+        title, 
+        description,
+        openGraph: {
+            title, 
+            description,
+            type: 'article',
+            url: `https://knlrvr.dev/blog/${post.slug}`,
+            images: [
+                {
+                    url: ogImage,
+                }
+            ]
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title, 
+            description,
+            images: [ogImage]
+        },
+    };
+}
+```
+
+I think these differences do a good job of showcasing the trade offs between directories, highlighting the fact that the pages directory is better for simpler applications, and the app directory is better for more complex applications. 
+
 I certainly wouldn't *recommend* using both routers, but it's certainly possible, and may just fit your needs. 
 
 ## More about Next.js
