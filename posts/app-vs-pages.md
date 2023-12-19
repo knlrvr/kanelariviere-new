@@ -27,7 +27,7 @@ To outline some of the differences between the directories, we'll use this portf
     └── guestbook.tsx   
 ```
 
-Next.js will treat files in the '**pages**' directory as routes, provided that the files are React Components exported from a **.js**, **.ts**, **.jsx** or **.tsx** file.
+Next.js will treat files in the **pages** directory as routes, provided that the files are React Components exported from a **.js**, **.ts**, **.jsx** or **.tsx** file.
 
 For example, if the code below was in our '**about.tsx**' file, it will be accessible at '**/about**'.
 
@@ -65,7 +65,7 @@ src/
 
 ###### The use of a folder in square brackets indicates a dynamic route. The name inside of the square brackets corresponds to the parameter we want to capture for the URL. 
 
-The app router works in a new directory named '**app**'. In app, **folders** define the routes of your application, from a root folder down to a leaf folder. So the previous route we defined in '**pages**' would instead be '**app/contact/page.tsx**'. 
+The app router works in a new directory named **app**. In app, **folders** define the routes of your application, from a root folder down to a leaf folder. So, the previous route we defined in **pages** would instead be '**app/contact/page.tsx**'. 
 
 The app router includes new support for shared layouts, server components, streaming, and data fetching. It's a great answer to the issues introduced by the Pages directory, but does also come with its own limitation &mdash; 
 
@@ -130,11 +130,11 @@ export async function generateStaticParams() {
 }
 ```
 
-###### Tip &mdash; When using both directories, you also have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. 
+###### Tip &mdash; When using both directories, you also have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. More on that below.
 
-Other than the dynamic routes for work, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, and I will be making the complete transition at some point, but I wanted to see the different behaviors in practice. 
+Other than the dynamic routes for work, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, and I will be making the complete transition at some point, but I wanted to see the different behaviors in practice here. 
 
-For example, if you change the theme and then navigate to any of the '**work**' pages, the theme will revert to it's default setting, which is dependent on the time of day. Another example is how metadata is added. In the pages directory, we simply use the Head component provided by Next.js &mdash;
+For example, if you change the theme and then navigate to any of the **/work** pages, the theme will revert to it's default setting, which is dependent on the time of day. Another example is how metadata is added. In the pages directory, we simply use the Head component provided by Next.js &mdash;
 
 ```jsx
 <Head>

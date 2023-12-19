@@ -49,7 +49,7 @@ interface ProjectDetailsPageProps {
 }
 
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) => {
-  // const paragraphs = projectData.description.split('\n');
+  const paragraphs = projectData.description.split('\n');
 
   return (
     <div className="min-h-screen max-w-7xl mx-auto">
@@ -104,11 +104,13 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ projectData }) 
         )}
 
         <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="md:w-4/5 font-light">
-              <span className="text-neutral-500">
-                {projectData.title}
-              </span>&nbsp;{projectData.description}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="font-light mb-8">
+              {paragraphs.map((paragraph, index) => (
+                <p key={index} className="md:mb-4">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div className="text-xs grid grid-cols-1 md:grid-cols-3 gap-0 gap-y-8 md:gap-y-0">
               <div className="w-full flex flex-col">
@@ -222,7 +224,7 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://ttrpcompanion.vercel.app/',
       title: 'TTRPCompanion',
       category: 'Gaming Utility',
-      description: 'is a gaming utility app that allows users to track their character\'s stats in D&D Campaigns. Typically, other tools carry on the basic stats of characters, while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
+      description: 'TTRPCompanion is a gaming utility app that allows users to track their character\'s stats in D&D or other TTRPG Campaigns. Typically, other available tools weigh on the very basic stats of characters like total HP, ability scores, etc. while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
       tags: ['TypeScipt', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
       year: '2023 ~',
       next: '/work/theviewfrominside',
@@ -244,7 +246,7 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://the-view-from-inside.vercel.app/',
       title: 'The View From Inside',
       category: 'Blog',
-      description: 'is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
+      description: 'The View From Inside is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Sanity'],
       year: '2023',
       next: '/work/keepup',
@@ -267,8 +269,8 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://next-notes-74lh.vercel.app/',
       title: 'KeepUp',
       category: 'Social Media',
-      description: 'is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
-      tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Redis', 'NextAuth'],
+      description: 'KeepUp is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
+      tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Upstash', 'NextAuth'],
       year: '2023',
       next: '/work/theskyisfake',
       nextTitle: 'The Sky Is Fake'
@@ -289,7 +291,7 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://www.theskyisfake.org',
       title: 'The Sky Is Fake',
       category: 'Social Media',
-      description: 'is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
+      description: 'The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
       tags: ['TypeScript', 'React', 'Next', 'Tailwind', 'Convex', 'Clerk'],
       year: '2023 ~',
       next: '/work/abstract',
@@ -311,7 +313,7 @@ const fetchProjectData = (url: string): Project => {
       live: 'https://abstract-eight.vercel.app/',
       title: 'Abstract',
       category: 'Ecommerce',
-      description: 'is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
+      description: 'Abstract is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
       tags: ['JavaScript', 'React', 'Next', 'Tailwind', 'MongoDB'],
       year: '2023',
       next: '/work/personalportfolio',
@@ -333,7 +335,7 @@ const fetchProjectData = (url: string): Project => {
       live: '',
       title: 'My Personal Portfolio',
       category: 'Misc',
-      description: 'is where you are now! Take a look around and let me know what you think. You can navigate to the Guestbook page and leave me a message!',
+      description: 'My personal portfolio is where you are now! Take a look around! If you\'d like, you can navigate to the Guestbook page and leave me a note!',
       tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
       year: '2023',
       next: '/work/ttrpcompanion',
