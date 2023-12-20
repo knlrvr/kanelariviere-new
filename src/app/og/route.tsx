@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
       >
         <div 
           style={{
-            marginLeft: 70,
+            marginLeft: 90,
             marginRight: 190,
             marginBottom: 120,
             display: 'flex',
@@ -47,7 +47,7 @@ export async function GET(req: NextRequest) {
       height: 1080,
       fonts: [
         {
-          name: 'Kaisei Tokumin',
+          name: 'Migra Extralight',
           data: fontData,
           style: 'normal',
         },
