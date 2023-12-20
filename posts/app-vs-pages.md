@@ -8,6 +8,8 @@ When I felt reasonably comfortable with my knowledge in React, I, of course, mov
 
 Next.js is an absolute powerhouse. It provides a ton of features out-of-the-box, and even though you might not need them all, it can be pretty intimidating if you don't understand them. 
 
+###### Disclaimer &mdash; This is not a comprehensive breakdown of Next.js or the features it provides. This is only an outline of my experience with a single feature in Next.js. If you've had a different experience, please feel free to let me know! 
+
 ## Routing 
 There have been a lot of changes and additions with the introduction of Next.js 13, the most recent update from the framework. The most significant change is the new app directory, which handles routing for Next applications. Basically, the new app directory has a lot more flexibility and ease-of-use than the previous pages directory. 
 
