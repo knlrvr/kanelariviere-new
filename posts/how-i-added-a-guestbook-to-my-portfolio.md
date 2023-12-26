@@ -354,6 +354,7 @@ const Guestbook = () => {
 export default Guestbook
 ```
 
+## Conclusion
 And that's how I used Convex to set up a Guestbook in my portfolio! It was a relatively easy set up, and I'm happy to have it now! If you come across it or want to post on it, please do! Again, almost *all* of this information can be found directly in the Convex docs. 
 
-To learn more about Convex, visit [convex.dev](https://www.convex.dev/). 
+To learn more about Convex, visit [convex.dev](https://www.convex.dev/) & **happy coding**!
