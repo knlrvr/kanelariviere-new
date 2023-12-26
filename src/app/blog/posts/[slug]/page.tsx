@@ -141,9 +141,11 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </div>
 
-                <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-headings:font-light prose-headings:tracking-wide prose-code:text-code 
+                <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-h2:font-semibold prose-h2:tracking-wide prose-code:text-code 
                                     prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
-                                    prose-h5:text-xs prose-h5:border prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-neutral-500 prose-h5:bg-opacity-25
+                                    prose-h5:text-xs prose-h5:border prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-neutral-500 prose-h5:bg-opacity-25 prose-h5:border-opacity-50
+                                    prose-h4:text-xl prose-h4:font-medium prose-h4:tracking-wider
+                                    prose-quoteless 
                 ">
                     <Reveal>
                         <ReactMarkdown className=""

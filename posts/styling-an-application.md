@@ -101,7 +101,7 @@ The biggest issue I've come across with CSS-in-JS is it's impact on performance.
 ## StyleX
 [StyleX](https://stylexjs.com/) is Meta's CSS-in-JS solution, which they've been developing for some time and have recently open-sourced. 
 
-It's important to note that this is probably far better suited for large-scale solutions since it was created with those solutions in mind. I wouldn't use StyleX for a small to medium project, but I think the benefit becomes apparent in larger projects when you have to build and define specific design systems. 
+It's important to note that this is probably far better suited for large-scale solutions since it was created with those solutions in mind. I wouldn't use StyleX for a small to medium project, but I think the benefit becomes apparent in larger projects when you have to build and define very specific design systems. 
 
 One thing that I really liked that StyleX was sure to be clear about is that it's a CSS-in-JS solution, not a CSS-in-React solution. Obviously, it was made with React in mind, but it is framework-agnostic. You can use this with *any* JavaScript framework, provided that framework allows authoring markup in JavaScript. 
 
@@ -158,7 +158,7 @@ CSS Modules aren't very beginner friendly, but they're a great way to style your
 ## CSS Preprocessors
 In the simplest of terms, preprocessors compile the code you write into something else. CSS preprocessors compile code written in the selected preprocessors syntax and generate CSS based on that code. Well, *this* sounds like vanilla CSS with extra steps, but preprocessors offer a new dimension to writing CSS that makes them far easier to work with overall. 
 
-## Sass
+#### Sass
 [Sass](https://sass-lang.com/) is a CSS preprocessor. Sass introduces features that lend to writing reusable and maintainable styling, making it a go-to for many projects. For example &mdash;
 
 **Variables**. Define a value once and use it across your styling. 
@@ -200,7 +200,7 @@ Personally, Sass is my #2 go-to for styling. It's easy and intuitive.
 ## But Naming Is... Hard
 The biggest drawback to most of these methods is naming. If you're working on a large application, you'll have to get pretty creative with names, regardless of the styling conventions you might be using. This is something that I, personally, absolutely hate.
 
-## ✨ Tailwind ✨
+## Tailwind 
 [Tailwind CSS](https://tailwindcss.com/) is my go-to for most of my projects, and I won't apologize for that. It gets a lot of hate, though. A lot of folks see Tailwind as a shortcut to avoid actually learning CSS, but I believe the only way to effectively use Tailwind is by knowing CSS. I'm not saying that people don't use it for that reason, but to write off an entire framework because a few people take advantage of it seems strange to me. 
 
 Tailwind is a utility-first framework, so it doesn't provide predefined classes for elements like buttons, or tables. You'll still have to design & build components yourself. 
@@ -235,8 +235,5 @@ There's a lot of options when styling your application. You just have to pick th
 
 **It's Tailwind, though**.
 
-Thanks for reading! Don't hesitate to reach out & let me know what you think! 
+Thanks for reading! Don't hesitate to reach out & let me know what you think! & **happy coding**!
 
-## 
-
-###### This is an official Tailwind fan account. Not really. But it might be. 
