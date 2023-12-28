@@ -1,7 +1,7 @@
 ---
 title: Styling An Application
 description: Vanilla CSS, CSS-in-JS, Sass, etc. 
-date: 12/1/23
+date: December 1, 2023
 ---
 
 There are so many ways that you could style your application. You could use Vanilla CSS, CSS-in-JS, SASS, a styling framework, a component library, etc. Whatever you decide to use will be fine, as long as it works for you and meets the needs of your application! There are so many reasons to use or not use various technologies, and YMMV. (*Your Mileage May Vary*)

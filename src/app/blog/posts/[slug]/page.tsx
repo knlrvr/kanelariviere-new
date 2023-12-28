@@ -134,8 +134,8 @@ const PostPage = (props: PostPageProps) => {
                             <span className="font-migra text-4xl sm:text-5xl md:text-7xl">
                                 {post.data.title}
                             </span>
-                            <span className="font-light tracking-wider text-sm mt-2">
-                                Published &mdash; {post.data.date}
+                            <span className="font-light tracking-wider text-lg mt-2">
+                                {post.data.date}
                             </span>
                         </div>
                     </Reveal>

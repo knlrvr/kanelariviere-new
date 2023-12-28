@@ -1,7 +1,7 @@
 ---
 title: 'How I Added A Guestbook To My Portfolio'
 description: 'Using Convex with Next JS to create a Guestbook'
-date: '11/03/2023'
+date: 'November 3, 2023'
 ---
 
 While I was taking a look around at "professional dev" portfolios (that's literally what I googled) and trying to turn inspiration into creation for my new portfolio, I came across [Lee Robinson's Portfolio](https://leerob.io/). I was a big fan of the overall design, but I was far more intrigued with their *guestbook*. I'd never seen a guestbook on a portfolio site, and as soon as I saw it, I knew I had to have one. Luckily, I'd had my fair share of work in setting up authentication and databases, especially after my work on [TTRPCompanion](https://github.com/knlrvr/ttrpcompanion), so I knew it wouldn't be anything too far from my current realm of knowledge. However, I wanted to learn more. It's a portfolio, right? I should be showcasing my skills, or at least my ability to learn new skills quickly. 

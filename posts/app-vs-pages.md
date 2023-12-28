@@ -1,7 +1,7 @@
 ---
 title: App Router vs. Pages Router
 description: The differences between directories in Next.js
-date: 12/12/23
+date: December 12, 2023
 ---
 
 When I felt reasonably comfortable with my knowledge in React, I, of course, moved on to learning a framework. I didn't even know where to start. I did what any dev would do &mdash; **I googled it**. I chose the framework that seemed to have the most support, and was aligned with what I wanted from React &mdash; **Next.js**. 
