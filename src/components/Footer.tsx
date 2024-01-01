@@ -11,11 +11,6 @@ const Footer = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 max-w-7xl mx-auto">
-        <Reveal>
-          <div className="w-full flex flex-col justify-between">
-            <OnRepeat />
-          </div>
-        </Reveal>
 
         <div className="grid grid-cols-2 gap-4 mt-12 md:mt-0">
           <Reveal>
@@ -55,24 +50,41 @@ const Footer = () => {
               </ul>
             </div>
           </Reveal>
+
           <Reveal>
-            <div className="flex flex-col items-start">
-              <span className="font-migra text-2xl">Contact</span>
-              <ul className="flex flex-col font-light text-sm">
-                <li>
-                  <Link href="mailto:hello@knlrvr.com" target="_blank">
-                    Email
-                  </Link>
-                </li>
-                <li className="mt-9 font-migra text-2xl">Availability</li>
-                <li className="mt-2 flex items-center space-x-2">
-                  <div className="h-2 w-2 rounded-full bg-green-500"></div>
-                  <span className="text-xs">Currently Available</span>
-                </li>
-              </ul>
+            <div className="flex flex-col">
+
+              <div className="flex flex-col">
+                <span className="font-migra text-2xl">Contact</span>
+                <ul className="flex flex-col font-light text-sm">
+                  <li>
+                    <Link href="mailto:hello@knlrvr.com" target="_blank">
+                      Email
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col mt-[5.55rem] md:mt-9">
+                <span className="font-migra text-2xl">Availability</span>
+                <ul className="flex items-center font-light space-x-2 text-xs">
+                  <li>
+                    <div className="h-1.5 w-1.5 rounded-full bg-green-500"></div>
+                  </li>
+                  <li>Currently Available</li>
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>
+
+
+        <div className="w-full flex flex-col justify-between">
+          <Reveal>
+            <OnRepeat />
+          </Reveal>
+        </div>
+        
       </div>
 
       <Reveal>
