@@ -66,7 +66,7 @@ console.log('Hello World! Goodbye (for now) Python!')
 Not very long after falling down this rabbit hole, I started college again. Thankfully, I hadn't put college off for *too* long. I just took some small breaks that let me breathe and realign, so a lot of what I learned stayed with me and allowed me to continue building from what I already knew. I still have some strong feelings about college, but that's a blog post for another day. 
 
 ## The Present
-As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in banking, I'm finishing up my degree at WGU (& searching for internships), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth but I'm thankful for it and excited to continue learning and exploring new opportunities in software. 
+As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in banking, I'm finishing up my degree at WGU (& searching for internships), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth but I'm thankful for it and excited to continue learning, sharing, and exploring new opportunities in software. 
 
 ##
 
