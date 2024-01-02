@@ -70,7 +70,7 @@ As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in banking
 
 ##
 
-Here are some really important things that the years have taught me &mdash;
+Here are some really important things that the past few years have taught me &mdash;
 
 **Knowledge has a compounding nature**. Every topic you learn is built on top of the previous topic.  
 
