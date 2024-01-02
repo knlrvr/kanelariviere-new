@@ -11,7 +11,7 @@ When I was little, we had [this massive 55" Mitsubishi TV](https://www.recycledg
 
 I'd love to say that I chased that dream & supplemented my curiosity elsewhere. **But I didn't**. **I couldn't**. 
 
-It wasn't until my later years in high school that I found something that I could break. **Software**. I took a class learning HTML & CSS, but to be honest, I hated it. I just wasn't concerned with semantic HTML and how to make text change colors or move around a page, which is strange because I've always loved design! Maybe it had to do with how coding is portrayed in mainstream media, but I dreamt of racing against the clock to hack into places I shouldn't be, even if that wasn't actually what I wanted. So instead of paying attention in class, I learned Python. 
+It wasn't until my later years in high school that I found something that I could break. **Software**. I took a class learning HTML & CSS, but to be honest, I hated it. I just wasn't concerned with semantic HTML and how to make text change colors or move around the page, which is strange since I've always been a very visual person &mdash; in learning, in art, in self-expression, etc. Maybe it had to do with how coding is portrayed in mainstream media, but I dreamt of racing against the clock to hack into places I shouldn't be in, even if that wasn't actually what I wanted. So instead of paying attention in class, I learned Python. 
 
 *Why Python?* It was the first language listed on a google search for 'hacking'.
 
@@ -22,7 +22,7 @@ print('Hello World! Goodbye HTML!')
 I like to think that I got pretty good with Python, too. But after that semester, I didn't code at all. I just didn't have the resources to. And I wouldn't start again until I was in college. 
 
 ## How It Started, Again
-A few years after high school, I was working in sales for an 'international telecommunications company', which I very intentionally make sound cooler than it was. I was the person you'd talk to when you wanted to get a new phone from your mobile carrier. Not a bad job, but it just wasn't what I wanted. I wasn't even sure what I wanted at that point. I decided that it was time for college! I enrolled in a two year program for Applications Development and I learned **a lot**. Java, C#, Python, data structures and algorithms, logic, theory, etc. The coursework was incredible, and it felt great to be learning again. I was coding & learning something new every single day, and I rediscovered that same passion I'd had for it in high school. This time, I had the resources to keep going. 
+A few years after high school, I was working in sales for an 'international telecommunications company', which I very intentionally make sound cooler than it was. I was the person you'd talk to when you wanted to get a new phone from your mobile carrier. Not a bad job &mdash; it just wasn't what I wanted. I wasn't even sure what I wanted at that point. I decided that it was time for college! I enrolled in a two year program for Applications Development and I learned **a lot**. Java, C#, Python, data structures and algorithms, logic, theory, etc. The coursework was incredible, and it felt great to be learning again. I was coding & learning something new every single day, and I rediscovered that same passion I'd had for it in high school. This time, I had the resources to keep going. 
 
 ## Things Change Rapidly & There's Nothing You Can Do About It
 The week before finals in my second semester, my brother passed very suddenly. Everything stopped. When I asked my professors for extensions on my finals, every single one of them said no. I failed every class that semester and decided I'd take a break before trying again. It was hard not to let that cloud how I felt about college as an institution. 
@@ -47,22 +47,26 @@ That **free advice from a successful tech CEO** was -
 
 ##
 
-Admittedly, this is all pretty standard advice. But to the ears of a very lost 23-year-old who needed to hear it, it meant **everything**. 
+Admittedly, this is all pretty standard advice. But to a very lost 23-year-old who needed to hear it, it meant **everything**. It wasn't advice from a successful professional, it was advice from a *friend*. 
 
-At this point, I was pretty good with Python. But it just didn't excite me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. 
+## What Do You Mean 'Web Development'?
+
+At this point, I was pretty good with Python. But it didn't *excite* me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. 
 
 **Cue the standoff with HTML**. 
 
-I swallowed every bit of pride I had and relearned the basics. This time around, I loved it. I went on to learn CSS, and JavaScript, and fell deeper and deeper into web development. React, TypeScript, Tailwind, etc. I could make, break, and fix things, and then **share it with anyone and everyone**. 
+I swallowed every bit of pride I had and revisited the basics. This time around, I loved it. I went on to learn JavaScript, and fell deeper and deeper into web development. I could make, break, and fix things, and then **share it with anyone**. 
 
 ```js
-console.log('Hello World! Goodbye Python!') 
+console.log('Hello World! Goodbye (for now) Python!') 
 ```
 
-Not very long after falling down this rabbit hole, I started college again. Thankfully, I hadn't put college off for *too* long. I just took some small breaks that let me breathe and realign, so a lot of what I learned stayed with me and allowed me to continue compounding knowledge and experience. I still have some strong feelings about college, but that's a blog post for another day. 
+##
+
+Not very long after falling down this rabbit hole, I started college again. Thankfully, I hadn't put college off for *too* long. I just took some small breaks that let me breathe and realign, so a lot of what I learned stayed with me and allowed me to continue building from what I already knew. I still have some strong feelings about college, but that's a blog post for another day. 
 
 ## The Present
-As I'm writing this, it is 8:43 pm, January 1, 2024. I work full time in banking, I'm finishing up my degree at WGU (and searching for internships!), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth but I'm thankful for it and excited to continue!
+As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in banking, I'm finishing up my degree at WGU (& searching for internships), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth but I'm thankful for it and excited to continue learning and exploring new opportunities in software. 
 
 ##
 
