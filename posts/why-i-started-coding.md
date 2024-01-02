@@ -27,9 +27,9 @@ A few years after high school, I was working in sales for an 'international tele
 ## Things Change Rapidly & There's Nothing You Can Do About It
 The week before finals in my second semester, my brother passed very suddenly. Everything stopped. When I asked my professors for extensions on my finals, every single one of them said no. I failed every class that semester and decided I'd take a break before trying again. It was hard not to let that cloud how I felt about college as an institution. 
 
-I was lost. My world had turned upside down, and I had no idea how to navigate it. 
+I was lost. My world had turned upside down, and I had no idea how to navigate it. At this point, I had learned so much about so many different things through school & self-learning &mdash; Networking, Cybersecurity, Data, Web Development, etc. I was disillusioned with college and trying to learn anything I could for the real world (don't do this). 
 
-Someone I hadn't spoken to for some time reached out to me around when I would've been (or should've been) starting my second year of college. I'd looked up to this person for years, from when I was 13 and hearing them play music, to this point (23) and watching them grow their startup. I was lucky enough to pick their brain about what I should do and I got some really solid advice. 
+Someone I hadn't spoken to for some time reached out to me around when I would've been (or should've been) starting my second year of college. I'd looked up to this person for years, from when I was 13 and hearing them play music, to this point at 23, watching them grow their startup. I was lucky enough to pick their brain about what I should do and I got some really solid advice. 
 
 ## 
 
@@ -47,11 +47,11 @@ That **free advice from a successful tech CEO** was -
 
 ##
 
-Admittedly, this is all pretty standard advice. But to a very lost 23-year-old who needed to hear it, it meant **everything**. It wasn't advice from a successful professional, it was advice from a *friend*. 
+Admittedly, this is all pretty standard advice when entering tech. But to a very lost 23-year-old who needed to hear it, it meant **everything**. It wasn't advice from a successful professional, it was advice from a *friend*. 
 
-## What Do You Mean 'Web Development'?
+## I'm Not A Hacker
 
-At this point, I was pretty good with Python. But it didn't *excite* me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. 
+At this point, I was pretty good with Python. But it didn't *excite* me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. I only chose it because I thought I wanted to be a hacker (ethical, of course), and I'd learned that I was wrong. 
 
 **Cue the standoff with HTML**. 
 
