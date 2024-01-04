@@ -31,7 +31,7 @@ At this point, I was working in sales for an 'international telecommunications c
 ## Things Change Rapidly & There's Nothing You Can Do About It
 The week before finals in my second semester, my brother passed very suddenly. Everything stopped. When I asked my professors for extensions on my finals, every single one of them said no. I failed every class that semester and decided I'd take a break before trying again. It was hard not to let that cloud how I felt about college as an institution. 
 
-I was lost. My world had turned upside down, and I had no idea how to navigate it. At this point, I had learned only a little about so many different things through school & self-learning &mdash; Networking, Cybersecurity, Data, Web Development, etc. I was disillusioned with college and trying to learn anything I could for the sake of finding a job (don't do this). 
+I was lost. My world had turned upside down, and I had no idea how to navigate it. By then, I had learned only a little about so many different things through school & self-learning &mdash; Networking, Cybersecurity, Data, Web Development, etc. Surface level knowledge that would only get me so far. I was disillusioned with college and trying to learn anything I could for the sake of finding a job (don't do this). 
 
 Someone I hadn't spoken to for some time reached out to me around when I should've been starting my second year of college. I'd looked up to this person for years, from when I was 13 and hearing them play music, to this point at 23, watching them grow their startup. I was lucky enough to pick their brain about what I should do and I got some really solid advice. 
 
@@ -54,7 +54,7 @@ That **free advice from a successful tech CEO** was -
 Admittedly, this is all pretty standard advice when entering tech. But to a very lost 23-year-old who needed to hear it, it meant **everything**. It wasn't advice from a successful professional, it was advice from a *friend*. 
 
 ## I'm Not A Hacker
-At this point, I was pretty good with Python again, and had learned some basics across the board, but nothing I did seemed to *excite* me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. I only chose it because I thought I wanted to be a hacker (ethical, of course), and I'd since learned that I was wrong. 
+I was getting pretty good with Python again, and had learned some basics across the board, but nothing I did seemed to *excite* me anymore. Don't get me wrong, I know the problem is me because Python is absolute magic, but I needed something else. I only chose it because I thought I wanted to be a hacker (ethical, of course), and I'd since learned that I was wrong. 
 
 **Cue the standoff with HTML**. 
 
