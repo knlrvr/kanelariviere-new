@@ -13,7 +13,7 @@ When I was little, we had [this massive 55" Mitsubishi TV](https://www.recycledg
 
 I'd love to say that I chased that dream & supplemented my curiosity elsewhere. **But I didn't**. **I couldn't**. 
 
-It wasn't until my later years in high school that I found something that I could break. **Software**. I took a class learning HTML & CSS but to be honest, I hated it. I'd like to say I just wasn't interested in front end development at the time, but I think the issue was that I far more focused on the end goal than the work it takes to accomplish it. I had this strange, romanticized idea of coding, and if I wasn't going to be hacking into something, I wasn't interested. So instead of paying attention in class, I learned Python. 
+It wasn't until my later years in high school that I found something that I could break. **Software**. I took a class learning HTML & CSS but to be honest, I hated it. I'd like to say I just wasn't interested in front end development at the time, but I think the issue was that I was far more focused on the end goal than the work it takes to accomplish it. I had this strange, romanticized idea of coding, and if I wasn't going to be hacking into something, I wasn't interested. So instead of paying attention in class, I learned Python. 
 
 *Why Python?* It was the first language listed on a google search for 'hacking'.
 
