@@ -110,7 +110,7 @@ export default async function WorksPage(
                     </span>
                   </div>
                   <div className="w-full flex flex-col">
-                    <span className="font-migra text-base tracking-widest">Open</span>
+                    <span className="font-migra text-base tracking-widest">View</span>
                     <span className="border-t border-neutral-500 w-full mt-2 pt-4 flex flex-col space-y-2">
                     {projects.git && ( 
                       <Link href={projects.git} target="_blank"
