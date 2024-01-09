@@ -15,8 +15,6 @@ There have been a lot of changes and additions with the introduction of Next.js 
 
 So what's the difference? What *exactly* is the benefit of the new app directory? Or should you just keep using the pages directory? Could you use *both*? 
 
-###### If you take a look at the repo for this portfolio, you'll see that I am utilizing both directories. More about that below!
-
 ## Pages
 To outline some of the differences between the directories, we'll use this portfolio as an example. Using the **pages** directory, the structure looked a little like this &mdash;
 
@@ -51,7 +49,10 @@ src/
 └── app     
     ├── page.tsx     
     ├── globals.css     
-    ├── layout.tsx     
+    ├── layout.tsx    
+    ├── works
+    │   └── [url]        
+    │       └── page.tsx 
     ├── about     
     │   └── page.tsx     
     ├── blog
@@ -81,9 +82,9 @@ From my experience, and what I've been able to gather from others, it might be b
 *Or you can use **both***. 
 
 ## Using Both Directories
-The app router works alongside the pages directory to allow for incremental adoption of the new router, so you can absolutely use both if you needed certain behaviors from each one. 
+The app router works alongside the pages directory to allow for incremental adoption of the new router, so while it's only advised to use both during migration, you can absolutely use both if you needed certain behaviors from each one. 
 
-For example, I still use the **pages** directory in my portfolio to showcase my projects. This is all handled in a file named '**[url].tsx**'  located in the pages directory. Within that file, I use two functions that aren't supported in the app directory &mdash;  *getStaticProps* & *getStaticPaths*. 
+For example, I used the **pages** directory in my portfolio to showcase my projects. This is all handled in a file named '**[url].tsx**' that was located in the pages directory. Within that file, I use two functions that aren't supported in the app directory &mdash;  *getStaticProps* & *getStaticPaths*. 
 
 *getStaticProps* tells Next.js to pre-render the page at build time using the props returned by *getStaticProps*. Here it is in action &mdash;
 
@@ -134,9 +135,9 @@ export async function generateStaticParams() {
 
 ###### Tip &mdash; When using both directories, you also have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. More on that below.
 
-Other than the dynamic routes for work, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, and I will be making the complete transition at some point, but I wanted to see the different behaviors in practice here. 
+As of 01/08/24, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, but there are some important notes about behaviors that can make or break an experience that I experienced during the migration. 
 
-For example, if you change the theme and then navigate to any of the **/work** pages, the theme will revert to it's default setting, which is dependent on the time of day. Another example is how metadata is added. In the pages directory, we simply use the Head component provided by Next.js &mdash;
+For example, if you changed the theme and then navigated to any of the **/work** pages, the theme would revert to it's default setting, which is dependent on the time of day. The theme wasn't being preserved across routers. Another example is how metadata is added. In the pages directory, we simply used the Head component provided by Next.js &mdash;
 
 ```jsx
 <Head>
@@ -204,7 +205,7 @@ export async function generateMetadata({
 
 I think these differences do a good job of showcasing the trade offs between directories, highlighting the fact that the pages directory is better for simpler applications, and the app directory is better for more complex applications. 
 
-I certainly wouldn't *recommend* using both routers, but it's certainly possible, and may just fit your needs. 
+I certainly wouldn't *recommend* using both routers, but it's certainly possible, especially if you're needing to incrementally adopt the app router. 
 
 ## More about Next.js
 **Always read the docs!**   

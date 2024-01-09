@@ -2,6 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { Reveal } from '@/components/utils/reveal';
 
+import type { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'Kane Lariviere | Contact',
+  description: 'Works | Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
+}
+
 import {  
     BsArrowUpRight,
     BsArrowRight,
