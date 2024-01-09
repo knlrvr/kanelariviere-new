@@ -185,7 +185,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'TTRPCompanion is a gaming utility app that allows users to track their character\'s stats in D&D or other TTRPG Campaigns. Typically, other available tools weigh on the very basic stats of characters like total HP, ability scores, etc. while TTRPCompanion allows users to track stats that blur the lines between player & character. These stats include total sessions, total time played, total damage dealt, & more! TTRPCompanion allows you to immerse yourself in your own gameplay, without taking you away from your character.',
         tags: ['TypeScipt', 'React', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'Supabase', 'NextAuth', 'Playwright'],
         year: '2023 ~',
-        next: '/work/theviewfrominside',
+        next: '/works/theviewfrominside',
         nextTitle: 'The View From Inside'
       },
   
@@ -207,7 +207,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'The View From Inside is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Sanity'],
         year: '2023',
-        next: '/work/keepup',
+        next: '/works/keepup',
         nextTitle: 'Keep Up'
       },
   
@@ -230,7 +230,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'KeepUp is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post \'notes\' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'tRPC', 'Prisma', 'PlanetScale', 'Upstash', 'NextAuth'],
         year: '2023',
-        next: '/work/theskyisfake',
+        next: '/works/theskyisfake',
         nextTitle: 'The Sky Is Fake'
       },
   
@@ -252,7 +252,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'The Sky Is Fake is a full stack social media/image sharing app. Users can sign in through a variety of platforms via Clerk and upload pictures to be featured in the gallery. The gallery showcases images of the sky that seem just a little too picturesque to be real. Users can also like the pictures that are featured in the gallery.',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Convex', 'Clerk'],
         year: '2023 ~',
-        next: '/work/abstract',
+        next: '/works/abstract',
         nextTitle: 'Abstract'
       },
   
@@ -274,7 +274,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'Abstract is an innovative ecommerce store that offers a unique focus on concepts related to consumerism and materialism. Instead of traditional physical products, Abstract specializes in selling these thought-provoking concepts themselves. By challenging conventional notions of commerce, Abstract provides customers with an intellectual and philosophical exploration of consumerism and materialism.',
         tags: ['JavaScript', 'React', 'Next.js', 'Tailwind', 'MongoDB'],
         year: '2023',
-        next: '/work/personalportfolio',
+        next: '/works/personalportfolio',
         nextTitle: 'Personal Portfolio'
       },
   
@@ -296,7 +296,7 @@ const fetchWorksData = (url: string): Project => {
         description: 'My personal portfolio is where you are now! Take a look around! If you\'d like, you can navigate to the Guestbook page and leave me a note!',
         tags: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion', 'Convex'],
         year: '2023',
-        next: '/work/ttrpcompanion',
+        next: '/works/ttrpcompanion',
         nextTitle: 'TTRPCompanion'
       },
     };
