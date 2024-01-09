@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'Kane Lariviere | Contact',
+  title: 'Kane Lariviere | Works',
   description: 'Works | Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
 }
 
