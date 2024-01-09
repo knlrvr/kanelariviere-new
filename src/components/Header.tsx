@@ -36,7 +36,7 @@ export const Header = () => {
 
     let path = usePathname();
 
-    if (path?.includes("/work/")) {
+    if (path?.includes("/works/")) {
       path = '/';
     }
 
