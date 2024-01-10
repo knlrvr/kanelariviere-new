@@ -142,7 +142,7 @@ export async function generateStaticParams() {
 }
 ```
 
-I also didn't even really *need* to use getStaticProps since there just wasn't any data to fetch. I just wrote my own function that mapped through the data I wanted and called that function in the main component so it would only return the information for the project that matched the url. 
+I also didn't even really *need* to use getStaticProps since there just wasn't any data to fetch. I just wrote my own function that held the data I wanted and called that function in the main component so it would only return the information for the project that matched the url. 
 
 ```jsx
 export default async function WorksPage(
