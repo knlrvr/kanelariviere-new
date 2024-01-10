@@ -53,7 +53,7 @@ export default async function WorksPage(
     return (
         <div className="min-h-screen max-w-7xl mx-auto">
   
-        <div className="pt-10 md:pt-20 p-4">
+        <div className="pt-10 md:pt-20">
           <div className="flex flex-col items-center justify-center">
               <Reveal>
                 <span className="intro-text font-migra -mb-4">Work.</span>
