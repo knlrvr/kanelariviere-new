@@ -5,9 +5,6 @@ import useDarkMode from './utils/theme';
 
 import { Reveal } from './utils/reveal';
 
-import {
-    BsSun
-} from 'react-icons/bs'
 import { 
   LuMoon, 
   LuSunDim
@@ -25,10 +22,10 @@ const CircadianTheme = () => {
     function handleHourClick(hour: any) {
 
       // Toggle the theme IF it's different from the current theme
-      if ((hour < 7 || hour >= 17) && theme !== 'dark') {
+      if ((hour < 7 || hour >= 18) && theme !== 'dark') {
         toggleTheme();
       }
-      if ((hour >= 7 && hour < 17) && theme !== 'light') {
+      if ((hour >= 7 && hour < 18) && theme !== 'light') {
         toggleTheme();
       }
   
@@ -38,7 +35,7 @@ const CircadianTheme = () => {
 
     function renderHourLines() {
       const lines = [];
-      for (let hour = 1; hour < 25; hour++) {
+      for (let hour = 1; hour < 24; hour++) {
         const isActive = activeHour === hour;
         lines.push(
           <div className="relative w-full flex items-end">
@@ -53,7 +50,7 @@ const CircadianTheme = () => {
                 onClick={() => handleHourClick(hour)}
               >
                 <span className={`w-[2px] duration-200 group-hover:h-9
-                ${hour < 7 || hour > 16 ? 
+                ${hour < 7 || hour > 17 ? 
                   'bg-neutral-700 h-3' : 'bg-neutral-400 h-6'
                 }
                 ${isActive ? 'h-9' : 'opacity-50' } 
