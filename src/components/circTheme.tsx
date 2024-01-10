@@ -38,7 +38,7 @@ const CircadianTheme = () => {
       for (let hour = 1; hour < 24; hour++) {
         const isActive = activeHour === hour;
         lines.push(
-          <div className="relative w-full flex items-end">
+          <div key={hour} className="relative w-full flex items-end">
               <div
                 key={hour}
                 className={`
