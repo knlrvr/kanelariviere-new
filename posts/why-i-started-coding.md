@@ -92,3 +92,5 @@ Here are some really important things that the past few years have taught me &md
 
 ## Conclusion
 I'm not a seasoned professional with years of experience in a corporate environment. I'm not a prodigy with groundbreaking ideas that will revolutionize the industry. You don't have to be, either. I'm just someone that rediscovered their dream of breaking things and putting them back together. It just so happens that the things I break are also the things I've built. And I believe that is equally as exciting. 
+
+Thanks for reading! & as always, **happy coding**!
