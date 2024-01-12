@@ -25,7 +25,7 @@ const GuestbookForm = () => {
         </Reveal>
         {!user && (
           <Reveal>
-            <div className="mt-4 container p-1 px-4 rounded-full shadow-md">
+            <div className="mt-6 container p-1 px-4 rounded-full shadow-md">
               <SignInButton mode='modal' afterSignInUrl='/guestbook'/>
             </div>
           </Reveal>
@@ -45,20 +45,20 @@ const GuestbookForm = () => {
                 });
                 setText('')
               }}
-              className="w-full md:w-1/2 mt-4 flex py-2"
+              className="w-full md:w-1/2 -ml-1 mt-4 flex py-2"
             >
 
               <input 
                 value={text} 
                 onChange={e => setText(e.target.value)}
-                className="container bg-transparent rounded-full w-full placeholder:text-neutral-500 mr-3 ml-1 px-4 py-2"
+                className="container bg-transparent rounded-full w-full placeholder:text-neutral-500 mr-3 ml-1 px-4 py-2 text-sm"
                 required
                 placeholder='Leave a message here!'
               />
               <button
                 className="px-6 uppercase py-1.5 rounded-full container w-20 flex justify-center items-center font-light text-sm">sign</button>
             </form>
-            <div className="ml-4 text-xs">
+            <div className="ml-1 text-xs text-neutral-500">
               <SignOutButton />
             </div>
           </div>
@@ -66,7 +66,7 @@ const GuestbookForm = () => {
       )}
       
       <Reveal>
-        <div className="py-16 text-sm">
+        <div className="pt-14 text-sm">
           {notes?.map(note => {
 
             const creationTimeMs = note._creationTime;
@@ -82,12 +82,12 @@ const GuestbookForm = () => {
 
             const formattedDate = date.toLocaleDateString('en-US', options);
 
-            return <div key={note._id} className="flex flex-col py-2">
-              <span>{note.body}</span> 
-              <div className="flex items-center text-xs">
-                <span className="text-neutral-500">{note.author} &mdash;</span>
-                <span className="text-neutral-500">&nbsp;{formattedDate}</span>
+            return <div key={note._id} className="flex flex-col tracking-wide">
+              <div className="text-xs my-2"> 
+                <span className="text-neutral-500">{note.author}:</span>
+                <span className="">&nbsp;{note.body}</span> 
               </div>
+              {/* <span className="text-neutral-500 text-xs">{formattedDate}</span> */}
             </div>
           })}
         </div>
