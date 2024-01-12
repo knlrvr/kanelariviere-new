@@ -22,10 +22,10 @@ const CircadianTheme = () => {
     function handleHourClick(hour: any) {
 
       // Toggle the theme IF it's different from the current theme
-      if ((hour < 7 || hour >= 18) && theme !== 'dark') {
+      if ((hour < 8 || hour >= 18) && theme !== 'dark') {
         toggleTheme();
       }
-      if ((hour >= 7 && hour < 18) && theme !== 'light') {
+      if ((hour >= 8 && hour < 18) && theme !== 'light') {
         toggleTheme();
       }
   
@@ -50,7 +50,7 @@ const CircadianTheme = () => {
                 onClick={() => handleHourClick(hour)}
               >
                 <span className={`w-[2px] duration-200 group-hover:h-9
-                ${hour < 7 || hour > 17 ? 
+                ${hour < 8 || hour > 17 ? 
                   'bg-neutral-700 h-3' : 'bg-neutral-400 h-6'
                 }
                 ${isActive ? 'h-9' : 'opacity-50' } 
