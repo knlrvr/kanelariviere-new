@@ -162,7 +162,7 @@ const PostPage = (props: PostPageProps) => {
                 </article>
 
                 <div className="mt-28 flex flex-col space-y-6">
-                    <span className="font-migra text-2xl">More Posts &mdash;</span>
+                    <span className="font-migra text-2xl tracking-wider">More Posts &mdash;</span>
                     {postPreviews}
                 </div>
             </div>
