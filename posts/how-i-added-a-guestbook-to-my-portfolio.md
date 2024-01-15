@@ -174,7 +174,7 @@ const createNote = useMutation(api.notes.createNote);
 </div>
 ```
 
-The next thing I needed to do was display the messages left by visitors, so anyone who visited the page could see the messages as well, whether they were signed in or not. This meant I needed to **query** the data in the database and display each entry. I also needed to format the dates of the messages if I wanted to display them, since the date is returned as a Unix Timestamp. I could've used something like **toLocaleTimeString()** but I wanted the messages formatted in a very specific way. 
+The next thing I needed to do was display the messages left by visitors, so anyone who visited the page could see the messages as well, whether they were signed in or not. This meant I needed to **query** the data in the database and display each entry.
 
 ```js
 // notes.tsx
@@ -197,25 +197,27 @@ const notes = useQuery(api.notes.getNotes);
   const creationTimeMs = note._creationTime;
   const date = new Date(creationTimeMs);
 
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }
+//  const options: Intl.DateTimeFormatOptions = {
+//    year: 'numeric',
+//    month: 'short',
+//    day: 'numeric',
+//    hour: '2-digit',
+//    minute: '2-digit',
+//  }
 
   const formattedDate = date.toLocaleDateString('en-US', options);
 
-  return <div key={note._id} className="flex flex-col py-2">
-      <span>{note.body}</span> 
-      <div className="flex items-center text-xs">
-        <span className="text-neutral-500">{note.author} &mdash;</span>
-        <span className="text-neutral-500">&nbsp;{formattedDate}</span>
+  return <div key={note._id} className="flex flex-col tracking-wide">
+    <div className="text-xs my-2"> 
+      <span className="text-neutral-500">{note.author}:</span>
+        <span className="">&nbsp;{note.body}</span> 
       </div>
-  </div>
+      {/* <span className="text-neutral-500 text-xs">{formattedDate}</span> */}
+    </div>
 })}
 ```
+
+###### I used to display the date & time of each message, but I've since removed that feature. 
 
 The complete code for ***notes.tsx*** & ***guestbook.tsx*** can be found below or in the [GitHub Repo for my new portfolio](https://github.com/knlrvr/kanelariviere-new). In the complete code, we can see that I also depended on some react hooks and conditional rendering for the finished product. 
 
@@ -356,5 +358,7 @@ export default Guestbook
 
 ## Conclusion
 And that's how I used Convex to set up a Guestbook in my portfolio! It was a relatively easy set up, and I'm happy to have it now! If you come across it or want to post on it, please do! Again, almost *all* of this information can be found directly in the Convex docs. 
+
+You can also take a look around [the repo of my portfolio](https://github.com/knlrvr/kanelariviere-new) & see how it all works together! 
 
 To learn more about Convex, visit [convex.dev](https://www.convex.dev/) & **happy coding**!

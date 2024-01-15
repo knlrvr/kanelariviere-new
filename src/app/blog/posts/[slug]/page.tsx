@@ -14,6 +14,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
 import type { Metadata } from "next";
+import PostPreview from "@/components/PostPreview";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -102,6 +103,12 @@ const PostPage = (props: PostPageProps) => {
         notFound;
     }
 
+    const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const filteredPostMetadata = postMetadata.filter((p) => p.slug !== slug)
+    const postPreviews = filteredPostMetadata.slice(0, 3).map((filteredPost) => (
+      <PostPreview key={filteredPost.slug} {...filteredPost} />
+    ));
+
     return (
         <section>
             <script
@@ -118,7 +125,7 @@ const PostPage = (props: PostPageProps) => {
                     })
                 }}
             />
-            <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
+            <div className="pb-8 pt-10 md:pt-20 max-w-7xl mx-auto">
                 <div className="flex flex-col items-center justify-center">
                     <Reveal>
                         <span className="intro-text font-migra -mb-4">Blog.</span>
@@ -128,8 +135,8 @@ const PostPage = (props: PostPageProps) => {
                 <div className="my-8">
                     <Reveal>
                         <div className="flex flex-col">
-                            <Link href="/blog" className="text-2xl w-fit mb-4">
-                                <BsArrowLeft />
+                            <Link href="/blog" className="text-2xl w-fit mb-4 group">
+                                <BsArrowLeft className="group-hover:text-neutral-500 duration-200" />
                             </Link>
                             <span className="font-migra text-4xl sm:text-5xl md:text-7xl">
                                 {post.data.title}
@@ -145,7 +152,7 @@ const PostPage = (props: PostPageProps) => {
                                     prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
                                     prose-h5:text-xs prose-h5:border prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-neutral-500 prose-h5:bg-opacity-25 prose-h5:border-opacity-50
                                     prose-h4:text-xl prose-h4:font-medium prose-h4:tracking-wider
-                                    prose-quoteless 
+                                    prose-quoteless
                 ">
                     <Reveal>
                         <ReactMarkdown className=""
@@ -153,6 +160,11 @@ const PostPage = (props: PostPageProps) => {
                         >{post.content}</ReactMarkdown>
                     </Reveal>
                 </article>
+
+                <div className="mt-28 flex flex-col space-y-6">
+                    <span className="font-migra text-2xl">More Posts &mdash;</span>
+                    {postPreviews}
+                </div>
             </div>
         </section>
     )

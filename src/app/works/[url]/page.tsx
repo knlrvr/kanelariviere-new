@@ -62,8 +62,8 @@ export default async function WorksPage(
   
           <Reveal>
             <div className="flex flex-col my-8">
-              <Link href="/" className="text-2xl w-fit mb-4">
-                <BsArrowLeft />
+              <Link href="/" className="text-2xl w-fit mb-4 group">
+                <BsArrowLeft className="group-hover:text-neutral-500 duration-200" />
               </Link>
               <p className="font-migra text-4xl sm:text-5xl md:text-7xl">{projects.title}</p>
               <p className="font-thin text-2xl sm:text-3xl md:text-4xl">&mdash; {projects.category}</p>
@@ -72,7 +72,7 @@ export default async function WorksPage(
   
           {projects.brand && (
             <Reveal>
-              <div className={`flex justify-center pl-2 rounded-l-md rounded-r-xl mb-8 ${projects.bg}`}>
+              <div className={`flex justify-center pl-2 rounded-r-3xl rounded-l-md mb-8  ${projects.bg}`}>
   
                 <Image 
                   src={projects.brand.src}
@@ -137,7 +137,7 @@ export default async function WorksPage(
           <Reveal>
             <div className="pt-24 flex md:justify-end justify-center">
               <Link href={projects.next}
-                className="group text-2xl font-migra flex items-center space-x-4 w-fit">
+                className="group text-3xl font-migra flex items-center space-x-4 w-fit">
                 <span>{projects.nextTitle}</span>
                 <BsArrowRight className="text-xl group-hover:translate-x-2 duration-300 mb-1" />
               </Link>
