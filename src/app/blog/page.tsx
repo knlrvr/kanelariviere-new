@@ -24,12 +24,12 @@ const Blog = () => {
     <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
       <div className="flex flex-col items-center justify-center">
         <Reveal>
-          <span className="intro-text font-migra -mb-4">Blog.</span>
+          <span className="intro-text font-migra">Blog.</span>
         </Reveal>
       </div>
 
       <Reveal>
-        <div className="flex flex-col space-y-8 mt-8 w-fit">
+        <div className="flex flex-col space-y-8 mt-12 w-fit mb-12">
           {postPreviews}
         </div>
       </Reveal>

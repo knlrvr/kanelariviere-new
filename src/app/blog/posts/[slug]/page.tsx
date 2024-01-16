@@ -138,10 +138,10 @@ const PostPage = (props: PostPageProps) => {
                             <Link href="/blog" className="text-2xl w-fit mb-4 group">
                                 <BsArrowLeft className="group-hover:text-neutral-500 duration-200" />
                             </Link>
-                            <span className="font-migra text-4xl sm:text-5xl md:text-7xl">
+                            <span className="font-migra text-4xl sm:text-5xl md:text-7xl tracking-wider">
                                 {post.data.title}
                             </span>
-                            <span className="font-light tracking-wider text-lg mt-2">
+                            <span className="font-light tracking-wider text-base mt-2">
                                 {post.data.date}
                             </span>
                         </div>
