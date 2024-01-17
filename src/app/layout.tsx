@@ -5,7 +5,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 
-import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
@@ -26,6 +26,7 @@ export default function RootLayout({
             <div className="p-4">
               <Header />
               {children}
+              <Analytics />
               <Footer />
             </div>
           </ConvexProviderWithClerk>
