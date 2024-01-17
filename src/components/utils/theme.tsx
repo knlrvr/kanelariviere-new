@@ -5,7 +5,7 @@ import { useState, useEffect, useMemo } from 'react';
 const useDarkMode = () => {
   const getCurrentTheme = useMemo(() => {
     const currentHour = new Date().getHours();
-    return currentHour < 6 || currentHour >= 17 ? 'dark' : 'light';
+    return currentHour < 6 || currentHour >= 18 ? 'dark' : 'light';
   }, []);
 
   const [theme, setTheme] = useState(getCurrentTheme);
