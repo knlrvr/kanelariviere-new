@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
@@ -27,6 +28,7 @@ export default function RootLayout({
               <Header />
               {children}
               <Analytics />
+              <SpeedInsights />
               <Footer />
             </div>
           </ConvexProviderWithClerk>
