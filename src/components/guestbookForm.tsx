@@ -83,9 +83,9 @@ const GuestbookForm = () => {
             const formattedDate = date.toLocaleDateString('en-US', options);
 
             return <div key={note._id} className="flex flex-col tracking-wide">
-              <div className="text-xs my-2"> 
+              <div className="text-[0.825rem] my-1"> 
                 <span className="text-neutral-500">{note.author}:</span>
-                <span className="">&nbsp;{note.body}</span> 
+                <span className="tracking-wide">&nbsp;{note.body}</span> 
               </div>
               {/* <span className="text-neutral-500 text-xs">{formattedDate}</span> */}
             </div>

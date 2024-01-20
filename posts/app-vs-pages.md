@@ -92,7 +92,7 @@ For example, I used the **pages** directory in my portfolio to showcase my proje
 
 ###### Tip &mdash; When using both directories, you do have to be mindful of the different behaviors in layouts, state management, metadata, routing hooks, data fetching, etc. More about that below. 
 
-### Pages 
+### In Pages &mdash;
 
 *getStaticProps* tells Next.js to pre-render the page at build time using the props returned by *getStaticProps*. Here it is in action &mdash;
 
@@ -129,7 +129,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 ```
 
-### App 
+### In App &mdash;
 In the app directory, *getStaticPaths* is replaced with *generateStaticParams*, simplifying route parameters, so the function might look something like this &mdash;
 
 ```jsx
@@ -142,7 +142,7 @@ export async function generateStaticParams() {
 }
 ```
 
-I also didn't even really *need* to use getStaticProps since there just wasn't any data to fetch. I just wrote my own function that held the data I wanted and called that function in the main component so it would only return the information for the project that matched the url. 
+I also didn't even really *need* to use getStaticProps since there just wasn't any data to 'fetch'. I just wrote my own function that held the data I wanted and called that function in the main component so it would only return the information for the project that matched the url (*the magic of params!*).
 
 ```jsx
 export default async function WorksPage(
@@ -250,7 +250,7 @@ The **generateMetadata** function returns a **Metadata** object with one or more
 
 I think these differences do a good job of showcasing the trade offs between directories, highlighting the fact that the pages directory is better for simpler applications, and the app directory is better for more complex applications. 
 
-I certainly wouldn't *recommend* using both routers, but it's certainly possible, especially if you're needing to incrementally adopt the app router. 
+I certainly wouldn't *recommend* using both routers, but it's certainly possible, and necessary if you're needing to incrementally adopt the app router. 
 
 ## More about Next.js
 **Always read the docs!**   
