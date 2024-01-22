@@ -201,7 +201,7 @@ const fetchWorksData = (url: string): Project => {
         },
         quote: 'Boldly written. Relatably lived.',
         git: 'https://github.com/knlrvr/the-view-from-inside',
-        live: 'https://the-view-from-inside.vercel.app/',
+        live: 'https://theviewfrominside.com',
         title: 'The View From Inside',
         category: 'Blog',
         description: 'The View From Inside is an exceptionally performant blog powered by Sanity\'s dynamic capabilities. It seamlessly handles content creation with native editing, while its dynamic routing supports individual post pages for effortless article exploration. With optimized loading times and responsiveness through static generation, The View From Inside delivers compelling content in a user-friendly and efficient manner.',
