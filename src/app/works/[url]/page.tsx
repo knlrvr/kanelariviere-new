@@ -4,7 +4,6 @@ import { Reveal } from '@/components/utils/reveal';
 
 import type { Metadata } from 'next'
 
-
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Works',
   description: 'Works | Kane Lariviere • Software Engineer. Full Stack Developer. Designer.',
@@ -15,6 +14,8 @@ import {
     BsArrowRight,
     BsArrowLeft
 } from 'react-icons/bs'
+
+import { Analytics } from '@vercel/analytics/react';
 
 interface Work {
     url: string;
@@ -162,10 +163,10 @@ export async function generateStaticParams() {
     ] 
 }
 
-const fetchWorksData = (url: string): Project => {
+const fetchWorksData = (url: string): Work => {
     // Replace this with your actual static data for each project
     // Create an object that maps the project URLs to their respective data
-    const projectDataMap: { [key: string]: Project } = {
+    const projectDataMap: { [key: string]: Work } = {
       
       ttrpcompanion: {
         url: 'ttrpcompanion',
