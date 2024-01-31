@@ -52,7 +52,7 @@ const About = () => {
                 explore the world with my fiancée & play with my dog, Sundance, and my cat, Tadashi. 
               </p>
 
-              <Link href="/LariviereK.pdf" target="_blank"
+              <Link href="/LariviereK24.pdf" target="_blank"
                 className="text-neutral-500 flex items-center space-x-2 font-light text-sm group w-fit">
                 <span className="group-hover:text-blue-400 duration-300">View My Resume</span>
                 <BsBoxArrowUpRight className="text-sm group-hover:text-blue-400 duration-300" />
@@ -63,57 +63,45 @@ const About = () => {
       </div>
 
       <div className="mt-16 md:mt-24">
-        {/* <Reveal>
-          <p className="mb-20 font-light text-lg md:text-xl text-neutral-500 container mx-auto p-12 rounded-[2.5rem]">
-            I have a deep passion for all things tech, and an understanding that design drives 
-            <strong> everything</strong>. Because of this, I do my best to create welcoming and 
-            inclusive experiences for everyone because that&apos;s the <strong>right thing to do</strong>. 
-            The web is an exciting place, and everyone has a place in it.
-            <br /><br />
-            When I&apos;m not hunched over my keyboard, I&apos;m probably spending time with my family, playing D&D, 
-            listening to or writing music, or exploring the world!
-          </p>
-        </Reveal> */}
-
         <Reveal>
-        <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-8 gap-4 md:mt-16 mb-24 md:mb-32">
-          
-          {/* 1 */} 
-          <div className="md:col-span-4 row-start-1 container p-8 rounded-full flex justify-between items-center shadow-md">
-            <div className="flex flex-col">
-              <span className="font-migra text-xl md:text-2xl">Gaston College</span>
-              <span className="font-light text-xs md:text-sm">AAS, Computer Science</span>
+          <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-8 gap-4 md:mt-16 mb-24 md:mb-32">
+            
+            {/* 1 */} 
+            <div className="md:col-span-4 row-start-1 container p-8 rounded-full flex justify-between items-center shadow-md">
+              <div className="flex flex-col">
+                <span className="font-migra text-xl md:text-2xl">Gaston College</span>
+                <span className="font-light text-xs md:text-sm">AAS, Computer Science</span>
+              </div>
+              <div className="">
+                <span className="font-light text-right">&apos;20 &mdash; &apos;22</span>
+              </div>
             </div>
-            <div className="">
-              <span className="font-light text-right">&apos;20 &mdash; &apos;22</span>
-            </div>
-          </div>
 
-          {/* 2 */}
-          <div className="md:col-span-7 md:col-start-2 row-start-2 container p-8 rounded-full flex justify-between items-center shadow-md">
-            <div className="flex flex-col">
-              <span className="font-migra text-xl md:text-2xl">KNLRVR</span>
-              <span className="font-light text-xs md:text-sm">Freelance Developer</span>
+            {/* 2 */}
+            <div className="md:col-span-7 md:col-start-2 row-start-2 container p-8 rounded-full flex justify-between items-center shadow-md">
+              <div className="flex flex-col">
+                <span className="font-migra text-xl md:text-2xl">KNLRVR</span>
+                <span className="font-light text-xs md:text-sm">Freelance Developer</span>
+              </div>
+              <div className="">
+                <span className="font-light text-right">&apos;21 &mdash; Present</span>
+              </div>
             </div>
-            <div className="">
-              <span className="font-light text-right">&apos;21 &mdash; Present</span>
-            </div>
-          </div>
 
-          {/* 3 */}
-          <div className="md:col-span-4 md:col-start-5 row-start-3 container p-8 rounded-full flex justify-between items-center shadow-md">
-            <div className="flex flex-col">
-              <span className="block lg:hidden font-migra text-xl md:text-2xl">WGU</span>
-              <span className="hidden lg:block font-migra text-xl md:text-2xl">Western Governors University</span>
-              <span className="font-light text-xs md:text-sm">BSc, Computer Science</span>
+            {/* 3 */}
+            <div className="md:col-span-4 md:col-start-5 row-start-3 container p-8 rounded-full flex justify-between items-center shadow-md">
+              <div className="flex flex-col">
+                <span className="block lg:hidden font-migra text-xl md:text-2xl">WGU</span>
+                <span className="hidden lg:block font-migra text-xl md:text-2xl">Western Governors University</span>
+                <span className="font-light text-xs md:text-sm">BSc, Computer Science</span>
+              </div>
+              <div className="">
+                <span className="font-light text-right">&apos;23 &mdash; Present</span>
+              </div>
             </div>
-            <div className="">
-              <span className="font-light text-right">&apos;23 &mdash; Present</span>
-            </div>
-          </div>
 
-        </div>
-      </Reveal> 
+          </div>
+        </Reveal> 
 
         <Reveal>
           <span className="font-migra text-4xl md:text-5xl xl:text-6xl">
