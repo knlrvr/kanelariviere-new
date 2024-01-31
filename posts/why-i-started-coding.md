@@ -69,7 +69,7 @@ console.log('Hello World! Goodbye (for now) Python!')
 Not very long after falling down this rabbit hole, I started college again. Thankfully, I'd only missed one semester, so a lot of what I learned in class stayed with me and allowed me to continue building from what I already knew and had learned over my semester-long absence. I still have some strong feelings about college, but that's a blog post for another day. 
 
 ## The Present
-As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in SaaS Tech Support, I'm finishing up my degree at WGU (& searching for internships), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth and I'm thankful for it. I'm excited to continue learning, sharing, and exploring new opportunities in software and tech. The best to come has yet to come. 
+As I'm writing this, it is 8:43 pm, January 1, 2024. I work full-time in tech support, I'm finishing up my degree at WGU (& searching for internships), freelancing and working on anything that I can in any spare time that I have. The road has been anything but smooth and I'm thankful for it. I'm excited to continue learning, sharing, and exploring new opportunities in software and tech. The best to come has yet to come. 
 
 ##
 
