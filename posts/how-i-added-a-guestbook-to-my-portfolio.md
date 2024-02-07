@@ -46,7 +46,7 @@ export default function ConvexClientProvider({
 }
 ```
 
-However, this code isn't used at all. **Why?** Since I wanted the functionality of a guestbook, I obviously wanted to see who was signing it. For this, I needed some kind of authentication. Since I was using Convex, I decided to use [Clerk](https://docs.convex.dev/auth/clerk) for authentication, as they have a super easy setup. Setting the database up with authentication differs slightly from what's provided in the quickstart guide. 
+However, this code isn't used at all. **Why?** Since I wanted the functionality of a guestbook, I needed to know *who* was signing it. For this, I needed some kind of authentication. Since I was using Convex, I decided to use [Clerk](https://docs.convex.dev/auth/clerk) for authentication, as they have a super easy setup. Setting the database up with authentication differs slightly from what's provided in the quickstart guide. 
 
 Before doing anything else in the project, I needed to create a new application in Clerk. Within Clerk, I chose the Convex template, and copied the Issuer URL from the Issuer input field, and saved the template. Now, in the **convex** folder, I created **auth.config.js** and pasted the following code from Convex, changing the *domain* to what was actually generated. 
 
@@ -107,7 +107,7 @@ With all of that out of the way, I could now wrap the application with the neces
 </ClerkProvider>
 ```
 
-Perfect! The next thing I did was add the ability to sign in within **guestbook.tsx**. Luckily, sign in/out buttons are provided by Clerk. I'll also import **useUser** so I can access the current user data. 
+Perfect! The next thing I did was add the ability to sign in within **guestbook.tsx**. Luckily, sign in/out buttons are provided by Clerk. I'll also import **useUser** so I can access the current user data and save the user's name with their message. 
 
 ```js
 // guestbook.tsx
