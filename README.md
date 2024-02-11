@@ -10,11 +10,9 @@
 
 <a name="description"></a>
 ## Description
-My personal portfolio for 2023! [My old portfolio](https://kanelariviere-old.vercel.app) was minimal and straightforward. I tried to implement a similar minimal theme for this portfolio, while actually focusing on the design. I wanted this portfolio to show a little more personality, for itself & for me. Sections include work, about, contact, tsif, & guestbook. 
+My personal portfolio for 2023! [My old portfolio](https://kanelariviere-old.vercel.app) was minimal and straightforward. I tried to implement a similar minimal theme for this portfolio, while actually focusing on the design. I wanted this portfolio to show a little more personality, for itself & for me. Sections include work, about, blog, & guestbook. 
 
-This portfolio features a gallery, titled 'The Sky is Fake' (TSIF), that showcases some of my favorite pictures I've taken of the sky. The pictures are pulled 4 at a time from an array, which includes the url of the picture & the location where the picture was taken. I wanted to include this because it's something that I would hear my brother say often, and the sentiment of 'The Sky is Fake' has become a part of who I am. 
-
-This portfolio also features a guestbook, where visitors can sign in via Apple, Discord, or Google (provided by Clerk), and leave a note or message! Building this feature was a lot of fun because I got to work with [Convex](https://www.convex.dev/), which was a **dream** to integrate. I'm excited to see what people will say! 
+This portfolio features a guestbook, where visitors can sign in via Apple, Discord, or Google (provided by Clerk), and leave a note or message! Building this feature was a lot of fun because I got to work with [Convex](https://www.convex.dev/), which was a **dream** to integrate. I'm excited to see what people will say! 
 
 I've implemented a light/dark theme that is dependent on the current time of day. There are 24 lines at the bottom of the page representing the hours of the day, and the current time will be highlighted with an icon displayed above it. The theme can still be manually switched if you do prefer one over the other! 
 
