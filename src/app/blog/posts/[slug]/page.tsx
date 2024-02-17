@@ -138,10 +138,10 @@ const PostPage = (props: PostPageProps) => {
                             <Link href="/blog" className="text-2xl w-fit mb-4 group">
                                 <BsArrowLeft className="group-hover:text-neutral-500 duration-200" />
                             </Link>
-                            <span className="font-migra text-4xl sm:text-5xl md:text-7xl tracking-wider">
+                            <span className="mt-2 mb-6 font-migra text-4xl sm:text-5xl md:text-7xl tracking-wider">
                                 {post.data.title}
                             </span>
-                            <span className="font-light tracking-wider text-base mt-2">
+                            <span className="w-fit font-light tracking-wider text-base rounded-full border border-neutral-500 px-6 py-1">
                                 {post.data.date}
                             </span>
                         </div>
@@ -151,7 +151,7 @@ const PostPage = (props: PostPageProps) => {
                 <article className="text prose prose-md prose-pre:bg-[#2b2b2b] prose-pre:my-2 prose-a:text-blue-500 prose-blockquote:text-code max-w-full prose-strong:text-code prose-headings:text-heading prose-h2:font-semibold prose-h2:tracking-wide prose-code:text-code 
                                     prose-h6:text-xs prose-h6:text-neutral-500 prose-p:font-light
                                     prose-h5:text-xs prose-h5:border prose-h5:border-b-none prose-h5:border-neutral-500 prose-h5:p-4 prose-h5:rounded-lg prose-h5:bg-neutral-500 prose-h5:bg-opacity-25 prose-h5:border-opacity-50
-                                    prose-h4:text-lg prose-h4:font-medium prose-h4:tracking-wider prose-h4:text-neutral-500
+                                    prose-h3:text-xl prose-h3:font-medium prose-h3:tracking-wide prose-h4:text-neutral-500 prose-h3:opacity-80
                                     prose-quoteless prose-blockquote:border prose-blockquote:rounded-2xl prose-blockquote:not-italic prose-blockquote:border-neutral-500 prose-blockquote:bg-neutral-500 prose-blockquote:bg-opacity-10 prose-blockquote:text-xs prose-blockquote:text-neutral-500 prose-blockquote:px-4
                 ">
                     <Reveal>
