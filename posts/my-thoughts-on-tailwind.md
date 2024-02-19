@@ -75,7 +75,7 @@ Using **peer**, we could do something like displaying an error message if input 
 </form>
 ```
 
-When we use peer, we style an element based on the state of a *sibling* element. The **peer** class name can only work on *previous* siblings because of how the **subsequent-sibling combinator** works in CSS. 
+When we use peer, we style an element based on the state of a *sibling* element. The **peer** class name can only work on *previous* siblings because of how the [**subsequent-sibling combinator**](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator) works in CSS. 
 
 So something like the following wouldn't work &mdash;
 
