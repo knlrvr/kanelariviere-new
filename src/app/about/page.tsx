@@ -6,6 +6,7 @@ import { Reveal } from '@/components/utils/reveal'
 
 import type { Metadata } from 'next'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
+import Gallery from '@/components/gallery'
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | About',
@@ -102,6 +103,10 @@ const About = () => {
 
           </div>
         </Reveal> 
+
+        <Reveal>
+          <Gallery />
+        </Reveal>
 
         <Reveal>
           <span className="font-migra text-4xl md:text-5xl xl:text-6xl">

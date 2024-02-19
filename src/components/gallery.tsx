@@ -74,7 +74,7 @@ const Gallery: React.FC = () => {
   useEffect(() => {
     const selectedPictures: Picture[] = [];
 
-    while (selectedPictures.length < 4) {
+    while (selectedPictures.length < 2) {
       const randomIndex = Math.floor(Math.random() * pictures.length);
       const randomPicture = pictures[randomIndex];
 
@@ -90,15 +90,15 @@ const Gallery: React.FC = () => {
   return (
     <>
     <Reveal>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-12">
+      <div className="grid grid-cols-4 gap-x-4 gap-y-12 mb-20">
         {randomPictures.map((picture, index) => (
-            <div key={index} className="relative group flex justify-center md:first:col-span-3 md:last:col-span-3 overflow-hidden row-span-4 rounded-2xl shadow-md">
+            <div key={index} className="first:col-span-4 first:md:col-span-3 last:hidden md:last:block relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
               <Image 
                 src={picture.url} 
                 alt={`Random Picture ${index + 1} - ${picture.location}`} 
                 width="1000"
                 height="1000"
-                className="h-96 w-full object-cover rounded-2xl" 
+                className="h-64 sm:h-96 w-full object-cover rounded-2xl" 
               />
               <div className="absolute transform duration-500 -bottom-10 left-2 group-hover:bottom-2">
                 <div className="container p-2 rounded-lg text-sm text-neutral-500">
