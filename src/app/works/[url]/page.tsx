@@ -52,7 +52,7 @@ export default async function WorksPage(
     const paragraphs = projects.description.split('\n');
 
     return (
-        <div className="min-h-screen max-w-7xl mx-auto">
+        <div className="min-h-screen max-w-5xl mx-auto">
   
         <div className="pt-10 md:pt-20">
           <div className="flex flex-col items-center justify-center">
@@ -136,11 +136,11 @@ export default async function WorksPage(
           </Reveal>
   
           <Reveal>
-            <div className="pt-24 flex md:justify-end justify-center">
+            <div className="pt-24 pb-12 flex md:justify-end justify-center">
               <Link href={projects.next}
                 className="group text-3xl font-migra flex items-center space-x-4 w-fit">
-                <span>{projects.nextTitle}</span>
-                <BsArrowRight className="text-xl group-hover:translate-x-2 duration-300 mb-1" />
+                <span className="group-hover:text-neutral-500 transition-colors duration-200">{projects.nextTitle}</span>
+                <BsArrowRight className="text-xl group-hover:text-neutral-500 group-hover:translate-x-2 duration-200 mb-1" />
               </Link>
             </div>
           </Reveal>

@@ -5,7 +5,7 @@ import { Reveal } from './utils/reveal'
 
 const Projects: React.FC = () => {
     return (
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="pt-10 md:pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           <div className="md:col-span-2 relative">
             <Reveal>

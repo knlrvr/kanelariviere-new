@@ -1,6 +1,6 @@
 ---
 title: 'How I Added A Guestbook To My Portfolio'
-description: 'Using Convex with Next JS to create a Guestbook'
+description: 'Using Convex with Next.js to create a Guestbook'
 date: 'November 3, 2023'
 ---
 

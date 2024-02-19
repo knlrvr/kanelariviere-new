@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <div className="pb-8 pt-6 md:pt-20 max-w-7xl mx-auto">
+    <div className="pb-8 pt-6 md:pt-20 max-w-5xl mx-auto">
       <div className="flex flex-col items-center justify-center">
         <Reveal>
           <span className="intro-text font-migra -mb-4">I&apos;m Kane.</span>

@@ -78,7 +78,7 @@ const CircadianTheme = () => {
     }
   
     return (
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex justify-between mt-44">
           {renderHourLines()}
         </div>
