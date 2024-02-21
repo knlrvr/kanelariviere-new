@@ -18,33 +18,39 @@ const Footer = () => {
               <span className="font-migra text-2xl">Find me</span>
               <ul className="flex flex-col space-y-2 font-light text-sm">
                 <li>
-                  <Link href="https://www.github.com/knlrvr" target="_blank">
-                    GitHub
+                  <Link href="https://www.github.com/knlrvr" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200">
+                      GitHub
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.linkedin.com/in/kane-lariviere" target="_blank">
-                    LinkedIn
+                  <Link href="https://www.linkedin.com/in/kane-lariviere" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200">
+                      LinkedIn
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.twitter.com/knlrvr" target="_blank">
-                    X <span className="text-neutral-500">(Twitter)</span>
+                  <Link href="https://www.twitter.com/knlrvr" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200 group">
+                      X (Twitter) {/* {<span className="text-neutral-500">(Twitter)</span>} */}
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.threads.net/@kanelarivieresucks" target="_blank">
-                    Threads
+                  <Link href="https://www.threads.net/@kanelarivieresucks" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200">
+                      Threads
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.twitch.tv/knlrvr" target="_blank">
-                    Twitch
+                  <Link href="https://www.twitch.tv/knlrvr" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200">
+                      Twitch
                   </Link>
                 </li>
                 <li className="text-xs">
-                  <Link href="https://kanelariviere-old.vercel.app/" target="_blank">
-                    Previous Portfolio
+                  <Link href="https://kanelariviere-old.vercel.app/" target="_blank"
+                    className="hover:text-neutral-500 transition-colors duration-200">
+                      Previous Portfolio
                   </Link>
                 </li>
               </ul>
@@ -58,8 +64,9 @@ const Footer = () => {
                 <span className="font-migra text-2xl">Contact</span>
                 <ul className="flex flex-col font-light text-sm">
                   <li>
-                    <Link href="mailto:hello@knlrvr.com" target="_blank">
-                      Email
+                    <Link href="mailto:hello@knlrvr.com" target="_blank"
+                      className="hover:text-neutral-500 transition-colors duration-200">
+                        Email
                     </Link>
                   </li>
                 </ul>
