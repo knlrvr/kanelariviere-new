@@ -68,7 +68,7 @@ const About = () => {
           <div className="grid grid-rows-3 grid-cols-1 md:grid-cols-8 gap-4 md:mt-16 mb-24 md:mb-32">
             
             {/* 1 */} 
-            <div className="md:col-span-4 row-start-1 container p-8 rounded-full flex justify-between items-center shadow-md">
+            <div className="md:col-span-4 row-start-1 container min-w-full p-8 rounded-full flex justify-between items-center shadow-md">
               <div className="flex flex-col">
                 <span className="font-migra text-xl md:text-2xl">Gaston College</span>
                 <span className="font-light text-xs md:text-sm">AAS, Computer Science</span>
@@ -79,7 +79,7 @@ const About = () => {
             </div>
 
             {/* 2 */}
-            <div className="md:col-span-7 md:col-start-2 row-start-2 container p-8 rounded-full flex justify-between items-center shadow-md">
+            <div className="md:col-span-7 md:col-start-2 row-start-2 container min-w-full p-8 rounded-full flex justify-between items-center shadow-md">
               <div className="flex flex-col">
                 <span className="font-migra text-xl md:text-2xl">KNLRVR</span>
                 <span className="font-light text-xs md:text-sm">Freelance Developer</span>
@@ -90,7 +90,7 @@ const About = () => {
             </div>
 
             {/* 3 */}
-            <div className="md:col-span-4 md:col-start-5 row-start-3 container p-8 rounded-full flex justify-between items-center shadow-md">
+            <div className="md:col-span-4 md:col-start-5 row-start-3 container min-w-full p-8 rounded-full flex justify-between items-center shadow-md">
               <div className="flex flex-col">
                 <span className="block lg:hidden font-migra text-xl md:text-2xl">WGU</span>
                 <span className="hidden lg:block font-migra text-xl md:text-2xl">Western Governors University</span>
