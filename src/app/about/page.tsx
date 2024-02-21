@@ -115,7 +115,7 @@ const About = () => {
         </Reveal>
         <Reveal>
           <p className="mt-4 font-light font-mont text-base md:text-lg lg:text-xl text-neutral-500 md:w-1/2">
-            Reach me at <Link href="mailto:hello@knlrvr.com" className="hover:text-blue-400 duration-300">hello@knlrvr.com</Link>!
+            Reach out to me at <Link href="mailto:hello@knlrvr.com" className="hover:text-blue-400 duration-300">hello@knlrvr.com</Link>!
           </p>
         </Reveal>
       </div>
