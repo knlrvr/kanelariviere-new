@@ -154,7 +154,7 @@ const PostPage = (props: PostPageProps) => {
                     <Reveal>
                         <div className="flex flex-wrap gap-y-2 pt-4">
                             {post.data.tags.map((tag: string) => (
-                                <p className="mr-4 font-mono text-xs text-neutral-500 underline underline-offset-4">#{tag}</p>
+                                <p key={tag} className="mr-4 font-mono text-xs text-neutral-500 underline underline-offset-4">#{tag}</p>
                             ))}
                         </div>
                     </Reveal>
