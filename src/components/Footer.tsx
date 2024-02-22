@@ -6,6 +6,7 @@ import { Reveal } from './utils/reveal';
 import CircadianTheme from './circTheme';
 
 import OnRepeat from './OnRepeat';
+import { Credits } from './credits';
 
 const Footer = () => {
   return (
@@ -101,8 +102,9 @@ const Footer = () => {
       <Reveal>
         <div className="flex justify-center mt-16 mb-4 max-w-7xl mx-auto">
           <span className="font-light text-xs">
-            &copy; 2023 Kane Lariviere.
+            &copy; 2023 KNLRVR.
           </span>
+          <Credits />
         </div>
       </Reveal>
     </>

@@ -3,11 +3,42 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "MIGRA";
-    src: url('../../public/Migra-Extralight.otf')
+  font-family: "MIGRA";
+  src: url('../../public/Migra-Extralight.otf')
 }
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-.light {
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+ 
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+ 
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+ 
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+ 
+    --radius: 0.5rem;
+
     --bg-color: #f5f5f5;
     --highlight: rgba(163, 163, 163, 0.5); 
     --opaque: rgba(214, 211, 211, 0.8);
@@ -17,9 +48,37 @@
     --fade: #b5b5b5;
     --code: #333;
     --heading: #333;
-}
-  
-.dark {
+  }
+ 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+ 
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
     --bg-color: #111;
     --highlight: rgba(68, 68, 68, 0.5);
     --opaque: rgba(51, 51, 51, 0.5);
@@ -29,163 +88,189 @@
     --fade: #404040;
     --code: #e7e5e4;
     --heading: #e7e5e4;
+  }
 }
-  
+
+
+/* .light {
+  --bg-color: #f5f5f5;
+  --highlight: rgba(163, 163, 163, 0.5); 
+  --opaque: rgba(214, 211, 211, 0.8);
+  --text: #333;
+  --container: #e7e5e4;
+  --container-hover: #d0cecd; 
+  --fade: #b5b5b5;
+  --code: #333;
+  --heading: #333;
+} */
+
+/* .dark {
+  --bg-color: #111;
+  --highlight: rgba(68, 68, 68, 0.5);
+  --opaque: rgba(51, 51, 51, 0.5);
+  --text: #e7e5e4;
+  --container: #222;
+  --container-hover: #333;
+  --fade: #404040;
+  --code: #e7e5e4;
+  --heading: #e7e5e4;
+} */
+
 .email {
-    color: var(--text);
+  color: var(--text);
 }
-  
+
 body {
-    background-color: var(--bg-color);
-    color: var(--text);
+  background-color: var(--bg-color);
+  color: var(--text);
 }
-   
+ 
 nav {
-    border-radius: 5rem;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 1em;
-    transition: background-color 0.4s ease; /* Add a transition for smooth background color change */
-    color: var(--text);
+  border-radius: 5rem;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 1em;
+  transition: background-color 0.4s ease; /* Add a transition for smooth background color change */
+  color: var(--text);
+}
+
+nav.opaque {
+  background-color: var(--opaque); /* Adjust the opacity as needed */
+  backdrop-filter: blur(8px); /* Add a blur effect */
 }
   
-nav.opaque {
-    background-color: var(--opaque); /* Adjust the opacity as needed */
-    backdrop-filter: blur(8px); /* Add a blur effect */
-}
-    
 .tabs {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
 }
-    
+  
 ul,
 li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-    
+  
 ul {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
-    
+  
 nav li {
-    border-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 100%;
-    cursor: pointer;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    min-width: fit-content;
-    position: relative;
-    user-select: none;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  cursor: pointer;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: fit-content;
+  position: relative;
+  user-select: none;
 }
-    
+  
 .highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background-color: var(--highlight); */
-    background-color: var(--highlight);
-    z-index: -1;
-    border-radius: 25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: var(--highlight); */
+  background-color: var(--highlight);
+  z-index: -1;
+  border-radius: 25em;
 }
 
 .container {
-    background-color: var(--container);
-    transition: 300ms ease-in-out;
-  }
+  background-color: var(--container);
+  transition: 300ms ease-in-out;
+}
 
 .container:hover {
-    background-color: var(--container-hover);
-    transition: 300ms ease-in-out;
+  background-color: var(--container-hover);
+  transition: 300ms ease-in-out;
 }
 
 .intro-text {
-    font-size: clamp(3.2rem, 3.2rem + 10vw, 10vw);
-  }
-  
-.intro-subtext {
-    font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
+  font-size: clamp(3.2rem, 3.2rem + 10vw, 10vw);
 }
 
 .intro-subtext {
-    font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
+  font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
 }
-  
+
+.intro-subtext {
+  font-size: clamp(1.5rem, 1.5rem + 10vw, 5vw);
+}
+
 .project-container__1 {
-    background-color: #fdba74;
-    transition: 0.4s ease-in-out;
+  background-color: #fdba74;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__1:hover {
-    background-color: #fb923c;
-    transition: 0.4s ease-in-out;
+  background-color: #fb923c;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__2 {
-    background-color: #7dd3fc;
-    transition: 0.4s ease-in-out
+  background-color: #7dd3fc;
+  transition: 0.4s ease-in-out
 }
-  
+
 .project-container__2:hover {
-    background-color: #38bdf8;
-    transition: 0.4s ease-in-out;
+  background-color: #38bdf8;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__3 {
-    background-color: #86efac;
-    transition: 0.4s ease-in-out;
+  background-color: #86efac;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__3:hover {
-    background-color: #4ade80;
-    transition: 0.4s ease-in-out;
+  background-color: #4ade80;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__4 {
-    background-color: #f87171;
-    transition: 0.4s ease-in-out;
+  background-color: #f87171;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__4:hover {
-    background-color: #ef4444;
-    transition: 0.4s ease-in-out;
+  background-color: #ef4444;
+  transition: 0.4s ease-in-out;
 }
-  
+
 .project-container__5 {
-    background-color: var(--container);
+  background-color: var(--container);
 }
 
 .text {
-    color: var(--text);
+  color: var(--text);
 }
 
 .theme-icon {
-    color: var(--bg-color)
+  color: var(--bg-color)
 }
 
 .bounce {
-    animation: bounce 2s ease;
+  animation: bounce 2s ease;
 }
-  
+
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-30px);}
-    60% {transform: translateY(-15px);}
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
 }

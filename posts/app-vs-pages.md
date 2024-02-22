@@ -177,7 +177,7 @@ const fetchWorksData = (url: string): Project => {
 }
 ```
 
-As of 01/08/24, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, but there are some important notes about behaviors that can make or break an experience that I went through during the migration. 
+As of January 8th, 2024, everything in my portfolio was migrated to the new app router with the support of [these Next.js docs](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration). It was a relatively easy process, but there are some important notes about behaviors that can make or break an experience that I went through during the migration. 
 
 For example, if you changed the theme and then navigated to any of the **/work** pages, the theme would revert to it's default setting, which is dependent on the time of day. The theme wasn't persisting between my projects in the pages router, and the rest of the site in the app router. 
 
