@@ -1,7 +1,7 @@
 ---
 title: My Contribution To The Tailwind Discourse
 description: My thoughts on the Tailwind discourse - why I use & support Tailwind
-tags: ['Tailwind', 'CSS', 'webdev']
+tags: ['Tailwind', 'CSS', 'webdev', 'rant']
 date: February 19, 2024
 ---
 
