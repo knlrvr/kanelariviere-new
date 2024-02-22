@@ -1,6 +1,7 @@
 ---
 title: Styling An Application
 description: Vanilla CSS, CSS-in-JS, Sass, etc. 
+tags: ['CSS', 'webdev']
 date: December 1, 2023
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Why I Started Coding
 description: My journey into software development
+tags: ['webdev']
 date: January 1, 2024
 ---
 

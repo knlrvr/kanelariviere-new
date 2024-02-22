@@ -29,7 +29,7 @@ const Blog = () => {
       </div>
 
       <Reveal>
-        <div className="flex flex-col space-y-8 mt-12 w-fit mb-12">
+        <div className="flex flex-col space-y-9 mt-12 w-fit mb-12">
           {postPreviews}
         </div>
       </Reveal>

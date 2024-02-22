@@ -1,6 +1,7 @@
 ---
 title: App Router vs. Pages Router
 description: The differences between directories in Next.js
+tags: ['Next.js', 'webdev']
 date: December 12, 2023
 ---
 
