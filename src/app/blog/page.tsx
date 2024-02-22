@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 import { Reveal } from '@/components/utils/reveal';
 
@@ -38,4 +37,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Blog 
