@@ -171,7 +171,7 @@ const PostPage = (props: PostPageProps) => {
                     <Reveal>
                         <ReactMarkdown className=""
                             components={components}
-                        >{post.content}</ReactMarkdown>
+                        >{post.content}</ReactMarkdown> 
                     </Reveal>
                 </article>
 
