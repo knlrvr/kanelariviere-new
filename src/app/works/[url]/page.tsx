@@ -61,12 +61,12 @@ export default async function WorksPage(
               </Reveal>
             </div>
   
-          <Reveal>
-            <div className="flex flex-col my-8">
+          <Reveal> 
+            <div className="flex flex-col mt-8 mb-9">
               <Link href="/" className="text-2xl w-fit mb-4 group">
                 <BsArrowLeft className="group-hover:text-neutral-500 duration-200" />
               </Link>
-              <p className="font-migra text-4xl sm:text-5xl md:text-7xl">{projects.title}</p>
+              <p className="mt-2 font-migra text-4xl sm:text-5xl md:text-7xl">{projects.title}</p>
               <p className="font-thin text-2xl sm:text-3xl md:text-4xl">&mdash; {projects.category}</p>
             </div>
           </Reveal>
