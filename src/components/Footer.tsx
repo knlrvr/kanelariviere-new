@@ -48,12 +48,6 @@ const Footer = () => {
                       Twitch
                   </Link>
                 </li>
-                <li className="text-xs">
-                  <Link href="https://kanelariviere-old.vercel.app/" target="_blank"
-                    className="hover:text-neutral-500 transition-colors duration-200">
-                      Previous Portfolio
-                  </Link>
-                </li>
               </ul>
             </div>
           </Reveal>
@@ -73,7 +67,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="flex flex-col mt-[5.55rem] md:mt-9">
+              <div className="flex flex-col mt-[4rem] md:mt-8">
                 <span className="font-migra text-2xl">Availability</span>
                 <ul className="flex items-center font-light space-x-2 text-xs">
                   <li>
