@@ -15,6 +15,7 @@ import ReactMarkdown from "react-markdown";
 
 import type { Metadata } from "next";
 import PostPreview from "@/components/PostPreview";
+import AuthorCard from "@/components/authorcard";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -148,7 +149,11 @@ const PostPage = (props: PostPageProps) => {
                     </Reveal>
                 </div>
 
-                <div className="flex flex-col mb-12 space-y-2">
+                <Reveal>
+                    <AuthorCard />
+                </Reveal>
+
+                <div className="flex flex-col mb-12 mt-4 space-y-2">
                     {/* <hr className="bg-neutral-500 border-0 h-[0.05rem]"/> */}
                     {/* <span className="text-xs">Tags &mdash;</span> */}
                     <Reveal>
