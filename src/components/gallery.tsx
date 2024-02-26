@@ -50,7 +50,7 @@ const pictures = [
   },
   {
     url: '/gallery/12.jpeg',
-    location: 'Florida',
+    location: 'Florida', 
   },
 ];
 
