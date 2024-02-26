@@ -6,11 +6,11 @@ import { Reveal } from './utils/reveal';
 const pictures = [
   {
     url: '/gallery/1.jpeg',
-    location: 'North Carolina',
+    location: 'Florida',
   },
   {
     url: '/gallery/2.jpeg',
-    location: 'North Carolina',
+    location: 'Minnesota',
   },
   {
     url: '/gallery/3.jpeg',
@@ -21,48 +21,32 @@ const pictures = [
     location: 'North Carolina',
   },
   {
-    url: '/gallery/5.jpeg',
-    location: 'North Carolina',
-  },
-  {
     url: '/gallery/6.jpeg',
+    location: 'Georgia',
+  },
+  {
+    url: '/gallery/7.jpg',
     location: 'North Carolina',
   },
   {
-    url: '/gallery/8.jpeg',
-    location: 'United States',
+    url: '/gallery/8.jpg',
+    location: 'North Carolina',
   },
   {
     url: '/gallery/9.jpeg',
-    location: 'Florida',
-  },
-  {
-    url: '/gallery/15.jpeg',
     location: 'North Carolina',
   },
   {
-    url: '/gallery/17.jpeg',
-    location: 'United States',
-  },
-  {
-    url: '/gallery/19.jpg',
-    location: 'North Carolina',
-  },
-  {
-    url: '/gallery/22.jpg',
-    location: 'South Carolina',
-  },
-  {
-    url: '/gallery/23.jpg',
-    location: 'North Carolina',
-  },
-  {
-    url: '/gallery/25.jpg',
-    location: 'North Carolina',
-  },
-  {
-    url: '/gallery/26.jpeg',
+    url: '/gallery/10.jpeg',
     location: 'Minnesota',
+  },
+  {
+    url: '/gallery/11.jpeg',
+    location: 'North Carolina',
+  },
+  {
+    url: '/gallery/12.jpeg',
+    location: 'Florida',
   },
 ];
 
@@ -90,7 +74,7 @@ const Gallery: React.FC = () => {
   return (
     <>
     <Reveal>
-      <div className="grid grid-cols-4 gap-x-4 gap-y-12 mb-20">
+      <div className="grid grid-cols-4 gap-x-8 gap-y-12 mb-20">
         {randomPictures.map((picture, index) => (
             <div key={index} className="first:col-span-4 first:md:col-span-3 last:hidden md:last:block relative group flex justify-center overflow-hidden rounded-2xl shadow-md">
               <Image 
