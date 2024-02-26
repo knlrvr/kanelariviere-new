@@ -21,6 +21,10 @@ const pictures = [
     location: 'North Carolina',
   },
   {
+    url: '/gallery/5.jpeg',
+    location: 'North Carolina',
+  },
+  {
     url: '/gallery/6.jpeg',
     location: 'Georgia',
   },
@@ -41,7 +45,7 @@ const pictures = [
     location: 'Minnesota',
   },
   {
-    url: '/gallery/11.jpeg',
+    url: '/gallery/11.jpg',
     location: 'North Carolina',
   },
   {
