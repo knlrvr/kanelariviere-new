@@ -18,7 +18,7 @@ I've implemented a light/dark theme that is dependent on the current time of day
 
 <a name="view"></a>
 ## View
-[knlrvr.com](https://knlrvr.com) or [knlrvr.dev](https://knlrvr.dev)
+[knlrvr.com](https://knlrvr.com)
 
 <a name="built-with"></a>
 ## Built With 
